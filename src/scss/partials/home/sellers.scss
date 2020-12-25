@@ -1,0 +1,26 @@
+.sellers {
+  text-align: center;
+  @include adaptive-value(margin-bottom, 110, 30);
+
+  &__head {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+  }
+
+  &__title {
+    @include adaptive-value(font-size, 36, 24);
+    @include adaptive-value(line-height, 48, 30);
+    font-weight: 600;
+    color: $black;
+    @include adaptive-value(margin-bottom, 70, 30);
+  }
+
+  .inline-link {
+    font-size: 16px;
+    line-height: 23px;
+  }
+}

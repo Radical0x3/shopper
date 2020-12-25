@@ -1,0 +1,55 @@
+.sale-banner {
+  @include adaptive-value(padding-top, 85, 25);
+  @include adaptive-value(padding-bottom, 85, 25);
+  @include adaptive-value(padding-left, 130, 30);
+  @include adaptive-value(padding-right, 130, 30);
+  @include adaptive-value(margin-bottom, 105, 40);
+  text-align: center;
+  background: url("../img/icons/icons.svg#sale"), $orange;
+  background-size: cover;
+
+  &__title {
+    @include adaptive-value(font-size, 60, 24);
+    font-weight: 600;
+    @include adaptive-value(line-height, 80, 30);
+    color: #fff;
+    @include adaptive-value(margin-bottom, 65, 20);
+  }
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__btn {
+    width: 190px;
+    padding: 15px 0;
+    color: #fff;
+    border: 2px solid #fff;
+    background: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23px;
+    @include adaptive-value(margin, 15, 5);
+    transition: 0.3s;
+    transition-delay: 0.2s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  .fill-from-left {
+    &::before {
+      background: #fff;
+      left: -2px;
+      top: -2px;
+      height: calc(100% + 4px);
+    }
+
+    &:hover::before {
+      width: calc(100% + 4px);
+    }
+  }
+}

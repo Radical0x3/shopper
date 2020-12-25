@@ -1,0 +1,94 @@
+@import "nullstyle";
+@import "hamburgers/hamburgers";
+@import "animation";
+@import "adaptive-properties";
+@import "header";
+@import "footer";
+@import "general";
+@import "partials/home/top-banner";
+@import "partials/home/sale-banner";
+@import "partials/home/trends";
+@import "partials/home/instashop";
+@import "partials/home/features";
+@import "partials/home/newsletter";
+@import "partials/home/brands";
+@import "partials/home/collection";
+@import "partials/home/sellers";
+@import "partials/home/arrivals";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import "fonts";
+
+body {
+  font-family: Jost;
+  border: 0;
+
+  &.lock {
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #ff6f61;
+  position: absolute;
+  top: 0;
+  transform: translate(60%, -50%);
+
+  span {
+    color: #fff;
+    font-size: 11px;
+  }
+}
+
+.button-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  background-color: #1de9b6;
+  border-radius: 50%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    line-height: 40px;
+    color: #fff;
+  }
+}
+

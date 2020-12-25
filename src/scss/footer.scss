@@ -1,0 +1,152 @@
+.footer {
+  background: url("../img/icons/icons.svg#bg2") center no-repeat;
+  //background: url("../img/footer.png") center no-repeat;
+  background-size: cover;
+  //background: #1f1f1f;
+  padding-top: 69px;
+
+  @media (max-width: 860px) {
+    //padding-top: 50px;
+    background: #1f1f1f;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+
+    @media (max-width: 800px) {
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 426px) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #cdcdcd;
+
+      &:hover {
+        color: #fff;
+      }
+
+      transition: 0.3s;
+    }
+
+    &-item {
+      color: #cdcdcd;
+
+      @media (max-width: 800px) {
+        margin: 15px;
+      }
+
+      h2 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 30px;
+      }
+
+      h3 {
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 16px;
+
+        @media (max-width: 800px) {
+          font-size: 16px;
+        }
+      }
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+
+    &-item {
+      a {
+        font-size: 20px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &__support,
+  &__shop,
+  &__company,
+  &__contact {
+    font-size: 16px;
+
+    &-item {
+      margin-bottom: 10px;
+
+      @media (max-width: 800px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      font-size: 20px;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #2b2b2b;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 0;
+
+      @media (max-width: 630px) {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+      }
+
+      span {
+        color: #767676;
+        font-size: 13px;
+        padding: 0 10px;
+
+        @media (max-width: 800px) {
+          font-size: 16px;
+        }
+
+        @media (max-width: 630px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__payments {
+    display: flex;
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      svg {
+        width: 42px;
+        height: 24px;
+      }
+    }
+
+    @media (max-width: 630px) {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.collection {
+  //width: 100%;
+  display: flex;
+  padding: 110px 100px;
+  @include adaptive-value(padding-top, 110, 30);
+  @include adaptive-value(padding-bottom, 110, 30);
+  @include adaptive-value(padding-left, 100, 0);
+  @include adaptive-value(padding-right, 100, 0);
+  
+  @media (max-width: 769px) {
+    display: block;
+  }
+
+  &__img {
+    width: 31%;
+
+    @media (max-width: 769px) {
+      @include adaptive-value(width, 364, 300);
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    width: 38%;
+    padding: 72px 50px 80px;
+    @include adaptive-value(padding-top, 72, 15);
+    @include adaptive-value(padding-bottom, 80, 25);
+    @include adaptive-value(padding-left, 50, 10);
+    @include adaptive-value(padding-right, 50, 10);
+    text-align: center;
+
+    @media (max-width: 769px) {
+      @include adaptive-value(width, 500, 300);
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    @include adaptive-value(font-size, 36, 20);
+    font-weight: 600;
+    @include adaptive-value(line-height, 48, 26);
+    @include adaptive-value(margin-bottom, 33, 15);
+    color: $black;
+  }
+
+  &__description {
+    @include adaptive-value(font-size, 18, 14);
+    @include adaptive-value(line-height, 27, 18);
+    color: #525252;
+    @include adaptive-value(margin-bottom, 40, 20);
+  }
+
+  &__video {
+    position: relative;
+    width: 31%;
+    overflow: hidden;
+
+    @media (max-width: 769px) {
+      @include adaptive-value(width, 364, 300);
+      @include adaptive-value(height, 430, 300);
+      margin: 0 auto;
+    }
+
+    &.active {
+      &:hover {
+        .collection__video-btn {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      .collection__video-btn {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+
+        &::after {
+          content: "\f04c";
+        }
+      }
+
+      #video {
+        filter: none;
+      }
+    }
+
+    &-btn {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+
+      &::after {
+        content: "\f04b";
+        display: block;
+        font-family: FontAwesome;
+        font-size: 15px;
+        color: #1f1f1f;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s;
+      }
+
+      &:hover {
+        background: darken(#fff, 10%);
+      }
+    }
+  }
+
+  #video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+    transition: 0.3s;
+  }
+
+  .inline-link {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
