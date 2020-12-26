@@ -13,7 +13,7 @@
   <title>Shopper | Home Page</title>
 </head>
 <body id="home">
-@@include("_header.html")
+
 <main class="main">
   <section class="top-banner">
     <div class="top-banner__images">
@@ -712,7 +712,7 @@
     </div>
     <!-- /.collection__content -->
     <div class="collection__video">
-      <video id="video" src="videos/lezz.mp4"></video>
+      <video id="video" class="lazyload" data-src="videos/lezz.mp4"></video>
       <div class="collection__video-btn"></div>
       <!-- /.collection__video-btn -->
     </div>
@@ -1277,6 +1277,6 @@
 @@include("_footer.html")
 <a href="#home" class="button-up"></a>
 <!-- /.button-up -->
-<script src="js/app.min.js"></script>
+<script async src="js/app.min.js"></script>
 </body>
 </html>
