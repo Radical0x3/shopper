@@ -6,6 +6,7 @@ $("#new-arrivals").slick({
   speed: 700,
   autoplay: true,
   autoplaySpeed: 3000,
+  pauseOnHover: true,
   responsive: [
     {
       breakpoint: 851,
@@ -18,6 +19,7 @@ $("#new-arrivals").slick({
       settings: {
         arrows: false,
         slidesToShow: 2,
+        dots: true,
       },
     },
     {
@@ -25,6 +27,7 @@ $("#new-arrivals").slick({
       settings: {
         arrows: false,
         slidesToShow: 1,
+        dots: true,
       },
     },
   ],

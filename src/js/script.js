@@ -6,18 +6,12 @@ import "./slider";
 import Scrollbar from "smooth-scrollbar";
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
-// @@include("jquery.min.js")
-// @@include("slick.min.js")
-// @@include("slider.js")
-// @@include("gsap.min.js")
-// @@include("ScrollToPlugin.min.js")
-// @@include("ScrollTrigger.min.js")
-// @@include("lazysizes.min.js")
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 // Scrollbar.initAll();
 
 window.onload = function () {
+  // <------ Button scroll-up START ------>
   document.querySelector(".button-up").addEventListener("click", function (e) {
     e.preventDefault();
     gsap.to(window, {duration: 1.5, scrollTo: e.target.getAttribute("href")})
@@ -28,7 +22,18 @@ window.onload = function () {
   })
   toggleBtnUp();
 
+  function toggleBtnUp() {
+    let btnUp = $(".button-up");
+    if ($(window).scrollTop() > 0) {
+      btnUp.addClass("show");
+    } else {
+      btnUp.removeClass("show");
+    }
+  }
 
+  // <------ Button scroll-up END ------>
+
+  // <------ Header menu  START ------>
   $(".menu-item").on("click", function () {
     if (!$(this).hasClass("active")) {
       $(this).parent().children(".menu-item").removeClass("active");
@@ -63,6 +68,7 @@ window.onload = function () {
     }
     span.text($(this).text());
   })
+  // <------ Header menu END ------>
 
   // <------ Email check START ------>
   let pattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,4})+$/;
@@ -85,8 +91,9 @@ window.onload = function () {
       }
     }
   });
-// <------ Email check END ------>
+  // <------ Email check END ------>
 
+  // <------ Video control START ------>
   $(".collection__video-btn").on("click", function () {
     let video = $(".collection__video");
     document.getElementById("video").play();
@@ -101,7 +108,9 @@ window.onload = function () {
   $("#video").on("ended", function () {
     $(".collection__video").removeClass("active");
   })
+  // <------ Video control END ------>
 
+  // <------ Goods color's picker START ------>
   let colors = $(".goods__colors-item");
   colors.on("click", function () {
     let img = $(this).parents(".goods__item-wrap").children("a").children("picture");
@@ -112,8 +121,9 @@ window.onload = function () {
       img.children("source").attr("srcset", $(this).attr("data-img"));
     }
   })
+  // <------ Goods color's picker END ------>
 
-  // <------ Custom select START ------>
+  // <------ Goods select START ------>
   let select = $(".select");
   select.on("click", function () {
     let selectBody = $(this).find(".select__body");
@@ -139,18 +149,43 @@ window.onload = function () {
     mainPicture.children("img").attr("src", picture.children("img").attr("src"));
     mainPicture.children("source").attr("srcset", picture.children("source").attr("srcset"));
   })
-// <------ Custom select END ------>
+  // <------ Goods select END ------>
 }
 
-function toggleBtnUp() {
-  let btnUp = $(".button-up");
-  if ($(window).scrollTop() > 0) {
-    btnUp.addClass("show");
-  } else {
-    btnUp.removeClass("show");
-  }
-}
+// window.onresize = function () {
+//   let elem = document.querySelector(".header__top");
+//   let node = document.querySelector(".header__top").nextSibling;
+//   if (document.documentElement.clientWidth < 769) {
+//     document.querySelector(".header__mobile").appendChild(elem);
+//   } else {
+//     document.querySelector(".header").insertBefore(elem, document.querySelector(".header__middle"));
+//   }
+// }
 
+$(".header__label").on("click", function () {
+  $(".header__search").toggleClass("active");
+})
+
+// <------ Burger menu START ------>
+const btnUp = $(".button-up");
+$(".hamburger").on("click", function () {
+  $(this).toggleClass("is-active");
+  // $(".header__nav").toggleClass("active");
+  $(".header__body").toggleClass("active");
+  $("body").toggleClass("lock");
+  btnUp.toggleClass("lock");
+});
+// <------ Burger menu END ------>
+
+// <------ Form submit START ------>
+let form = document.getElementById("header-form");
+$(".header__label").on("click", function (e) {
+  form.submit();
+  e.preventDefault();
+})
+// <------ Form submit  END ------>
+
+// <------ WebP compatibility START ------>
 function testWebP(callback) {
   let webP = new Image();
   webP.onload = webP.onerror = function () {
@@ -164,3 +199,4 @@ testWebP(function (support) {
     document.querySelector("body").classList.add("webp");
   }
 });
+// <------ WebP compatibility END ------>

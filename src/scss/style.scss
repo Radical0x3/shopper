@@ -24,6 +24,11 @@ body {
   &.lock {
     overflow: hidden;
     box-sizing: border-box;
+    //padding-right: 17px;
+  }
+
+  @media (max-width: 769px) {
+    margin-top: 60px;
   }
 }
 
@@ -71,6 +76,16 @@ body {
   &.show {
     opacity: 1;
     visibility: visible;
+  }
+
+  @media (max-width: 769px) {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  &.lock {
+    opacity: 0;
+    visibility: hidden;
   }
 
   &::after {
