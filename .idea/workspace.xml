@@ -5,26 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/app.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/app.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/_header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/ScrollToPlugin.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/ScrollTrigger.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/gsap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/lazysizes.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/slick.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/general.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/partials/home/trends.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/home/trends.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/slick-theme.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/slick.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +62,7 @@
       <workItem from="1608806601018" duration="29390000" />
       <workItem from="1608897495622" duration="31751000" />
       <workItem from="1608933363934" duration="13000" />
-      <workItem from="1608969569786" duration="28190000" />
+      <workItem from="1608969569786" duration="28551000" />
     </task>
     <servers />
   </component>

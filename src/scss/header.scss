@@ -414,8 +414,10 @@ $black: #111;
       }
 
       .header__shipping {
-        font-size: 16px;
-        margin-bottom: 10px;
+        @media (max-width: 769px) {
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
       }
     }
 
@@ -489,9 +491,11 @@ $black: #111;
       }
 
       #header-form {
-        order: -1;
-        max-width: 90%;
-        margin-bottom: 20px;
+        @media (max-width: 769px) {
+          order: -1;
+          max-width: 90%;
+          margin-bottom: 20px;
+        }
       }
     }
 
@@ -546,7 +550,9 @@ $black: #111;
 
         &:first-child {
           ul {
-            width: 170px;
+            @media (max-width: 769px) {
+              width: 170px;
+            }
           }
         }
       }
