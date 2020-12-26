@@ -1,1 +1,4 @@
-@include font("Jost", "Jost", "400", "normal");
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost.ttf");
+}

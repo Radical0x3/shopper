@@ -2254,10 +2254,7 @@ h6 {
 
 @font-face {
   font-family: "Jost";
-  font-display: swap;
-  src: url("../fonts/Jost.woff") format("woff"), url("../fonts/Jost.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
+  src: url("../fonts/Jost.ttf");
 }
 
 body {
