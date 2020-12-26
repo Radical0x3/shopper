@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9c29acf-4424-4ced-aaf9-bde4e4cae1f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/icons/icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img/icons/icons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iconsprite/sale-banner.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/partials/home/sale-banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/home/sale-banner.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +52,7 @@
       <workItem from="1608806601018" duration="29390000" />
       <workItem from="1608897495622" duration="31751000" />
       <workItem from="1608933363934" duration="13000" />
-      <workItem from="1608969569786" duration="7852000" />
+      <workItem from="1608969569786" duration="8109000" />
     </task>
     <servers />
   </component>
