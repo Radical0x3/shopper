@@ -72,26 +72,6 @@ function html() {
 
 function js() {
   return src(path.src.js)
-    .pipe(
-      webpackStream({
-        mode: "production",
-        output: {
-          filename: "app.js"
-        },
-        module: {
-          rules: [
-            {
-              test: /\.(js)$/,
-              exclude: /(node_modules)/,
-              loader: "babel-loader",
-              query: {
-                presets: ["@babel/preset-env"]
-              }
-            }
-          ]
-        }
-      })
-    )
     .pipe(fileinclude())
     .pipe(dest(path.build.js))
     .pipe(uglify())

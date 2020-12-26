@@ -433,6 +433,11 @@
 }
 
 .slick {
+  &-slider {
+    position: static !important;
+  }
+
+
   &-list {
     overflow: hidden;
   }
@@ -443,19 +448,19 @@
   }
 
   &-slide {
-    width: 33.33%;
-    margin: 15px;
+    width: 33.33% !important;
+    margin: 15px !important;
     height: 100%;
   }
 
   &-arrow {
-    position: absolute;
+    position: absolute !important;
     z-index: 3;
   }
 
   &-prev,
   &-next{
-    font-size: 0;
+    font-size: 0 !important;;
     background: none;
     position: absolute;
     top: 50%;
@@ -478,7 +483,7 @@
   }
 
   &-prev {
-    left: 10px;
+    left: 10px !important;;
 
     &::after {
       content: "\f053";
@@ -487,7 +492,7 @@
   }
 
   &-next {
-    right: 10px;
+    right: 10px !important;;
 
     &::after {
       content: "\f054";
