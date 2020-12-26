@@ -1,4 +1,5 @@
-
+import "slick-carousel";
+import $ from "jquery";
 
 $("#new-arrivals").slick({
   slidesToShow: 3,

@@ -1,18 +1,18 @@
-// import $ from "jquery";
-// import {gsap} from "gsap";
-// import {ScrollTrigger} from "gsap/ScrollTrigger";
-// import {ScrollToPlugin} from "gsap/ScrollToPlugin";
-// import "./slider";
-// import Scrollbar from "smooth-scrollbar";
-// import 'lazysizes';
-// import 'lazysizes/plugins/parent-fit/ls.parent-fit';
-@@include("jquery.min.js")
-@@include("slick.min.js")
-@@include("slider.js")
-@@include("gsap.min.js")
-@@include("ScrollToPlugin.min.js")
-@@include("ScrollTrigger.min.js")
-@@include("lazysizes.min.js")
+import $ from "jquery";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {ScrollToPlugin} from "gsap/ScrollToPlugin";
+import "./slider";
+import Scrollbar from "smooth-scrollbar";
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+// @@include("jquery.min.js")
+// @@include("slick.min.js")
+// @@include("slider.js")
+// @@include("gsap.min.js")
+// @@include("ScrollToPlugin.min.js")
+// @@include("ScrollTrigger.min.js")
+// @@include("lazysizes.min.js")
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 // Scrollbar.initAll();
