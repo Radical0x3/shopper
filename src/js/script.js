@@ -4,14 +4,11 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 import "./slider";
 import Scrollbar from "smooth-scrollbar";
-import "vanilla-lazyload";
-import LazyLoad from "vanilla-lazyload";
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
 Scrollbar.initAll();
-let lazyLoadInstance = new LazyLoad();
-lazyLoadInstance.update();
 
 window.onload = function () {
   document.querySelector(".button-up").addEventListener("click", function (e) {

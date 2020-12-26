@@ -66,7 +66,6 @@ function browserSync(params) {
 function html() {
   return src(path.src.html)
     .pipe(fileinclude())
-    .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
 }
@@ -139,7 +138,7 @@ function images() {
   return src(path.src.img)
     .pipe(
       webp({
-        quality: 70
+        quality: 75
       })
     )
     .pipe(dest(path.build.img))
