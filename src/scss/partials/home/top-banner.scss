@@ -1,15 +1,23 @@
 .top-banner {
   position: relative;
   margin: 15px 0;
+  padding: 122px 0 150px;
+  @include adaptive-value(padding-top, 122, 20);
+  @include adaptive-value(padding-bottom, 150, 30);
 
   &__images {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    min-height: 160px;
+    //min-height: 160px;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     picture {
       flex: 1 1;
+      height: 100%;
     }
 
     img {
@@ -22,11 +30,12 @@
   &__content {
     //max-width: 420px;
     @include adaptive-value(width, 420, 280);
-    position: absolute;
+    position: relative;
     //@include adaptive-value(top, 122, 20);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    //top: 50%;
+    //left: 50%;
+    //transform: translate(-50%, -50%);
+    margin: 0 auto;
     background: #fff;
     text-align: center;
     @include adaptive-value(padding, 30, 10);
