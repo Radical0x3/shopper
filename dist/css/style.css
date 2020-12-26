@@ -1666,6 +1666,9 @@ h6 {
   padding-bottom: calc( 10px + 10 * ((100vw - 320px) / 1046));
 }
 
+.no-webp .sale-banner{
+  background: url("../img/sale.png") center no-repeat, #FF6F61; }
+
 .sale-banner {
   padding-top: calc( 25px + 60 * ((100vw - 320px) / 1046));
   padding-bottom: calc( 25px + 60 * ((100vw - 320px) / 1046));
@@ -1673,8 +1676,7 @@ h6 {
   padding-right: calc( 30px + 100 * ((100vw - 320px) / 1046));
   margin-bottom: calc( 40px + 65 * ((100vw - 320px) / 1046));
   text-align: center;
-  background: url("../img/icons/icons.svg#sale"), #FF6F61;
-  background-size: cover;
+  background-size: contain;
 }
 
 .sale-banner__title {
@@ -2475,3 +2477,5 @@ body.lock {
     margin-bottom: 20px;
   }
 }
+
+.webp .sale-banner{ background: url(../img/sale.webp) center no-repeat, #FF6F61; }

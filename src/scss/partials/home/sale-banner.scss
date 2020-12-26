@@ -5,8 +5,8 @@
   @include adaptive-value(padding-right, 130, 30);
   @include adaptive-value(margin-bottom, 105, 40);
   text-align: center;
-  background: url("../img/icons/icons.svg#sale"), $orange;
-  background-size: cover;
+  background: url("../img/sale.png") center no-repeat, $orange;
+  background-size: contain;
 
   &__title {
     @include adaptive-value(font-size, 60, 24);
