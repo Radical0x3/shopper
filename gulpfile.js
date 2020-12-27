@@ -78,6 +78,19 @@ function js() {
         output: {
           filename: "app.js"
         },
+        optimization: {
+          namedChunks: true,
+          minimize: true,
+          splitChunks: {
+            cacheGroups: {
+              commons: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendors',
+                chunks: 'all'
+              },
+            }
+          }
+        },
         module: {
           rules: [
             {
