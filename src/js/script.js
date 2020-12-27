@@ -1,21 +1,22 @@
 import $ from "jquery";
-import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
-import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 import "./slider";
-import Scrollbar from "smooth-scrollbar";
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-// Scrollbar.initAll();
-
 window.onload = function () {
   // <------ Button scroll-up START ------>
-  document.querySelector(".button-up").addEventListener("click", function (e) {
-    e.preventDefault();
-    gsap.to(window, {duration: 1.5, scrollTo: e.target.getAttribute("href")})
-  })
+  $('a[href^="#"]').on('click', function () {
+    let href = $(this).attr('href');
+
+    $('html, body').animate({
+      scrollTop: $(href).offset().top
+    }, {
+      duration: 600,
+      easing: "linear"
+    });
+
+    return false;
+  });
 
   $(window).scroll(function () {
     toggleBtnUp();
@@ -152,16 +153,6 @@ window.onload = function () {
   // <------ Goods select END ------>
 }
 
-// window.onresize = function () {
-//   let elem = document.querySelector(".header__top");
-//   let node = document.querySelector(".header__top").nextSibling;
-//   if (document.documentElement.clientWidth < 769) {
-//     document.querySelector(".header__mobile").appendChild(elem);
-//   } else {
-//     document.querySelector(".header").insertBefore(elem, document.querySelector(".header__middle"));
-//   }
-// }
-
 $(".header__label").on("click", function () {
   $(".header__search").toggleClass("active");
 })
@@ -170,7 +161,6 @@ $(".header__label").on("click", function () {
 const btnUp = $(".button-up");
 $(".hamburger").on("click", function () {
   $(this).toggleClass("is-active");
-  // $(".header__nav").toggleClass("active");
   $(".header__body").toggleClass("active");
   $("body").toggleClass("lock");
   btnUp.toggleClass("lock");
