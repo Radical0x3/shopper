@@ -47,7 +47,6 @@ const path = {
     js: source_folder + "/js/**/*.js",
     img: source_folder + "/img/**/*.+(jpg|png|svg|gif|ico|webp)",
     videos: source_folder + "/videos/**/*.mp4",
-    // img: source_folder + "/img/**/*.{jpg, png, svg, gif, ico, webp}",
   },
   clean: "./" + project_folder + "/",
 }
