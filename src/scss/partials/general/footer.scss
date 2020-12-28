@@ -1,7 +1,7 @@
 .footer {
   background: url("../img/icons/icons.svg#bg2") center no-repeat;
   background-size: cover;
-  @include adaptive-value(padding-top, 70, 30);
+  @include adaptive-value(padding-top, 70, 20);
 
   @media (max-width: 860px) {
     background: #1f1f1f;
@@ -10,22 +10,12 @@
   &__nav {
     display: flex;
     justify-content: space-between;
-    @include adaptive-value(margin-bottom, 90, 40);
+    @include adaptive-value(margin-bottom, 90, 20);
 
     @media (max-width: 800px) {
       justify-content: center;
       flex-wrap: wrap;
       @include adaptive-value(margin-bottom, 50, 20);
-    }
-
-    @media (max-width: 577px) {
-      flex-direction: column;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 426px) {
-
     }
 
     a {
@@ -39,17 +29,31 @@
     }
 
     &-item {
+      max-width: 150px;
       color: #cdcdcd;
 
+      &:first-of-type {
+        @media (max-width: 768px) {
+          max-width: 100%;
+          text-align: center;
+        }
+      }
+
+      &:not(:first-of-type) {
+        &:nth-of-type(2n + 1) {
+          text-align: right;
+        }
+      }
+
       @media (max-width: 800px) {
-        margin: 15px;
+        margin: 10px 5px;
       }
 
       h2 {
-        font-size: 28px;
+        @include adaptive-value(font-size, 28, 24);
         font-weight: 600;
         color: #fff;
-        margin-bottom: 30px;
+        @include adaptive-value(margin-bottom, 30, 10);
       }
 
       h3 {
@@ -74,10 +78,6 @@
     display: flex;
 
     &-item {
-      a {
-        @include adaptive-value(font-size, 28, 20);
-      }
-
       &:not(:last-child) {
         margin-right: 15px;
       }
@@ -100,14 +100,6 @@
 
     &-item {
       margin-bottom: 10px;
-
-      @media (max-width: 800px) {
-        margin-bottom: 20px;
-      }
-    }
-
-    @media (max-width: 800px) {
-      font-size: 20px;
     }
   }
 
@@ -130,9 +122,6 @@
         font-size: 13px;
         padding: 0 10px;
 
-        @media (max-width: 800px) {
-          font-size: 16px;
-        }
 
         @media (max-width: 630px) {
           text-align: center;

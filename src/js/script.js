@@ -5,7 +5,7 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 window.onload = function () {
   // <------ Button scroll-up START ------>
-  $('a[href^="#"]').on('click', function () {
+  $(".button-up").on('click', function () {
     let href = $(this).attr('href');
 
     $('html, body').animate({
@@ -53,6 +53,10 @@ window.onload = function () {
 
   menu.on("mouseout", function () {
     $(this).children("ul").removeClass("active");
+  })
+
+  menu.on("touchend", function () {
+    $(this).children("ul").toggleClass("active");
   })
 
   $(".drop-menu > ul > li").on("click", function () {
@@ -122,6 +126,9 @@ window.onload = function () {
       img.children("source").attr("srcset", $(this).attr("data-img"));
     }
   })
+  // $(".goods__item-link").on("click", function (e) {
+  //   e.preventDefault();
+  // })
   // <------ Goods color's picker END ------>
 
   // <------ Goods select START ------>

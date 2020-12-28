@@ -1,0 +1,42 @@
+.menu {
+  display: flex;
+  align-items: center;
+
+  &-item {
+    padding: 0 5px;
+    margin: 0 10px;
+    font-size: 16px;
+    position: relative;
+
+    &.active {
+      .menu-link {
+        color: $orange;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .menu-link {
+      transition: 0.3s;
+      color: $black;
+
+      &:hover {
+        color: $orange;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: #ff6f61;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        transition: 0.3s;
+      }
+    }
+  }
+}

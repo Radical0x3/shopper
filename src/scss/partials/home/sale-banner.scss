@@ -1,8 +1,8 @@
 .sale-banner {
   @include adaptive-value(padding-top, 85, 25);
   @include adaptive-value(padding-bottom, 85, 25);
-  @include adaptive-value(padding-left, 130, 30);
-  @include adaptive-value(padding-right, 130, 30);
+  @include adaptive-value(padding-left, 130, 0);
+  @include adaptive-value(padding-right, 130, 0);
   @include adaptive-value(margin-bottom, 105, 40);
   text-align: center;
   background: url("../img/sale.png") center no-repeat, $orange;
@@ -23,7 +23,7 @@
   }
 
   &__btn {
-    width: 190px;
+    @include adaptive-value(width, 190, 150);
     padding: 15px 0;
     color: #fff;
     border: 2px solid #fff;

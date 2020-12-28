@@ -14,30 +14,36 @@
     display: flex;
     margin: 10px;
 
+    @media (max-width: 1040px) {
+      @include adaptive-value(width, 240, 150);
+    }
+
     @media (max-width: 906px) {
-      margin: 10px 20px;
+      //margin: 10px 20px;
+      @include adaptive-value(margin-right, 10, 5);
+      @include adaptive-value(margin-left, 10, 5);
     }
   }
 
   &__img {
-    width: 22px;
-    height: 22px;
+    @include adaptive-value(width, 22, 16);
+    @include adaptive-value(height, 22, 16);
     object-fit: cover;
     margin-right: 25px;
     @include adaptive-value(margin-right, 25, 10);
   }
 
   &__title {
-    font-size: 13px;
+    @include adaptive-value(font-size, 13, 11);
+    @include adaptive-value(line-height, 19, 13);
     font-weight: 600;
-    line-height: 19px;
     color: $black;
     text-transform: uppercase;
   }
 
   &__description {
-    font-size: 15px;
-    line-height: 22px;
+    @include adaptive-value(font-size, 15, 12);
+    @include adaptive-value(line-height, 22, 16);
     color: #767676;
   }
 }

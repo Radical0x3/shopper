@@ -1,10 +1,15 @@
-@import "nullstyle";
+@import "partials/general/nullstyle";
+@import "partials/general/_vars";
+@import "partials/general/select";
+@import "partials/general/goods";
+@import "partials/general/links";
+@import "partials/general/menu";
+@import "partials/general/slider";
 @import "hamburgers/hamburgers";
-@import "animation";
-@import "adaptive-properties";
-@import "header";
-@import "footer";
-@import "general";
+@import "partials/general/animation";
+@import "partials/general/header";
+@import "partials/general/footer";
+@import "partials/general/slider";
 @import "partials/home/top-banner";
 @import "partials/home/sale-banner";
 @import "partials/home/trends";
@@ -15,7 +20,7 @@
 @import "partials/home/collection";
 @import "partials/home/sellers";
 @import "partials/home/arrivals";
-@import "fonts";
+@import "partials/general/fonts";
 
 body {
   font-family: Jost;
@@ -28,7 +33,7 @@ body {
   }
 
   @media (max-width: 769px) {
-    margin-top: 60px;
+    margin-top: 55px;
   }
 }
 
@@ -40,59 +45,6 @@ body {
   box-sizing: border-box;
 }
 
-.circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-  background-color: #ff6f61;
-  position: absolute;
-  top: 0;
-  transform: translate(60%, -50%);
-
-  span {
-    color: #fff;
-    font-size: 11px;
-  }
+.hamburger {
+  padding-bottom: 10px;
 }
-
-.button-up {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 99;
-  width: 40px;
-  height: 40px;
-  background-color: #1de9b6;
-  border-radius: 50%;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s;
-
-  &.show {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  @media (max-width: 769px) {
-    bottom: 10px;
-    right: 10px;
-  }
-
-  &.lock {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  &::after {
-    content: "\f077";
-    font-family: FontAwesome;
-    line-height: 40px;
-    color: #fff;
-  }
-}
-
