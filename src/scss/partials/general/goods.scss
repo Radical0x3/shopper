@@ -59,6 +59,7 @@
       @include adaptive-value(font-size, 16, 13);
       @include adaptive-value(line-height, 23, 16);
       color: $black;
+      font-weight: 600;
     }
 
     &-category {
@@ -147,9 +148,12 @@
   &__prices {
     text-align: right;
     color: #a0a0a0;
+    font-weight: 600;
 
     .old-price {
       text-decoration: line-through;
+      font-weight: 400;
+      color: lighten(#a0a0a0, 10%);
     }
 
     .new-price {

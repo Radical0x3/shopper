@@ -291,6 +291,10 @@
     width: 135px;
     padding: 5px 15px 10px 20px;
 
+    &-item {
+      transition: none;
+    }
+
     img {
       margin-left: -2px;
     }

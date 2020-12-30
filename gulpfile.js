@@ -74,21 +74,29 @@ function js() {
     .pipe(
       webpackStream({
         mode: "production",
+        entry: {
+          main: "./src/js/script.js",
+          shop: "./src/js/shop.js"
+        },
         output: {
-          filename: "app.js"
+          filename: "[name].js"
         },
         optimization: {
-          namedChunks: true,
-          minimize: true,
+          runtimeChunk: 'single',
           splitChunks: {
+            chunks: 'all',
+            maxInitialRequests: Infinity,
+            minSize: 0,
             cacheGroups: {
-              commons: {
+              vendor: {
                 test: /[\\/]node_modules[\\/]/,
-                name: 'vendors',
-                chunks: 'all'
+                name(module) {
+                  const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+                  return `npm.${packageName.replace('@', '')}`;
+                },
               },
-            }
-          }
+            },
+          },
         },
         module: {
           rules: [
@@ -105,13 +113,7 @@ function js() {
       })
     )
     .pipe(fileinclude())
-    .pipe(dest(path.build.js))
     .pipe(uglify())
-    .pipe(
-      rename({
-        extname: ".min.js"
-      })
-    )
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream());
 }

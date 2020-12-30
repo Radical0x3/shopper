@@ -9,7 +9,7 @@ window.onload = function () {
     let href = $(this).attr('href');
 
     $('html, body').animate({
-      scrollTop: $(href).offset().top
+      scrollTop: $(href).offset().top - 55
     }, {
       duration: 600,
       easing: "linear"
@@ -157,6 +157,17 @@ window.onload = function () {
     mainPicture.children("img").attr("src", picture.children("img").attr("src"));
     mainPicture.children("source").attr("srcset", picture.children("source").attr("srcset"));
   })
+
+  let container = $(".select__header");
+  $(document).mouseup(function (e) {
+    let select = $(".select__body");
+    if (
+      container.has(e.target).length === 0 &&
+      select.has(e.target).length === 0
+    ) {
+      select.removeClass("active");
+    }
+  });
   // <------ Goods select END ------>
 }
 

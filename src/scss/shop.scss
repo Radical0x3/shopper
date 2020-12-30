@@ -4,22 +4,14 @@
 @import "partials/general/goods";
 @import "partials/general/links";
 @import "partials/general/menu";
-@import "partials/general/slider";
 @import "hamburgers/hamburgers";
 @import "partials/general/animation";
 @import "partials/general/header";
 @import "partials/general/footer";
-@import "partials/home/top-banner";
-@import "partials/home/sale-banner";
-@import "partials/home/trends";
-@import "partials/home/instashop";
-@import "partials/home/features";
-@import "partials/home/newsletter";
-@import "partials/home/brands";
-@import "partials/home/collection";
-@import "partials/home/sellers";
-@import "partials/home/arrivals";
 @import "partials/general/fonts";
+@import "partials/shop/aside";
+@import "partials/shop/slider";
+@import "partials/shop/content";
 
 body {
   font-family: Jost;
@@ -36,14 +28,44 @@ body {
   }
 }
 
+#shop {
+  .container {
+    padding: 0;
+
+    @media (max-width: 941px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+}
+
 .container {
   width: 100%;
   max-width: 1190px;
   margin: 0 auto;
   padding: 0 10px;
   box-sizing: border-box;
+  display: flex;
 }
 
 .hamburger {
   padding-bottom: 10px;
+}
+
+.header {
+  @include adaptive-value(margin-bottom, 123, 70);
+}
+
+.site {
+  width: 75%;
+
+  @media (max-width: 941px) {
+    width: 100%;
+  }
+}
+
+.circle {
+  &.hide {
+    display: none;
+  }
 }

@@ -1,0 +1,142 @@
+.slider {
+  width: 100%;
+  position: relative;
+  @include adaptive-value(margin-bottom, 50, 20);
+  padding: 0 10px;
+
+  &__item {
+    width: 100%;
+    display: flex !important;
+    position: relative;
+  }
+
+  &__content {
+    width: 40%;
+    @include adaptive-value(padding-top, 90, 30);
+    @include adaptive-value(padding-right, 30, 15);
+    @include adaptive-value(padding-left, 70, 20);
+    @include adaptive-value(padding-bottom, 80, 20);
+    background: #f5f5f5;
+
+    @media (max-width: 426px) {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    @include adaptive-value(font-size, 28, 16);
+    @include adaptive-value(line-height, 39, 24);
+    color: $black;
+    @include adaptive-value(margin-bottom, 28, 10);
+    font-weight: 600;
+    z-index: 2;
+  }
+
+  &__link {
+    color: $black;
+    @include adaptive-value(font-size, 16, 12);
+    @include adaptive-value(line-height, 23, 16);
+    padding-right: 25px;
+    position: relative;
+    font-weight: 600;
+    transition: 0.3s;
+    z-index: 2;
+
+    &::after {
+      content: "\2192";
+      display: inline-block;
+      position: absolute;
+      @include adaptive-value(line-height, 23, 16);
+      top: 0;
+      right: 0;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:hover::before {
+      color: $orange;
+    }
+  }
+
+  &__img {
+    width: 60%;
+    z-index: 2;
+
+    @media (max-width: 426px) {
+      width: 50%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__banner {
+    @include adaptive-value(font-size, 160, 50);
+    color: #e2e2e2;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: -10px;
+    @include adaptive-value(left, 70, 35);
+    z-index: 1;
+    user-select: none;
+  }
+
+  .slick {
+    &-slider {
+      width: 100%;
+      position: relative;
+    }
+
+    &-list {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    &-slide {
+      width: 100% !important;
+    }
+
+    &-track {
+      display: flex;
+    }
+
+    &-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      @include adaptive-value(bottom, 25, 5);
+      left: 50%;
+      transform: translateX(-50%);
+
+      li {
+        list-style: none;
+        margin: 0 5px;
+
+        &.slick-active {
+          button {
+            background-color: #ff6f61;
+            opacity: 1;
+          }
+        }
+      }
+
+      button {
+        font-size: 0;
+        @include adaptive-value(width, 12, 8);
+        @include adaptive-value(height, 12, 8);
+        background-color: #fff;
+        opacity: 0.6;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
