@@ -2503,6 +2503,10 @@ body.lock {
   padding-bottom: 10px;
 }
 
+.circle.hide {
+  display: none;
+}
+
 @media (max-width: 1040px) {
   .features__item {
     width: calc( 150px + 90 * ((100vw - 320px) / 1046));

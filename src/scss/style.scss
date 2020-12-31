@@ -47,3 +47,9 @@ body {
 .hamburger {
   padding-bottom: 10px;
 }
+
+.circle {
+  &.hide {
+    display: none;
+  }
+}

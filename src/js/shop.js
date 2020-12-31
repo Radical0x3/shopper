@@ -215,7 +215,7 @@ $(".aside-category .aside__label").on("click", function () {
 function checkGoods() {
   let goods = $(".goods__item:visible");
   let pages = $(".content__pagination");
-  
+
   if (goods.length < 10) {
     pages.hide();
   } else {

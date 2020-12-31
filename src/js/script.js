@@ -169,6 +169,19 @@ window.onload = function () {
     }
   });
   // <------ Goods select END ------>
+
+  let btn = $(".like span");
+  let val = parseInt(btn.text());
+
+  if (val < 1) {
+    if (!$(btn).parent().hasClass("hide")) {
+      $(btn).parent().addClass("hide");
+    }
+  } else {
+    if ($(btn).parent().hasClass("hide")) {
+      $(btn).parent().removeClass("hide");
+    }
+  }
 }
 
 $(".header__label").on("click", function () {

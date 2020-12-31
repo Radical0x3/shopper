@@ -3,32 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d9c29acf-4424-4ced-aaf9-bde4e4cae1f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/shop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/shop.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/shop.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/npm.core-js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/npm.jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/npm.lazysizes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/npm.lodash-es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/npm.slick-carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/npm.smooth-scrollbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/npm.tslib.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/npm.webpack-stream.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/runtime.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/partials/general/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/general/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/partials/shop/aside.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/shop/aside.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/partials/shop/content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/shop/content.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/partials/shop/slider.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/shop/slider.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/shop.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/shop.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +80,7 @@
       <workItem from="1609245765418" duration="12726000" />
       <workItem from="1609260424347" duration="13454000" />
       <workItem from="1609347874755" duration="15963000" />
-      <workItem from="1609412620527" duration="18539000" />
+      <workItem from="1609412620527" duration="19354000" />
     </task>
     <servers />
   </component>
