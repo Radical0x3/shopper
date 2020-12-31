@@ -7,7 +7,7 @@
 }
 
 .aside {
-  width: 25%;
+  width: 26%;
   @include adaptive-value(padding-right, 60, 10);
 
 
@@ -16,7 +16,12 @@
   }
 
   &__list {
-
+    @media (max-width: 941px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -10px;
+    }
   }
 
   &__item {
@@ -27,16 +32,19 @@
     cursor: pointer;
     position: relative;
     //padding-bottom: 7px;
-    margin-bottom: 43px;
+    @include adaptive-value(padding-bottom, 16, 8);
     transition: 0.3s;
 
-
+    @media (max-width: 941px) {
+      @include adaptive-value(width, 200, 140);
+      margin: 0 5px;
+    }
   }
 
   &__title {
     position: relative;
     padding-bottom: 7px;
-    margin-bottom: 27px;
+    @include adaptive-value(margin-bottom, 27, 10);
 
     &.active {
       &::before {
@@ -124,31 +132,31 @@
         color: #525252;
         cursor: auto;
 
-        &[data-color="black"] {
+        &[data-colour="black"] {
           @include checkbox-bg(#1f1f1f);
         }
 
-        &[data-color="blue"] {
+        &[data-colour="blue"] {
           @include checkbox-bg(#3D8FE9);
         }
 
-        &[data-color="red"] {
+        &[data-colour="red"] {
           @include checkbox-bg(#F55050);
         }
 
-        &[data-color="yellow"] {
+        &[data-colour="yellow"] {
           @include checkbox-bg(#FFC61E);
         }
 
-        &[data-color="brown"] {
+        &[data-colour="brown"] {
           @include checkbox-bg(#795548);
         }
 
-        &[data-color="grey"] {
+        &[data-colour="grey"] {
           @include checkbox-bg(#BDC3C7);
         }
 
-        &[data-color="white"] {
+        &[data-colour="white"] {
           .aside__label {
             &::before {
               background: #fff;
@@ -173,6 +181,10 @@
       display: none;
       @include adaptive-value(padding-left, 25, 10);
       padding-bottom: 15px;
+
+      @media (max-width: 941px) {
+        padding-left: 10px;
+      }
     }
   }
 
@@ -203,6 +215,12 @@
         margin-right: 15px;
         transition: 0.1s;
         text-shadow: none !important;
+      }
+
+      @media (max-width: 941px) {
+        &::before {
+          margin-right: 10px;
+        }
       }
     }
 
@@ -240,13 +258,16 @@
     display: block;
   }
 
-  &__sizes {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -8px;
+  .aside-sizes {
+    margin: 0 -7px;
 
-    &-item {
-      margin: 8px;
+    &.active {
+      display: flex !important;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      margin: 7px;
 
       &.unavailable {
         cursor: not-allowed;
@@ -260,7 +281,7 @@
 
       &.big-item {
         .aside__label {
-          width: 112px;
+          width: 110px;
         }
       }
 
@@ -295,6 +316,10 @@
     .aside__expanded-item {
       cursor: auto;
     }
+  }
+
+  .aside-colors {
+    display: none;
   }
 
   .aside-colors,

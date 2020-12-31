@@ -68,6 +68,103 @@
     }
   }
 
+  &__pagination {
+    max-width: 320px;
+    display: flex;
+    justify-content: space-between;
+    @include adaptive-value(margin-bottom, 100, 20);
+    margin-left: auto;
+
+    &-list {
+      display: flex;
+      font-size: 15px;
+      line-height: 22px;
+      text-align: center;
+    }
+
+    &-item {
+      width: 43px;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        background: $orange;
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        transition: 0.3s;
+      }
+
+      &.active {
+        &::after {
+          width: 100%;
+        }
+
+        .content__pagination-link {
+          color: $orange;
+        }
+      }
+    }
+
+    &-link {
+      color: #a0a0a0;
+      transition: 0.3s;
+
+      &:hover {
+        color: darken(#a0a0a0, 30%);
+      }
+    }
+
+    &-arrow {
+      color: #a0a0a0;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -7px -7px 33px;
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    color: #767676;
+    line-height: 22px;
+    padding: 10px 38px 10px 14px;
+    position: relative;
+    transition: 0.3s;
+    background: #f5f5f5;
+    margin: 7px;
+
+    &::after {
+      content: "\f00d";
+      display: inline-block;
+      font-size: 11px;
+      line-height: 11px;
+      font-family: FontAwesome;
+      color: #767676;
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+      transition: 0.3s;
+    }
+
+    &:hover {
+      color: darken(#767676, 30%);
+      background: darken(#f5f5f5, 10%);
+    }
+
+    &:hover::after {
+      color: darken(#767676, 30%);
+    }
+
+  }
+
   .select {
     width: 190px;
 
@@ -102,6 +199,11 @@
   }
 
   .goods {
+    &__list {
+      @include adaptive-value(margin, -8, -5);
+      margin-bottom: 40px;
+    }
+
     &__item {
       //@include adaptive-value(width, 200, 150);
       width: 23%;
@@ -159,7 +261,7 @@
       justify-content: center;
       flex-wrap: wrap;
       position: absolute;
-      @include adaptive-value(top, -60, -30);
+      @include adaptive-value(top, -60, -40);
       left: 50%;
       transform: translateX(-50%);
       opacity: 0;
@@ -168,8 +270,8 @@
 
       &-item {
         display: block;
-        @include adaptive-value(width, 40, 25);
-        @include adaptive-value(height, 40, 25);
+        @include adaptive-value(width, 40, 30);
+        @include adaptive-value(height, 40, 30);
         border-radius: 50%;
         background: #fff;
         position: relative;
@@ -196,10 +298,8 @@
         }
 
         svg {
-          @include adaptive-value(width, 17, 10);
-          @include adaptive-value(height, 17, 10);
-          //width: 17px;
-          //height: 17px;
+          @include adaptive-value(width, 17, 13);
+          @include adaptive-value(height, 17, 13);
           object-fit: cover;
           transition: 0.3s;
           position: absolute;
@@ -207,7 +307,6 @@
           left: 50%;
           transform: translate(-50%, -50%);
           fill: #1f1f1f;
-
         }
       }
     }

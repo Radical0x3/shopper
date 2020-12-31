@@ -30,7 +30,7 @@ body {
 
 #shop {
   .container {
-    padding: 0;
+    //padding: 0;
 
     @media (max-width: 941px) {
       display: flex;
@@ -57,7 +57,7 @@ body {
 }
 
 .site {
-  width: 75%;
+  width: 74%;
 
   @media (max-width: 941px) {
     width: 100%;

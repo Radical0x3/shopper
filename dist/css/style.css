@@ -1707,6 +1707,10 @@ h6 {
   display: block;
 }
 
+.header .hamburger {
+  padding: 15px 0 10px;
+}
+
 .footer {
   background: url("../img/icons/icons.svg#bg2") center no-repeat;
   background-size: cover;
