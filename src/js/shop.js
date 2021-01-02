@@ -7,6 +7,12 @@ Scrollbar.initAll({
   renderByPixels: true,
 });
 
+$(".slider").slick({
+  arrows: false,
+  slidesToShow: 1,
+  dots: true
+});
+
 $(".aside__title").on("click", function () {
   $(this).next(".aside__expanded").toggle(300);
   $(this).toggleClass("active");
@@ -71,12 +77,6 @@ $(".aside-reset").on("click", function () {
     $(".slider").show();
   }
 })
-
-$(".slider").slick({
-  arrows: false,
-  slidesToShow: 1,
-  dots: true
-});
 
 $(".goods__item-link").on("click", function (e) {
   e.preventDefault();
