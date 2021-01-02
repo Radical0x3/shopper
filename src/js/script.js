@@ -1,7 +1,7 @@
 import $ from "jquery";
 import "./slider";
-import 'lazysizes';
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+// import 'lazysizes';
+// import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 window.onload = function () {
   // <------ Button scroll-up START ------>
@@ -81,7 +81,7 @@ window.onload = function () {
   let mail_btn = $(".newsletter__submit");
   let label = $("#label");
 
-  mail.on("input", function (e) {
+  mail.on("input", function () {
     if (mail.val() !== " ") {
       if (mail.val().search(pattern) === 0) {
         mail.removeClass("error");
