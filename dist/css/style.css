@@ -2473,12 +2473,6 @@ h6 {
   margin-bottom: calc( 25px + 45 * ((100vw - 320px) / 1046));
 }
 
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost.woff");
-  font-display: swap;
-}
-
 body {
   font-family: Jost;
   border: 0;

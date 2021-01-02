@@ -1711,12 +1711,6 @@ h6 {
   height: 24px;
 }
 
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost.woff");
-  font-display: swap;
-}
-
 .aside {
   width: 26%;
   padding-right: calc( 10px + 50 * ((100vw - 320px) / 1046));
