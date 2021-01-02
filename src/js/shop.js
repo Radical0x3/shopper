@@ -263,3 +263,19 @@ const callback = function (target, observer) {
 
 const observer = new MutationObserver(callback);
 observer.observe(target, config);
+
+moveAside();
+$(window).on("resize", function () {
+  moveAside();
+})
+
+function moveAside() {
+  let elem = $(".aside");
+  let windowInnerWidth = window.innerWidth;
+
+  if (windowInnerWidth <= 940) {
+    elem.insertAfter(".content__top");
+  } else {
+    elem.insertBefore(".site");
+  }
+}
