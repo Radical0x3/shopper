@@ -1,7 +1,5 @@
 import $ from "jquery";
 import "./slider";
-// import 'lazysizes';
-// import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 window.onload = function () {
   // <------ Button scroll-up START ------>

@@ -2094,11 +2094,13 @@ h6 {
 }
 
 .aside .aside-prices__item {
-  width: 106px;
+  width: calc( 60px + 46 * ((100vw - 320px) / 1046));
   color: #525252;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: calc( 12px + 4 * ((100vw - 320px) / 1046));
+  line-height: calc( 16px + 8 * ((100vw - 320px) / 1046));
   padding: 9px 15px;
+  padding-right: calc( 9px + 6 * ((100vw - 320px) / 1046));
+  padding-left: calc( 9px + 6 * ((100vw - 320px) / 1046));
   text-align: center;
   border: 1px solid #cdcdcd;
   -webkit-transition: 0.3s;
@@ -2107,27 +2109,27 @@ h6 {
 }
 
 .aside .aside-prices__item::-webkit-input-placeholder {
-  font-size: 16px;
+  font-size: calc( 12px + 4 * ((100vw - 320px) / 1046));
   text-align: center;
 }
 
 .aside .aside-prices__item::-moz-placeholder {
-  font-size: 16px;
+  font-size: calc( 12px + 4 * ((100vw - 320px) / 1046));
   text-align: center;
 }
 
 .aside .aside-prices__item:-ms-input-placeholder {
-  font-size: 16px;
+  font-size: calc( 12px + 4 * ((100vw - 320px) / 1046));
   text-align: center;
 }
 
 .aside .aside-prices__item::-ms-input-placeholder {
-  font-size: 16px;
+  font-size: calc( 12px + 4 * ((100vw - 320px) / 1046));
   text-align: center;
 }
 
 .aside .aside-prices__item::placeholder {
-  font-size: 16px;
+  font-size: calc( 12px + 4 * ((100vw - 320px) / 1046));
   text-align: center;
 }
 
@@ -2707,6 +2709,7 @@ body.lock {
 @media (max-width: 941px) {
   .aside {
     width: 100%;
+    padding-right: 0;
   }
 
   .aside__list {
@@ -2722,7 +2725,8 @@ body.lock {
   }
 
   .aside__item {
-    width: calc( 140px + 60 * ((100vw - 320px) / 1046));
+    width: 23%;
+    min-width: 140px;
     margin: 0 5px;
   }
 
@@ -3085,6 +3089,12 @@ body.lock {
   }
 }
 
+@media (max-width: 625px) {
+  .aside__item {
+    width: 31%;
+  }
+}
+
 @media (max-width: 615px) {
   .content .goods__item {
     width: 31%;
@@ -3124,6 +3134,12 @@ body.lock {
 
 @media (max-width: 475px) {
   .content .goods__item {
+    width: 46%;
+  }
+}
+
+@media (max-width: 450px) {
+  .aside__item {
     width: 46%;
   }
 }

@@ -13,6 +13,7 @@
 
   @media (max-width: 941px) {
     width: 100%;
+    padding-right: 0;
   }
 
   &__list {
@@ -36,8 +37,18 @@
     transition: 0.3s;
 
     @media (max-width: 941px) {
-      @include adaptive-value(width, 200, 140);
+      //@include adaptive-value(width, 200, 140);
+      width: 23%;
+      min-width: 140px;
       margin: 0 5px;
+    }
+
+    @media (max-width: 625px) {
+      width: 31%;
+    }
+
+    @media (max-width: 450px) {
+      width: 46%;
     }
   }
 
@@ -382,17 +393,19 @@
     }
 
     &__item {
-      width: 106px;
+      @include adaptive-value(width, 106, 60);
       color: #525252;
-      font-size: 16px;
-      line-height: 24px;
+      @include adaptive-value(font-size, 16, 12);
+      @include adaptive-value(line-height, 24, 16);
       padding: 9px 15px;
+      @include adaptive-value(padding-right, 15, 9);
+      @include adaptive-value(padding-left, 15, 9);
       text-align: center;
       border: 1px solid #cdcdcd;
       transition: 0.3s;
 
       &::placeholder {
-        font-size: 16px;
+        @include adaptive-value(font-size, 16, 12);
         text-align: center;
       }
 
