@@ -6,9 +6,6 @@
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/shop.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/partials/general/fonts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/shop.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/shop.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/shop.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +79,7 @@
       <workItem from="1609260424347" duration="13454000" />
       <workItem from="1609347874755" duration="15963000" />
       <workItem from="1609412620527" duration="19567000" />
-      <workItem from="1609593922387" duration="2641000" />
+      <workItem from="1609593922387" duration="3354000" />
     </task>
     <servers />
   </component>
