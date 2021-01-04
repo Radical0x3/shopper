@@ -1329,7 +1329,7 @@ h6 {
 }
 
 .header__menu .drop-menu:nth-of-type(3) {
-  width: 85px;
+  width: 70px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -2287,7 +2287,7 @@ h6 {
 
 .collection__img img {
   width: 100%;
-  max-height: 250px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2659,6 +2659,10 @@ body.lock {
     height: 20px;
   }
 
+  .header__menu .drop-menu:nth-of-type(3) {
+    width: 85px;
+  }
+
   .header__title {
     padding: 0;
   }
@@ -2872,6 +2876,10 @@ body.lock {
   .collection__img {
     width: calc( 300px + 64 * ((100vw - 320px) / 1046));
     margin: 0 auto;
+  }
+
+  .collection__img img {
+    max-height: 250px;
   }
 
   .collection__content {

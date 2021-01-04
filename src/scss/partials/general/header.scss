@@ -108,8 +108,12 @@
       }
 
       &:nth-of-type(3) {
-        width: 85px;
+        width: 70px;
         justify-content: flex-start;
+
+        @media (max-width: 769px) {
+          width: 85px;
+        }
       }
 
       &:nth-of-type(2) {

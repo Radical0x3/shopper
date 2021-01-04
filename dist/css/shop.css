@@ -1215,7 +1215,7 @@ h6 {
 }
 
 .header__menu .drop-menu:nth-of-type(3) {
-  width: 85px;
+  width: 70px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -2883,6 +2883,10 @@ body.lock {
   .header__shipping img {
     width: 20px;
     height: 20px;
+  }
+
+  .header__menu .drop-menu:nth-of-type(3) {
+    width: 85px;
   }
 
   .header__title {
