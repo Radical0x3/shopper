@@ -2486,6 +2486,30 @@ h6 {
   margin-bottom: calc( 25px + 45 * ((100vw - 320px) / 1046));
 }
 
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Medium.woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-SemiBold.woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: Jost;
   border: 0;
@@ -2508,10 +2532,6 @@ body.lock {
 
 .hamburger {
   padding-bottom: 10px;
-}
-
-.header {
-  margin-bottom: calc( 70px + 53 * ((100vw - 320px) / 1046));
 }
 
 .circle.hide {
@@ -2899,6 +2919,10 @@ body.lock {
 
   body {
     margin-top: 55px;
+  }
+
+  .header {
+    margin-bottom: calc( 70px + 53 * ((100vw - 320px) / 1046));
   }
 }
 

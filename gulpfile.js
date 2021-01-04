@@ -180,6 +180,9 @@ function fonts() {
   src(path.src.fonts)
     .pipe(ttf2woff())
     .pipe(dest(path.build.fonts));
+  return src(path.src.fonts)
+    .pipe(ttf2woff2())
+    .pipe(dest(path.build.fonts));
 }
 
 gulp.task("svgSprite", function () {

@@ -19,6 +19,7 @@
 @import "partials/home/collection";
 @import "partials/home/sellers";
 @import "partials/home/arrivals";
+@import "fonts";
 
 body {
   font-family: Jost;
@@ -48,7 +49,9 @@ body {
 }
 
 .header {
-  @include adaptive-value(margin-bottom, 123, 70);
+  @media (max-width: 769px) {
+    @include adaptive-value(margin-bottom, 123, 70);
+  }
 }
 
 .circle {
