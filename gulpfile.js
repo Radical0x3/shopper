@@ -76,7 +76,8 @@ function js() {
         mode: "production",
         entry: {
           main: "./src/js/script.js",
-          shop: "./src/js/shop.js"
+          shop: "./src/js/shop.js",
+          product: "./src/js/product.js",
         },
         output: {
           filename: "[name].js"

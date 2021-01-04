@@ -1,0 +1,42 @@
+.routes {
+  display: flex;
+
+  @media (max-width: 431px) {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    position: relative;
+    line-height: 23px;
+
+    &:not(:last-child) {
+      padding-right: 40px;
+
+      &::after {
+        content: "\f054";
+        display: block;
+        font-size: 11px;
+        font-family: FontAwesome;
+        color: #909090;
+        position: absolute;
+        top: 55%;
+        right: 20px;
+        transform: translate(50%, -50%);
+      }
+    }
+
+    &:hover {
+      .routes__link {
+        color: darken(#909090, 50%);
+      }
+    }
+  }
+
+  &__link {
+    color: #909090;
+    font-size: 14px;
+    line-height: 21px;
+    transition: 0.3s;
+  }
+}

@@ -150,16 +150,6 @@
     text-align: right;
     color: #a0a0a0;
     font-weight: 600;
-
-    .old-price {
-      text-decoration: line-through;
-      font-weight: 400;
-      color: lighten(#a0a0a0, 10%);
-    }
-
-    .new-price {
-      color: $orange;
-    }
   }
 
   &__price {
@@ -259,4 +249,14 @@
       }
     }
   }
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-weight: 400;
+  color: lighten(#a0a0a0, 10%);
+}
+
+.new-price {
+  color: $orange;
 }

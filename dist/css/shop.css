@@ -130,7 +130,7 @@ h6 {
 }
 
 .select__current::after {
-  content: "\f107";
+  content: "\f078";
   display: block;
   font-family: FontAwesome;
   font-size: 12px;
@@ -365,16 +365,6 @@ h6 {
   font-weight: 600;
 }
 
-.goods__prices .old-price {
-  text-decoration: line-through;
-  font-weight: 400;
-  color: #bababa;
-}
-
-.goods__prices .new-price {
-  color: #FF6F61;
-}
-
 .goods__price {
   font-size: calc( 12px + 2 * ((100vw - 320px) / 1046));
 }
@@ -472,6 +462,16 @@ h6 {
 
 .goods__sizes-item:last-child {
   margin-right: 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-weight: 400;
+  color: #bababa;
+}
+
+.new-price {
+  color: #FF6F61;
 }
 
 .inline-link {
@@ -645,6 +645,48 @@ h6 {
   position: absolute;
   bottom: -1px;
   left: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.routes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.routes__item {
+  position: relative;
+  line-height: 23px;
+}
+
+.routes__item:not(:last-child) {
+  padding-right: 40px;
+}
+
+.routes__item:not(:last-child)::after {
+  content: "\f054";
+  display: block;
+  font-size: 11px;
+  font-family: FontAwesome;
+  color: #909090;
+  position: absolute;
+  top: 55%;
+  right: 20px;
+  -webkit-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+.routes__item:hover .routes__link {
+  color: #111111;
+}
+
+.routes__link {
+  color: #909090;
+  font-size: 14px;
+  line-height: 21px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -2667,6 +2709,12 @@ h6 {
   z-index: 5;
 }
 
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost.woff");
+  font-display: swap;
+}
+
 body {
   font-family: Jost;
   border: 0;
@@ -3149,6 +3197,13 @@ body.lock {
 }
 
 @media (max-width: 431px) {
+  .routes {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 10px;
+  }
+
   .content__top {
     display: block;
   }
