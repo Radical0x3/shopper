@@ -2709,12 +2709,6 @@ h6 {
   z-index: 5;
 }
 
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost.woff");
-  font-display: swap;
-}
-
 body {
   font-family: Jost;
   border: 0;
