@@ -29,9 +29,8 @@
   background: #fff;
   border-radius: 3px;
   z-index: 9999;
-  //padding: 20px;
   max-width: 770px;
-  width: 100%;
+  width: calc(100% - 20px);
   max-height: calc(100% - 20px);
   overflow-y: auto;
 }
@@ -41,16 +40,12 @@
   display: block;
   width: 15px;
   height: 15px;
-  //top: -30px;
-  //right: -30px;
-  top: 35px;
+  @include adaptive-value(top, 35, 27);
   right: 30px;
   transform: translateY(-50%);
   border-radius: 3px;
-  //box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
   transition: 0.4s;
   cursor: pointer;
-  //background: #111;
 
   &::after {
     content: "\01F5D9";
@@ -62,8 +57,4 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-}
-
-.popup__container {
-
 }

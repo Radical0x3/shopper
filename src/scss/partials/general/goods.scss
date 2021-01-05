@@ -69,6 +69,64 @@
     }
   }
 
+  &__panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    @include adaptive-value(top, -60, -40);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+    &-item {
+      display: block;
+      @include adaptive-value(width, 40, 30);
+      @include adaptive-value(height, 40, 30);
+      border-radius: 50%;
+      background: #fff;
+      position: relative;
+      margin: 0 5px;
+      box-shadow: 0 0 1px 0 #111;
+      transition: 0.3s;
+
+      &:hover {
+        background: $orange;
+
+        svg {
+          fill: #fff;
+        }
+      }
+
+      &.active {
+        svg {
+          fill: $orange;
+        }
+
+        &:hover {
+          svg {
+            fill: #fff;
+          }
+        }
+      }
+
+      svg {
+        @include adaptive-value(width, 17, 13);
+        @include adaptive-value(height, 17, 13);
+        object-fit: cover;
+        transition: 0.3s;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: #1f1f1f;
+      }
+    }
+  }
+
   &__tag {
     position: absolute;
     top: 20px;
@@ -87,6 +145,42 @@
     &.tag-sale {
       background: #1f1f1f;
       color: #fff;
+    }
+  }
+
+  &__msg {
+    width: 136px;
+    font-size: 13px;
+    line-height: 19px;
+    padding: 4px 0;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 0 1px 0 #111;
+    user-select: none;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0;
+
+    &::before {
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: 10px;
+      color: #1f1f1f;
+      margin-right: 10px;
+    }
+
+    &.add {
+      &::before {
+        content: "\f00c";
+      }
+    }
+
+    &.remove {
+      &::before {
+        content: "\f00d";
+      }
     }
   }
 

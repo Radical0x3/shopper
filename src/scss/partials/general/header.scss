@@ -405,7 +405,7 @@
       position: fixed;
       top: 0;
       background: #fff;
-      z-index: 99;
+      z-index: 9999;
       box-shadow: 0 8px 6px -6px #cdcdcd;
     }
   }
@@ -427,14 +427,14 @@
       overflow-x: hidden;
       overflow-y: scroll;
       transition: 0.3s;
-      z-index: 99;
+      z-index: 9999;
     }
 
     &.active {
       opacity: 1;
       visibility: visible;
       left: 0;
-      z-index: 5;
+      z-index: 9999;
 
       .header__top > .container {
         display: block;

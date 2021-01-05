@@ -2,15 +2,15 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  @include adaptive-value(padding-top, 45, 10);
-  @include adaptive-value(padding-bottom, 45, 10);
+  @include adaptive-value(padding-top, 45, 10, 1);
+  @include adaptive-value(padding-bottom, 45, 10, 1);
 
   @media (max-width: 906px) {
     justify-content: center;
   }
 
   &__item {
-    width: 240px;
+    width: 250px;
     display: flex;
     margin: 10px;
 
