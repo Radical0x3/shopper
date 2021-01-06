@@ -3,7 +3,7 @@ import "./slider";
 
 window.onload = function () {
   // <------ Button scroll-up START ------>
-  $(".button-up").on('click', function () {
+  $("a").on('click', function () {
     let href = $(this).attr('href');
 
     $('html, body').animate({
@@ -70,6 +70,7 @@ window.onload = function () {
       $(img).attr("src", $(this).children("picture").children("img").attr("src"));
     }
     span.text($(this).text());
+    $(this).parent().removeClass("active");
   })
   // <------ Header menu END ------>
 

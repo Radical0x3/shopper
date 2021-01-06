@@ -70,7 +70,7 @@ $(".product__colors-item").on("click", function () {
 })
 
 $(".product__sizes .aside-sizes__item:not(.unavailable)").on("click", function () {
-  let title = $(".product__sizes-title");
+  let title = $(this).parents(".product__sizes").children(".product__sizes-title");
   let data = $(this).attr("data-size");
 
   title.children("span").eq(0).text(data);
@@ -91,15 +91,25 @@ $(".product__wait").on("click", function (e) {
   openPopup(1);
 })
 
+$(".goods__panel-item:first-child").on("click", function (e) {
+  e.preventDefault();
+  openPopup(2);
+  $(".product-popup__preview-slider").slick({
+    slidesToShow: 1,
+  })
+})
+
 function openPopup(id) {
-  $("body").addClass("lock");
-  $("body").addClass("lock-pd");
+  // $("body").addClass("lock");
+  // $("body").addClass("lock-pd");
+  bodyLock();
   $(".js-popup[data-id-popup='" + id + "']").fadeIn(300);
 }
 
 function close_popup() {
-  $("body").removeClass("lock");
-  $("body").removeClass("lock-pd");
+  // $("body").removeClass("lock");
+  // $("body").removeClass("lock-pd");
+  bodyUnlock();
   $('.js-popup').fadeOut(300);
 }
 
@@ -117,6 +127,48 @@ $('.js-popup').click(function (e) {
     close_popup();
   }
 });
+
+let unlock = true;
+const timeout = 200;
+const body = document.querySelector("body");
+const lockPadding = document.querySelectorAll(".lock-padding");
+const header = document.querySelector(".header");
+
+function bodyLock() {
+  const lockPaddingValue =
+          window.innerWidth - document.querySelector("body").offsetWidth + "px";
+  if (lockPadding.length > 0) {
+    for (let i = 0; i < lockPadding.length; i++) {
+      const el = lockPadding[i];
+      el.style.paddingRight = lockPaddingValue;
+    }
+  }
+  header.style.paddingRight = lockPaddingValue;
+  body.style.paddingRight = lockPaddingValue;
+  body.classList.add("lock");
+
+  unlock = false;
+  setTimeout(function () {
+    unlock = true;
+  }, timeout);
+}
+
+function bodyUnlock() {
+  setTimeout(function () {
+    for (let i = 0; i < lockPadding.length; i++) {
+      const el = lockPadding[i];
+      el.style.paddingRight = "0px";
+    }
+    body.style.paddingRight = "0px";
+    header.style.paddingRight = "0px";
+    body.classList.remove("lock");
+  }, timeout);
+
+  unlock = false;
+  setTimeout(function () {
+    unlock = true;
+  }, timeout);
+}
 
 $(".product-popup__units-item").on("click", function () {
   $(this).parents(".product-popup__body").find(".product-popup__units-item").removeClass("active");
@@ -306,9 +358,7 @@ $(".dislike-btn").on("click", function () {
   let span = $(this).next("span");
   let val = +span.text();
   let opposite = $(this).parent().parent().find(".like-btn").parent();
-  console.log(opposite)
   let oppositeVal = parseInt(opposite.children("span").text());
-  console.log(oppositeVal)
 
   if (opposite.hasClass("active")) {
     opposite.removeClass("active");
@@ -357,4 +407,17 @@ $(".next-arrow").on("click", function () {
 
   $(".reviews__pagination-item.active").removeClass("active");
   $(".reviews__pagination-item").eq(current).addClass("active");
+})
+
+const ratingItemsList = document.querySelectorAll(".product__rating-item");
+const ratingItemsArray = Array.prototype.slice.call(ratingItemsList);
+
+ratingItemsArray.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.parentNode.dataset.totalValue = item.dataset.ratingValue;
+  });
+});
+
+$(".reviews__actions-btn").on("click", function () {
+  $(".reviews__write-review").fadeToggle(200);
 })

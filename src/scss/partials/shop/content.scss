@@ -84,6 +84,7 @@
       display: flex;
       font-size: 15px;
       text-align: center;
+      border-bottom: 1px solid #e2e2e2;
     }
 
     &-item {
@@ -98,7 +99,7 @@
         height: 1px;
         background: $orange;
         position: absolute;
-        bottom: 0;
+        bottom: -1px;
         left: 0;
         transition: 0.3s;
       }

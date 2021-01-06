@@ -2532,6 +2532,7 @@ h6 {
   display: flex;
   font-size: 15px;
   text-align: center;
+  border-bottom: 1px solid #e2e2e2;
 }
 
 .content__pagination-item {
@@ -2547,7 +2548,7 @@ h6 {
   height: 1px;
   background: #FF6F61;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
