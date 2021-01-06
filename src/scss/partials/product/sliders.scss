@@ -24,17 +24,10 @@
     &-list {
       overflow: hidden;
       width: 100%;
-      //@include adaptive-value(margin-left, 20, 10);
-      //@include adaptive-value(margin-right, 20, 10);
     }
 
     &-track {
       display: flex;
-    }
-
-    &-slide {
-      //@include adaptive-value(margin-left, 15, 5);
-      //@include adaptive-value(margin-right, 15, 5);
     }
 
     &-arrow {

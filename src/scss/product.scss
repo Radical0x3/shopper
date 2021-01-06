@@ -83,7 +83,6 @@ body {
   }
 
   &__info {
-    width: 45%;
     @media (max-width: 577px) {
       width: 100%;
     }
@@ -773,11 +772,13 @@ body {
     }
 
     &-slider {
+      max-width: 470px;
       width: 43%;
       max-height: 550px;
       @include adaptive-value(margin-right, 70, 30, 1);
 
       @media (max-width: 798px) {
+        max-width: 100%;
         width: 50%;
         margin: 0 auto;
       }
@@ -908,7 +909,7 @@ body {
         @include adaptive-value(height, 42, 30);
         background: #fff !important;
         position: absolute !important;
-        z-index: 5;
+        z-index: 1111;
       }
 
       &-prev,
@@ -957,6 +958,7 @@ body {
   &__btn {
     display: flex;
     justify-content: center;
+    max-width: 470px;
     width: 43%;
     color: #fff;
     font-size: 15px;

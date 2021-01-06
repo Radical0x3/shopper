@@ -96,6 +96,7 @@ $(".goods__panel-item:first-child").on("click", function (e) {
   openPopup(2);
   $(".product-popup__preview-slider").slick({
     slidesToShow: 1,
+    fade: true
   })
 })
 

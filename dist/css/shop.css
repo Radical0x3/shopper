@@ -2411,6 +2411,61 @@ h6 {
   display: flex;
 }
 
+.slider .slick-arrow {
+  position: absolute !important;
+  z-index: 3;
+}
+
+.slider .slick-prev,
+.slider .slick-next {
+  font-size: 0 !important;
+  background: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.slider .slick-prev::after,
+.slider .slick-next::after {
+  display: block;
+  font-family: FontAwesome;
+  font-size: 22px;
+  color: #1f1f1f;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.slider .slick-prev:hover::after,
+.slider .slick-next:hover::after {
+  color: #8d8d8d;
+}
+
+.slider .slick-prev {
+  left: 0 !important;
+}
+
+.slider .slick-prev::after {
+  content: "\f053";
+  left: 0;
+}
+
+.slider .slick-next {
+  right: 0 !important;
+}
+
+.slider .slick-next::after {
+  content: "\f054";
+  right: 0;
+}
+
 .slider .slick-dots {
   display: -webkit-box;
   display: -ms-flexbox;

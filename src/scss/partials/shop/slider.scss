@@ -107,6 +107,53 @@
       display: flex;
     }
 
+    &-arrow {
+      position: absolute !important;
+      z-index: 3;
+    }
+
+    &-prev,
+    &-next {
+      font-size: 0 !important;;
+      background: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &::after {
+        display: block;
+        font-family: FontAwesome;
+        font-size: 22px;
+        color: #1f1f1f;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.3s;
+      }
+
+      &:hover::after {
+        color: darken(#cdcdcd, 25%);
+      }
+    }
+
+    &-prev {
+      left: 0 !important;
+
+      &::after {
+        content: "\f053";
+        left: 0;
+      }
+    }
+
+    &-next {
+      right: 0 !important;
+
+      &::after {
+        content: "\f054";
+        right: 0;
+      }
+    }
+
     &-dots {
       display: flex;
       align-items: center;

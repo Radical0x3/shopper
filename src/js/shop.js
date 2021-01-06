@@ -8,7 +8,7 @@ Scrollbar.initAll({
 });
 
 $(".slider").slick({
-  arrows: false,
+  arrows: true,
   slidesToShow: 1,
   dots: true
 });
