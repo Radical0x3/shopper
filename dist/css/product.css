@@ -804,8 +804,8 @@ h6 {
 .popup__close {
   position: absolute;
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   top: calc( 20px + 15 * ((100vw - 320px) / 1046));
   right: calc( 20px + 10 * ((100vw - 320px) / 1046));
   -webkit-transform: translateY(-50%);
@@ -819,17 +819,19 @@ h6 {
   z-index: 1111;
 }
 
-.popup__close::after {
-  content: "\01F5D9";
-  display: block;
-  font-size: 18px;
+.popup__close svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   color: #a0a0a0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.popup__close svg:hover {
+  color: #6d6d6d;
 }
 
 /*!
@@ -2587,7 +2589,7 @@ h6 {
   height: 200px;
   overflow: auto;
   border: 1px solid #cdcdcd;
-  margin: 15px;
+  margin: calc( 8px + 7 * ((100vw - 320px) / 1046));
   padding: 15px 20px;
   font-size: 14px;
   resize: none;

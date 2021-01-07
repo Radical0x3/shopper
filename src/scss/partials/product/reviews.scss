@@ -470,7 +470,7 @@
       height: 200px;
       overflow: auto;
       border: 1px solid #cdcdcd;
-      margin: 15px;
+      @include adaptive-value(margin, 15, 8);
       padding: 15px 20px;
       font-size: 14px;
       resize: none;
