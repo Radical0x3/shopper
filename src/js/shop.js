@@ -264,8 +264,10 @@ const callback = function (target, observer) {
 const observer = new MutationObserver(callback);
 observer.observe(target, config);
 
+moveSort();
 moveAside();
 $(window).on("resize", function () {
+  moveSort();
   moveAside();
 })
 
@@ -274,8 +276,42 @@ function moveAside() {
   let windowInnerWidth = window.innerWidth;
 
   if (windowInnerWidth <= 940) {
-    elem.insertAfter(".content__top");
+    // elem.insertAfter(".content__actions");
+    $(".content__filter").append(elem);
   } else {
     elem.insertBefore(".site");
   }
 }
+
+function moveSort() {
+  let elem = $(".select");
+  let windowInnerWidth = window.innerWidth;
+
+  if (windowInnerWidth <= 940) {
+    // elem.insertAfter(".content__actions");
+    $(".content__actions").append(elem);
+  } else {
+    $(".content__top-right").append(elem);
+  }
+}
+
+$(".content__filter-btn").on("click", function () {
+  let elem = $(this).next(".aside");
+
+  if (elem.hasClass("active")) {
+    elem.removeClass("active");
+  } else {
+    elem.addClass("active");
+  }
+})
+
+let container = $(".content__filter");
+$(document).mouseup(function (e) {
+  let select = $(".aside");
+  if (
+    container.has(e.target).length === 0 &&
+    select.has(e.target).length === 0
+  ) {
+    select.removeClass("active");
+  }
+});

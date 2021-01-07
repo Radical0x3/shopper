@@ -129,6 +129,115 @@
     }
   }
 
+  &__actions {
+    display: none;
+    margin-bottom: 20px;
+
+    @media (max-width: 941px) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    .select {
+      margin: 0;
+    }
+  }
+
+  &__filter {
+    @include adaptive-value(width, 300, 140);
+    position: relative;
+
+    &-btn {
+      text-align: left;
+      width: 100%;
+      height: 100%;
+      @include adaptive-value(font-size, 16, 14);
+      line-height: 22px;
+      padding: 11px 8px;
+      color: #767676;
+      background: #fff;
+      border: 1px solid #eaeaea;
+
+      &::after {
+        content: "\f078";
+        display: block;
+        font-family: FontAwesome;
+        font-size: 12px;
+        line-height: 12px;
+        color: #C8C8C8;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+      }
+    }
+
+    .aside {
+      opacity: 0;
+      visibility: hidden;
+      max-height: 250px;
+      overflow-y: auto;
+      position: absolute;
+      top: 150%;
+      right: 0;
+      z-index: 10;
+      background: #fff;
+      transition: 0.3s;
+      padding-top: 10px;
+      border: 1px solid #eaeaea;
+      border-top: 0;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+      }
+
+      &__list {
+        margin: 0;
+        display: block;
+      }
+
+      &__item {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0 8px;
+      }
+
+      &__title {
+        @include adaptive-value(font-size, 18, 14);
+      }
+
+      ul {
+        @include adaptive-value(font-size, 16, 13);
+      }
+
+      &__label {
+
+      }
+
+      &-sizes {
+        &__item {
+          @include adaptive-value(margin, 7, 3);
+
+          .aside__label {
+            @include adaptive-value(width, 48, 36);
+            @include adaptive-value(height, 42, 30);
+            @include adaptive-value(line-height, 42, 30);
+          }
+
+          &.big-item {
+            .aside__label {
+              @include adaptive-value(width, 110, 78);
+            }
+          }
+        }
+      }
+    }
+  }
+
   &__bottom {
     display: flex;
     flex-wrap: wrap;
@@ -172,7 +281,11 @@
   }
 
   .select {
-    width: 190px;
+    @include adaptive-value(width, 190, 140);
+
+    span {
+      @include adaptive-value(font-size, 16, 14);
+    }
 
     &__header {
       padding: 12px 31px 12px 15px;
