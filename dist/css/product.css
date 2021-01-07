@@ -1711,6 +1711,8 @@ h6 {
 
 .product__bigslider {
   width: 100%;
+  max-height: 585px;
+  overflow: hidden;
 }
 
 .product__bigslider-item {
@@ -1720,7 +1722,7 @@ h6 {
 .product__bigslider-item img {
   width: 100%;
   height: 100%;
-  max-height: 583px;
+  max-height: 585px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1834,6 +1836,8 @@ h6 {
 
 .product__slider {
   margin: 0 -8px;
+  max-height: 151px;
+  overflow: hidden;
 }
 
 .product__slider-item img {
@@ -1893,6 +1897,7 @@ h6 {
 
 .product__preview {
   width: 50%;
+  max-width: 570px;
   margin-right: 100px;
   position: relative;
 }
