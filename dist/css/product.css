@@ -4476,7 +4476,7 @@ body.lock {
   }
 
   .product__bigslider {
-    height: 300%;
+    height: 300px;
   }
 
   .product__bigslider-item img {
