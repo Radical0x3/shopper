@@ -1098,6 +1098,11 @@ body {
     margin: 0;
   }
 
+  &__list {
+    @include adaptive-value(padding-left, 20, 10);
+    @include adaptive-value(padding-right, 20, 10);
+  }
+
   .slick {
     &-slider {
       position: relative;
@@ -1110,8 +1115,8 @@ body {
     &-list {
       overflow: hidden;
       width: 100%;
-      @include adaptive-value(margin-left, 20, 10);
-      @include adaptive-value(margin-right, 20, 10);
+      //@include adaptive-value(margin-left, 20, 10);
+      //@include adaptive-value(margin-right, 20, 10);
     }
 
     &-slide {

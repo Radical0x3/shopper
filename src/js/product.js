@@ -101,15 +101,11 @@ $(".goods__panel-item:first-child").on("click", function (e) {
 })
 
 function openPopup(id) {
-  // $("body").addClass("lock");
-  // $("body").addClass("lock-pd");
   bodyLock();
   $(".js-popup[data-id-popup='" + id + "']").fadeIn(300);
 }
 
 function close_popup() {
-  // $("body").removeClass("lock");
-  // $("body").removeClass("lock-pd");
   bodyUnlock();
   $('.js-popup').fadeOut(300);
 }

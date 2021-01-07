@@ -3772,6 +3772,11 @@ body.lock {
   margin: 0;
 }
 
+.goods__list {
+  padding-left: calc( 10px + 10 * ((100vw - 320px) / 1046));
+  padding-right: calc( 10px + 10 * ((100vw - 320px) / 1046));
+}
+
 .goods .slick-slider {
   position: relative;
 }
@@ -3785,8 +3790,6 @@ body.lock {
 .goods .slick-list {
   overflow: hidden;
   width: 100%;
-  margin-left: calc( 10px + 10 * ((100vw - 320px) / 1046));
-  margin-right: calc( 10px + 10 * ((100vw - 320px) / 1046));
 }
 
 .goods .slick-slide {
