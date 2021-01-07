@@ -61,11 +61,11 @@ $(".product__slider .slick-slide").on("click", function () {
 })
 
 $(".product__colors-item").on("click", function () {
-  let title = $(".product__colors-title");
+  let title = $(this).parents(".product__colors").children(".product__colors-title");
   let data = $(this).attr("data-colour");
 
   title.children("span").text(data);
-  $(".product__colors-item").removeClass("active");
+  $(this).parent().children((".product__colors-item")).removeClass("active");
   $(this).addClass("active");
 })
 
