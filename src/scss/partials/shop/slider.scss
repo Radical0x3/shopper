@@ -1,8 +1,13 @@
 .slider {
   width: 100%;
+  max-height: 395px;
+  overflow: hidden;
   position: relative;
   @include adaptive-value(margin-bottom, 50, 20);
-  //padding: 0 10px;
+  
+  @media (max-width: 577px) {
+    max-height: 254px;
+  }
 
   &__item {
     width: 100%;

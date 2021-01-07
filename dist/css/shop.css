@@ -2303,6 +2303,8 @@ h6 {
 
 .slider {
   width: 100%;
+  max-height: 395px;
+  overflow: hidden;
   position: relative;
   margin-bottom: calc( 20px + 30 * ((100vw - 320px) / 1046));
 }
@@ -3344,6 +3346,10 @@ body.lock {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .slider {
+    max-height: 254px;
   }
 }
 
