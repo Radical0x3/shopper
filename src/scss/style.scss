@@ -24,6 +24,7 @@
 body {
   font-family: Jost;
   border: 0;
+  transition: 0.3s;
 
   &.lock {
     overflow: hidden;

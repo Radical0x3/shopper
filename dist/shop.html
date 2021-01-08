@@ -15,7 +15,7 @@
   <div class="header__mobile">
     <div class="container">
       <h1 class="header__title">Shopper.</h1>
-      <button class="hamburger hamburger--spin" type="button">
+      <button class="hamburger" type="button">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
@@ -35,11 +35,13 @@
           <!-- /.header__shipping -->
           <ul class="header__menu">
             <li class="header__menu-item drop-menu">
-              <picture>
-                <source class="lazyload" srcset="img/icons/icons.svg#usa" type="image/webp">
-                <img class="lazyload" src="img/icons/icons.svg#usa" alt="">
-              </picture>
-              <span>United States</span>
+              <div>
+                <picture>
+                  <source class="lazyload" srcset="img/icons/icons.svg#usa" type="image/webp">
+                  <img class="lazyload" src="img/icons/icons.svg#usa" alt="">
+                </picture>
+                <span>United States</span>
+              </div>
               <ul class="header__countries">
                 <li class="header__countries-item">
                   <picture>
@@ -70,7 +72,9 @@
             </li>
             <!-- /.header__menu-item -->
             <li class="header__menu-item drop-menu">
-              <span>USD</span>
+              <div>
+                <span>USD</span>
+              </div>
               <ul class="header__currencies">
                 <li class="header__currencies-item">USD</li>
                 <!-- /.header__currencies-item -->
@@ -83,7 +87,9 @@
             </li>
             <!-- /.header__menu-item -->
             <li class="header__menu-item drop-menu">
-              <span>English</span>
+              <div>
+                <span>English</span>
+              </div>
               <ul class="header__languages">
                 <li class="header__languages-item">English</li>
                 <!-- /.header__languages-item -->
@@ -221,9 +227,1450 @@
             <!-- /.header__list-link -->
           </li>
           <!-- /.header__list-item -->
-          <li class="header__list-item">
+          <li class="header__list-item" id="catalog">
             <a href="#" class="header__list-link">Catalog</a>
             <!-- /.header__list-link -->
+            <div class="categories__wrap">
+              <ul class="categories__titles-list">
+                <li class="categories__titles-item" data-category-id="1">
+                  <p>
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#dress"></use>
+                    </svg>
+                    <span>Womens Clothes</span>
+                  </p>
+                  <div class="categories__details-wrap" data-category-id="1">
+                    <div class="categories__details-inner">
+                      <div class="categories__details-left">
+                        <div class="categories__item">
+                          <h4 class="categories__title">Bottoms</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Bottoms</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jeans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Trousers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shorts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Skirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Outerwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Outerwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jackets</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Classic Blazers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Faux Fur Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">T-Shirts & Tops</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All T-Shirts & Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">T-Shirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Blouses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Tanks Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Polos</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Dresses</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">A-Line Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shift Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Wrap Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Maxi Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Sweaters</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Sweaters</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Pullovers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Cardigans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Crop Top</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Sweatshirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Underwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Underwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Bras</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Panties</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shapewear & Slips</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Lingerie</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                      </div>
+                      <!-- /.categories__details-list -->
+                      <div class="categories__details-right">
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Bags Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="https://dummyimage.com/240x184" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Watch Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                      </div>
+                      <!-- /.categories__details-right -->
+                    </div>
+                    <!-- /.categories__details-inner -->
+                  </div>
+                  <!-- /.categories__details-wrap -->
+                </li>
+                <!-- /.categories__titles-item -->
+                <li class="categories__titles-item" data-category-id="2">
+                  <p>
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#shirt"></use>
+                    </svg>
+                    <span>Mens Clothes</span>
+                  </p>
+                  <div class="categories__details-wrap" data-category-id="2">
+                    <div class="categories__details-inner">
+                      <div class="categories__details-left">
+                        <div class="categories__item">
+                          <h4 class="categories__title">Bottoms 2</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Bottoms</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jeans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Trousers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shorts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Skirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Outerwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Outerwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jackets</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Classic Blazers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Faux Fur Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">T-Shirts & Tops</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All T-Shirts & Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">T-Shirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Blouses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Tanks Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Polos</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Dresses</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">A-Line Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shift Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Wrap Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Maxi Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Sweaters</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Sweaters</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Pullovers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Cardigans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Crop Top</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Sweatshirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Underwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Underwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Bras</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Panties</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shapewear & Slips</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Lingerie</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                      </div>
+                      <!-- /.categories__details-list -->
+                      <div class="categories__details-right">
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Bags Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="https://dummyimage.com/240x184" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Watch Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                      </div>
+                      <!-- /.categories__details-right -->
+                    </div>
+                    <!-- /.categories__details-inner -->
+                  </div>
+                  <!-- /.categories__details-wrap -->
+                </li>
+                <!-- /.categories__titles-item -->
+                <li class="categories__titles-item" data-category-id="3">
+                  <p>
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#skirt"></use>
+                    </svg>
+                    <span>Girls Clothes</span>
+                  </p>
+                  <div class="categories__details-wrap" data-category-id="3">
+                    <div class="categories__details-inner">
+                      <div class="categories__details-left">
+                        <div class="categories__item">
+                          <h4 class="categories__title">Bottoms 3</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Bottoms</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jeans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Trousers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shorts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Skirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Outerwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Outerwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jackets</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Classic Blazers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Faux Fur Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">T-Shirts & Tops</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All T-Shirts & Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">T-Shirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Blouses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Tanks Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Polos</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Dresses</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">A-Line Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shift Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Wrap Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Maxi Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Sweaters</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Sweaters</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Pullovers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Cardigans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Crop Top</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Sweatshirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Underwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Underwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Bras</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Panties</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shapewear & Slips</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Lingerie</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                      </div>
+                      <!-- /.categories__details-list -->
+                      <div class="categories__details-right">
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Bags Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="https://dummyimage.com/240x184" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Watch Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                      </div>
+                      <!-- /.categories__details-right -->
+                    </div>
+                    <!-- /.categories__details-inner -->
+                  </div>
+                  <!-- /.categories__details-wrap -->
+                </li>
+                <!-- /.categories__titles-item -->
+                <li class="categories__titles-item" data-category-id="4">
+                  <p>
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#boy-shirt"></use>
+                    </svg>
+                    <span>Boys Clothes</span>
+                  </p>
+                  <div class="categories__details-wrap" data-category-id="4">
+                    <div class="categories__details-inner">
+                      <div class="categories__details-left">
+                        <div class="categories__item">
+                          <h4 class="categories__title">Bottoms 4</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Bottoms</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jeans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Trousers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shorts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Skirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Outerwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Outerwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jackets</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Classic Blazers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Faux Fur Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">T-Shirts & Tops</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All T-Shirts & Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">T-Shirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Blouses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Tanks Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Polos</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Dresses</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">A-Line Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shift Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Wrap Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Maxi Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Sweaters</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Sweaters</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Pullovers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Cardigans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Crop Top</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Sweatshirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Underwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Underwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Bras</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Panties</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shapewear & Slips</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Lingerie</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                      </div>
+                      <!-- /.categories__details-list -->
+                      <div class="categories__details-right">
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Bags Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="https://dummyimage.com/240x184" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Watch Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                      </div>
+                      <!-- /.categories__details-right -->
+                    </div>
+                    <!-- /.categories__details-inner -->
+                  </div>
+                  <!-- /.categories__details-wrap -->
+                </li>
+                <!-- /.categories__titles-item -->
+                <li class="categories__titles-item" data-category-id="5">
+                  <p>
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#bag"></use>
+                    </svg>
+                    <span>Bags & Accessoriess</span>
+                  </p>
+                  <div class="categories__details-wrap" data-category-id="5">
+                    <div class="categories__details-inner">
+                      <div class="categories__details-left">
+                        <div class="categories__item">
+                          <h4 class="categories__title">Bottoms 5</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Bottoms</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jeans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Trousers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shorts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Skirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Outerwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Outerwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jackets</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Classic Blazers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Faux Fur Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">T-Shirts & Tops</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All T-Shirts & Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">T-Shirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Blouses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Tanks Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Polos</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Dresses</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">A-Line Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shift Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Wrap Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Maxi Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Sweaters</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Sweaters</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Pullovers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Cardigans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Crop Top</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Sweatshirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Underwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Underwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Bras</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Panties</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shapewear & Slips</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Lingerie</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                      </div>
+                      <!-- /.categories__details-list -->
+                      <div class="categories__details-right">
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Bags Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="https://dummyimage.com/240x184" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Watch Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                      </div>
+                      <!-- /.categories__details-right -->
+                    </div>
+                    <!-- /.categories__details-inner -->
+                  </div>
+                  <!-- /.categories__details-wrap -->
+                </li>
+                <!-- /.categories__titles-item -->
+                <li class="categories__titles-item" data-category-id="6">
+                  <p>
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#womens-shoes"></use>
+                    </svg>
+                    <span>Womens Shoes</span>
+                  </p>
+                  <div class="categories__details-wrap" data-category-id="6">
+                    <div class="categories__details-inner">
+                      <div class="categories__details-left">
+                        <div class="categories__item">
+                          <h4 class="categories__title">Bottoms 6</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Bottoms</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jeans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Trousers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shorts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Skirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Outerwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Outerwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jackets</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Classic Blazers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Faux Fur Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">T-Shirts & Tops</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All T-Shirts & Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">T-Shirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Blouses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Tanks Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Polos</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Dresses</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">A-Line Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shift Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Wrap Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Maxi Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Sweaters</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Sweaters</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Pullovers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Cardigans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Crop Top</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Sweatshirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Underwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Underwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Bras</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Panties</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shapewear & Slips</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Lingerie</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                      </div>
+                      <!-- /.categories__details-list -->
+                      <div class="categories__details-right">
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Bags Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="https://dummyimage.com/240x184" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Watch Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                      </div>
+                      <!-- /.categories__details-right -->
+                    </div>
+                    <!-- /.categories__details-inner -->
+                  </div>
+                  <!-- /.categories__details-wrap -->
+                </li>
+                <!-- /.categories__titles-item -->
+                <li class="categories__titles-item" data-category-id="7">
+                  <p>
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#mens-shoes"></use>
+                    </svg>
+                    <span>Mens Shoes</span>
+                  </p>
+                  <div class="categories__details-wrap" data-category-id="7">
+                    <div class="categories__details-inner">
+                      <div class="categories__details-left">
+                        <div class="categories__item">
+                          <h4 class="categories__title">Bottoms 7</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Bottoms</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jeans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Trousers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shorts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Skirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Outerwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Outerwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Jackets</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Classic Blazers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Faux Fur Coats</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">T-Shirts & Tops</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All T-Shirts & Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">T-Shirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Blouses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Tanks Tops</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Polos</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Dresses</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">A-Line Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shift Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Wrap Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Maxi Dresses</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Sweaters</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Sweaters</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Pullovers</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Cardigans</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Crop Top</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Sweatshirts</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                        <div class="categories__item">
+                          <h4 class="categories__title">Underwear</h4>
+                          <!-- /.categories__title -->
+                          <ul class="categories__details-list">
+                            <li class="categories__details-item">
+                              <a href="#">All Underwear</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Bras</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Panties</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Shapewear & Slips</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                            <li class="categories__details-item">
+                              <a href="#">Lingerie</a>
+                            </li>
+                            <!-- /.categories__details-item -->
+                          </ul>
+                          <!-- /.categories__details-list -->
+                        </div>
+                        <!-- /.categories__item -->
+                      </div>
+                      <!-- /.categories__details-list -->
+                      <div class="categories__details-right">
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Bags Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                        <div class="categories__details-box">
+                          <picture>
+                            <source srcset="https://dummyimage.com/240x184" type="image/webp">
+                            <img src="https://dummyimage.com/240x184" alt=""/>
+                          </picture>
+                          <a href="#">Watch Collection</a>
+                        </div>
+                        <!-- /.categories__details-box -->
+                      </div>
+                      <!-- /.categories__details-right -->
+                    </div>
+                    <!-- /.categories__details-inner -->
+                  </div>
+                  <!-- /.categories__details-wrap -->
+                </li>
+                <!-- /.categories__titles-item -->
+              </ul>
+              <!-- /.categories__titles-list -->
+            </div>
+            <!-- /.categories__wrap -->
           </li>
           <!-- /.header__list-item -->
           <li class="header__list-item">
@@ -266,6 +1713,8 @@
     <!-- /.header__bottom -->
   </div>
   <!-- /.header__body -->
+  <div class="header__close"></div>
+  <!-- /.header__close -->
 </header>
 <!-- /.header -->
 <main id="shop" class="main">
