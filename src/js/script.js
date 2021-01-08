@@ -244,31 +244,43 @@ $("#catalog .header__list-link").on("touchend", function () {
   }
 })
 
+function mobileToggle() {
+  if ($(window).width() < 769) {
+    $(".categories__titles-item").on("touchend", function () {
+      let id = $(this).attr("data-category-id");
+      let elem = $(`.categories__details-wrap[data-category-id="${id}"]`);
+      $(this).children("p").toggleClass("active");
+      elem.slideToggle(300);
+    })
+
+    $(".drop-menu").on("click", function () {
+      $(this).children("ul").slideToggle(300);
+    })
+  }
+}
+
+mobileToggle();
+$(window).resize(function () {
+  mobileToggle();
+});
+
 if ($(window).width() > 768) {
   $(".categories__titles-item").hover(function () {
     let id = $(this).attr("data-category-id");
     let elem = $(`.categories__details-wrap[data-category-id="${id}"]`);
 
-    if (elem.is(":visible")) {
-      $(".categories__details-wrap").hide();
-      elem.fadeOut();
-    } else {
-      elem.fadeIn();
+    if (!elem.is(":visible")) {
+      elem.fadeIn(200);
     }
-  })
-} else {
-  $(".categories__titles-item").on("touchend", function () {
+  }, function () {
     let id = $(this).attr("data-category-id");
     let elem = $(`.categories__details-wrap[data-category-id="${id}"]`);
-    $(this).children("p").toggleClass("active");
-    elem.slideToggle(300);
-  })
 
-  $(".drop-menu").on("click", function () {
-    $(this).children("ul").slideToggle(300);
+    if (elem.is(":visible")) {
+      elem.fadeOut(200);
+    }
   })
 }
-
 
 // <------ WebP compatibility START ------>
 function testWebP(callback) {
