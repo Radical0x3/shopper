@@ -58,6 +58,7 @@ window.onload = function () {
 
   function menuToggle() {
     let menu = $(".drop-menu");
+    let windowInnerWidth = window.innerWidth;
 
     if (windowInnerWidth > 768) {
       menu.on("mouseover", function () {
