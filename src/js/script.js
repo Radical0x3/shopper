@@ -52,7 +52,7 @@ window.onload = function () {
   });
 
   menuToggle();
-  $(window).rezise(function () {
+  $(window).on("resize", function () {
     menuToggle();
   });
 
@@ -69,8 +69,16 @@ window.onload = function () {
         $(this).children("ul").removeClass("active");
       });
     } else {
-      menu.on("touchend", function () {
-        $(this).children("ul").toggleClass("active");
+      $(".drop-menu div").on("click", function () {
+        // $(this).children("ul").toggleClass("active");
+        let elem = $(this).next("ul");
+
+        if (!elem.hasClass("active")) {
+          $(".drop-menu ul").removeClass("active");
+          elem.addClass("active");
+        } else {
+          elem.removeClass("active");
+        }
       });
     }
   }

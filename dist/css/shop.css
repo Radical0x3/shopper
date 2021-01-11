@@ -3565,6 +3565,7 @@ body.lock {
   }
 
   .header__menu .drop-menu div {
+    width: 100%;
     margin-bottom: 10px;
   }
 
@@ -3595,7 +3596,7 @@ body.lock {
 
   .header__menu .drop-menu::before {
     position: absolute;
-    top: 13px;
+    top: 10px;
     right: 10px;
     margin-left: 0;
   }
