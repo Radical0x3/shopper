@@ -253,6 +253,10 @@
         display: block;
         width: 100%;
         text-align: left;
+
+        &.active {
+          margin-bottom: 15px;
+        }
       }
     }
   }
@@ -306,35 +310,37 @@
   &__currencies {
     height: 0;
     position: absolute;
-    top: 150%;
+    top: 100%;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.175);
     cursor: auto;
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s;
+    transition: 0.2s;
     z-index: 5;
 
     @media (max-width: 769px) {
       position: static;
-      height: auto;
       width: 100% !important;
       opacity: 1;
       visibility: visible;
-      display: none;
       box-shadow: none;
       background: inherit;
-      transition: none;
+      overflow: hidden;
+      height: auto;
+      max-height: 0;
+      transition: 0.3s;
     }
 
     &.active {
-      height: 120px;
-      top: 100%;
-      opacity: 1;
-      visibility: visible;
+      @media (min-width: 769px) {
+        height: 120px;
+        opacity: 1;
+        visibility: visible;
+      }
 
       @media (max-width: 769px) {
-        height: auto;
+        max-height: 300px;
       }
     }
 
@@ -453,8 +459,6 @@
         }
       }
 
-
-
       &:not(:last-child) {
         border-bottom: 1px solid #e2e2e2;
       }
@@ -539,7 +543,7 @@
       top: 0;
       right: 0;
       background: #fff;
-      z-index: 9999;
+      z-index: 2222;
       box-shadow: 0 8px 6px -6px #cdcdcd;
     }
 
@@ -551,7 +555,6 @@
       }
 
       &.active {
-        //width: calc(100% - 280px);
         transform: translateX(280px);
       }
     }
@@ -622,7 +625,6 @@
           font-size: 18px;
         }
       }
-
     }
 
     .header__title {
@@ -767,6 +769,8 @@
       left: 0;
       transition: 0.3s;
       background: none;
+      opacity: 0;
+      visibility: hidden;
     }
 
     &.active {
@@ -774,6 +778,8 @@
       z-index: 1111;
       background: rgba(0, 0, 0, 0.5);
       transform: translateX(280px);
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -782,6 +788,15 @@
   }
 
   #catalog {
+    &:hover {
+      @media (min-width: 769px) {
+        .categories__wrap {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
     @media (max-width: 769px) {
       position: relative;
     }
@@ -812,7 +827,7 @@
 
   .categories {
     &__wrap {
-      display: none;
+      display: block;
       width: 100%;
       max-width: 1190px;
       position: absolute;
@@ -820,11 +835,17 @@
       left: 0;
       z-index: 1111;
       padding: 0 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
 
       @media (max-width: 769px) {
+        display: none;
         position: static;
-        margin-top: 15px;
         padding: 0;
+        opacity: 1;
+        visibility: visible;
+        transition: none;
       }
     }
 
@@ -837,6 +858,7 @@
         @media (max-width: 769px) {
           width: 100%;
           background: inherit;
+          transition: none;
         }
       }
 
@@ -845,8 +867,17 @@
         @include adaptive-value(padding-bottom, 14, 10);
         @include adaptive-value(padding-right, 30, 10);
         @include adaptive-value(padding-left, 30, 10);
-        transition: 0.3s;
         cursor: pointer;
+        transition: 0.3s;
+
+        @media (min-width: 769px) {
+          &:hover {
+            > .categories__details-wrap {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
 
         @media (max-width: 769px) {
           padding: 10px 15px;
@@ -916,7 +947,6 @@
 
     &__details {
       &-wrap {
-        display: none;
         width: calc(75% - 10px);
         padding: 21px 30px 21px 16px;
         @include adaptive-value(padding-top, 21, 10);
@@ -926,17 +956,24 @@
         background: #fff;
         position: absolute;
         top: 0;
-        left: calc(25%);
+        left: 25%;
         cursor: initial;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
         border-left: 1px solid #e2e2e2;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s;
 
         @media (max-width: 769px) {
+          display: none;
           position: static;
           width: 100%;
           background: inherit;
           border-left: 0;
           padding: 0;
+          opacity: 1;
+          visibility: visible;
+          transition: none;
         }
       }
 

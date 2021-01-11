@@ -19,7 +19,6 @@
       &-info {
         @include adaptive-value(font-size, 16, 14);
       }
-
     }
 
     &-sort {
@@ -452,8 +451,6 @@
       &[data-total-value="5"] .product__rating-item:nth-child(n + 1) {
         color: #1f1f1f;
       }
-
-
     }
   }
 
@@ -506,33 +503,33 @@
       &:focus {
         box-shadow: 0 0 5px 1px #cdcdcd;
       }
+    }
 
-      &[type="submit"] {
-        width: auto;
-        border: 1px solid #1f1f1f;
-        color: $black;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 600;
-        @include adaptive-value(padding-top, 15, 10);
-        @include adaptive-value(padding-bottom, 15, 10);
-        @include adaptive-value(padding-right, 53, 25);
-        @include adaptive-value(padding-right, 53, 25);
-        background: #fff;
-        cursor: pointer;
-        margin: 0 auto;
-        @include adaptive-value(margin-top, 20, 10);
-        @include adaptive-value(margin-bottom, 20, 10);
-        transition: 0.3s;
+    button {
+      width: auto;
+      border: 1px solid #1f1f1f;
+      color: $black;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      @include adaptive-value(padding-top, 15, 10);
+      @include adaptive-value(padding-bottom, 15, 10);
+      @include adaptive-value(padding-right, 53, 25);
+      @include adaptive-value(padding-left, 53, 25);
+      background: #fff;
+      cursor: pointer;
+      margin: 0 auto;
+      @include adaptive-value(margin-top, 20, 10);
+      @include adaptive-value(margin-bottom, 20, 10);
+      transition: 0.3s;
 
-        &:hover {
-          box-shadow: 0 0 5px 1px #cdcdcd;
-          background: darken(#fff, 3%);
-        }
+      &:hover {
+        box-shadow: 0 0 5px 1px #cdcdcd;
+        background: darken(#fff, 3%);
+      }
 
-        &:focus {
-          box-shadow: 0 0 5px 1px #cdcdcd;
-        }
+      &:focus {
+        box-shadow: 0 0 5px 1px #cdcdcd;
       }
     }
   }

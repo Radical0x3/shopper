@@ -3,8 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="d9c29acf-4424-4ced-aaf9-bde4e4cae1f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/product.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/product.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/shop.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/shop.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/shop.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/shop.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/_header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/partials/general/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/partials/general/header.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +98,7 @@
       <workItem from="1609847472502" duration="33107000" />
       <workItem from="1609934411263" duration="19091000" />
       <workItem from="1610020674097" duration="10111000" />
-      <workItem from="1610108652920" duration="25029000" />
+      <workItem from="1610108652920" duration="28833000" />
     </task>
     <servers />
   </component>

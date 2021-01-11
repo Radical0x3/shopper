@@ -19,7 +19,6 @@ body {
   font-family: Jost;
   border: 0;
 
-
   &.lock {
     overflow: hidden;
     box-sizing: border-box;
@@ -37,6 +36,14 @@ body {
   padding: 0 10px;
   box-sizing: border-box;
   display: flex;
+}
+
+.main {
+  transition: 0.3s;
+
+  &.active {
+    transform: translateX(280px);
+  }
 }
 
 .hamburger {
@@ -93,6 +100,21 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     @include adaptive-value(margin-bottom, 35, 10, 1);
+  }
+
+  &__description {
+    width: 100%;
+  }
+
+  &__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 426px) {
+      display: block;
+    }
   }
 
   &__category {
@@ -283,11 +305,16 @@ body {
       &.cart-btn {
         @include adaptive-value(padding-top, 15, 10, 1);
         @include adaptive-value(padding-bottom, 15, 10, 1);
-        @include adaptive-value(padding-left, 45, 20, 1);
-        @include adaptive-value(padding-right, 45, 20, 1);
+        @include adaptive-value(padding-left, 40, 10, 1);
+        @include adaptive-value(padding-right, 40, 10, 1);
         color: #fff;
         background: #1f1f1f;
         @include adaptive-value(margin-right, 10, 5, 1);
+
+        @media (max-width: 1033px) {
+          @include adaptive-value(padding-left, 30, 10, 1);
+          @include adaptive-value(padding-right, 30, 10, 1);
+        }
 
         svg {
           fill: #fff;
@@ -297,10 +324,15 @@ body {
       &.wish-btn {
         @include adaptive-value(padding-top, 15, 10, 1);
         @include adaptive-value(padding-bottom, 15, 10, 1);
-        @include adaptive-value(padding-left, 35, 15, 1);
-        @include adaptive-value(padding-right, 35, 15, 1);
+        @include adaptive-value(padding-left, 30, 5, 1);
+        @include adaptive-value(padding-right, 30, 5, 1);
         color: $black;
         border: 1px solid #1f1f1f;
+
+        @media (max-width: 1033px) {
+          @include adaptive-value(padding-left, 20, 5, 1);
+          @include adaptive-value(padding-right, 20, 5, 1);
+        }
 
         &.active {
           background: $orange;
@@ -309,12 +341,12 @@ body {
       }
 
       span {
-        margin-right: 20px;
+        @include adaptive-value(margin-right, 20, 5, 1);
       }
 
       svg {
-        width: 17px;
-        height: 17px;
+        @include adaptive-value(width, 17, 13, 1);
+        @include adaptive-value(height, 17, 13, 1);
         object-fit: cover;
       }
     }
@@ -565,7 +597,10 @@ body {
     }
   }
 
-  table, tr, th, td {
+  table,
+  tr,
+  th,
+  td {
     border: 1px solid #cdcdcd;
   }
 
@@ -616,7 +651,8 @@ body {
       @media (max-width: 426px) {
         width: 100%;
 
-        th, td {
+        th,
+        td {
           &:first-child {
             width: 80px;
           }
@@ -914,7 +950,7 @@ body {
 
       &-prev,
       &-next {
-        font-size: 0 !important;;
+        font-size: 0 !important;
         background: none;
         position: absolute;
         top: 50%;
@@ -1022,7 +1058,11 @@ body {
 .select {
   width: 83px;
   margin: 8px 0;
-  @include adaptive-value(margin-right, 15, 10, 1);
+  @include adaptive-value(margin-right, 15, 5, 1);
+
+  @media (max-width: 665px) {
+    width: 70px;
+  }
 
   &__header {
     text-align: left;
@@ -1040,7 +1080,7 @@ body {
   }
 
   &__current {
-    padding-right: 20px;
+    padding-right: 10px;
 
     &::after {
       right: 20px;
@@ -1098,6 +1138,23 @@ body {
     margin: 0;
   }
 
+  &__info {
+    display: block;
+    transform: translateY(35%);
+
+    @media (max-width: 899px) {
+      transform: translateY(12%);
+    }
+  }
+
+  &__prices {
+    text-align: left;
+
+    .old-price {
+      margin-right: 10px;
+    }
+  }
+
   &__list {
     @include adaptive-value(padding-left, 20, 10);
     @include adaptive-value(padding-right, 20, 10);
@@ -1115,8 +1172,6 @@ body {
     &-list {
       overflow: hidden;
       width: 100%;
-      //@include adaptive-value(margin-left, 20, 10);
-      //@include adaptive-value(margin-right, 20, 10);
     }
 
     &-slide {
@@ -1127,11 +1182,12 @@ body {
     &-arrow {
       position: absolute !important;
       z-index: 3;
+      top: 40% !important;
     }
 
     &-prev,
     &-next {
-      font-size: 0 !important;;
+      font-size: 0 !important;
       background: none;
       position: absolute;
       top: 50%;

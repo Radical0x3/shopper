@@ -239,6 +239,7 @@ h6 {
 }
 
 .goods__item-wrap {
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -415,10 +416,11 @@ h6 {
 }
 
 .goods__img {
-  width: 99%;
+  width: calc(100% - 2px);
   height: calc( 270px + 50 * ((100vw - 320px) / 1046));
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 0 1px;
   margin-bottom: calc( 100px + -30 * ((100vw - 320px) / 1046));
 }
 
@@ -439,6 +441,8 @@ h6 {
   position: absolute;
   bottom: 0;
   left: 0;
+  right: 0;
+  padding: 0 1px;
   background: #fff;
   -webkit-transition: 0.3s ease-in-out;
   -o-transition: 0.3s ease-in-out;
@@ -579,10 +583,12 @@ h6 {
   text-decoration: line-through;
   font-weight: 400;
   color: #bababa;
+  font-size: calc( 14px + 2 * ((100vw - 320px) / 1046));
 }
 
 .new-price {
   color: #FF6F61;
+  font-size: calc( 14px + 2 * ((100vw - 320px) / 1046));
 }
 
 .inline-link {
@@ -1640,26 +1646,17 @@ h6 {
 .header__currencies {
   height: 0;
   position: absolute;
-  top: 150%;
+  top: 100%;
   background: #fff;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.175);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.175);
   cursor: auto;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
   z-index: 5;
-}
-
-.header__countries.active,
-.header__languages.active,
-.header__currencies.active {
-  height: 120px;
-  top: 100%;
-  opacity: 1;
-  visibility: visible;
 }
 
 .header__countries-item,
@@ -1857,6 +1854,8 @@ h6 {
   -webkit-transform: translateX(280px);
       -ms-transform: translateX(280px);
           transform: translateX(280px);
+  opacity: 1;
+  visibility: visible;
 }
 
 .header .hamburger {
@@ -1876,7 +1875,7 @@ h6 {
 }
 
 .header .categories__wrap {
-  display: none;
+  display: block;
   width: 100%;
   max-width: 1190px;
   position: absolute;
@@ -1884,6 +1883,11 @@ h6 {
   left: 0;
   z-index: 1111;
   padding: 0 10px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .header .categories__titles-list {
@@ -1898,10 +1902,10 @@ h6 {
   padding-bottom: calc( 10px + 4 * ((100vw - 320px) / 1046));
   padding-right: calc( 10px + 20 * ((100vw - 320px) / 1046));
   padding-left: calc( 10px + 20 * ((100vw - 320px) / 1046));
+  cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  cursor: pointer;
 }
 
 .header .categories__titles-item:not(:last-child) {
@@ -1964,7 +1968,6 @@ h6 {
 }
 
 .header .categories__details-wrap {
-  display: none;
   width: calc(75% - 10px);
   padding: 21px 30px 21px 16px;
   padding-top: calc( 10px + 11 * ((100vw - 320px) / 1046));
@@ -1974,11 +1977,16 @@ h6 {
   background: #fff;
   position: absolute;
   top: 0;
-  left: calc(25%);
+  left: 25%;
   cursor: initial;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
   border-left: 1px solid #e2e2e2;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .header .categories__details-inner {
@@ -2076,6 +2084,15 @@ h6 {
   background: url("../img/icons/icons.svg#bg2") center no-repeat;
   background-size: cover;
   padding-top: calc( 20px + 50 * ((100vw - 320px) / 1046));
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer.active {
+  -webkit-transform: translateX(280px);
+      -ms-transform: translateX(280px);
+          transform: translateX(280px);
 }
 
 .footer__nav {
@@ -2876,12 +2893,44 @@ body.lock {
           box-sizing: border-box;
 }
 
+.main {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main.active {
+  -webkit-transform: translateX(280px);
+      -ms-transform: translateX(280px);
+          transform: translateX(280px);
+}
+
 .hamburger {
   padding-bottom: 10px;
 }
 
 .circle.hide {
   display: none;
+}
+
+@media (min-width: 769px) {
+  .header__countries.active,
+  .header__languages.active,
+  .header__currencies.active {
+    height: 120px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header #catalog:hover .categories__wrap {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header .categories__titles-item:hover > .categories__details-wrap {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 @media (max-width: 1170px) {
@@ -3135,27 +3184,32 @@ body.lock {
     text-align: left;
   }
 
+  .header__list-link.active {
+    margin-bottom: 15px;
+  }
+
   .header__countries,
   .header__languages,
   .header__currencies {
     position: static;
-    height: auto;
     width: 100% !important;
     opacity: 1;
     visibility: visible;
-    display: none;
     -webkit-box-shadow: none;
             box-shadow: none;
     background: inherit;
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
+    overflow: hidden;
+    height: auto;
+    max-height: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
   }
 
   .header__countries.active,
   .header__languages.active,
   .header__currencies.active {
-    height: auto;
+    max-height: 300px;
   }
 
   .header__countries-item,
@@ -3217,7 +3271,7 @@ body.lock {
     top: 0;
     right: 0;
     background: #fff;
-    z-index: 9999;
+    z-index: 2222;
     -webkit-box-shadow: 0 8px 6px -6px #cdcdcd;
             box-shadow: 0 8px 6px -6px #cdcdcd;
   }
@@ -3398,6 +3452,8 @@ body.lock {
     -o-transition: 0.3s;
     transition: 0.3s;
     background: none;
+    opacity: 0;
+    visibility: hidden;
   }
 
   .header #catalog {
@@ -3422,14 +3478,22 @@ body.lock {
   }
 
   .header .categories__wrap {
+    display: none;
     position: static;
-    margin-top: 15px;
     padding: 0;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
   }
 
   .header .categories__titles-list {
     width: 100%;
     background: inherit;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
   }
 
   .header .categories__titles-item {
@@ -3445,11 +3509,17 @@ body.lock {
   }
 
   .header .categories__details-wrap {
+    display: none;
     position: static;
     width: 100%;
     background: inherit;
     border-left: 0;
     padding: 0;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
   }
 
   .header .categories__details-right {

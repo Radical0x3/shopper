@@ -29,6 +29,14 @@ body {
   }
 }
 
+.main {
+  transition: 0.3s;
+
+  &.active {
+    transform: translateX(280px);
+  }
+}
+
 #shop {
   .container {
     //padding: 0;
@@ -66,6 +74,13 @@ body {
 }
 
 .circle {
+  &.hide {
+    display: none;
+  }
+}
+
+
+.select {
   &.hide {
     display: none;
   }

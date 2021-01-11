@@ -1,4 +1,4 @@
-const {src, dest} = require("gulp");
+const { src, dest } = require("gulp");
 const gulp = require("gulp");
 const browsersync = require("browser-sync").create();
 const fileinclude = require("gulp-file-include");
@@ -42,23 +42,21 @@ const path = {
   },
   watch: {
     html: source_folder + "/**/*.html",
-    css: source_folder + "/scss/**/*.scss" +
-      "",
+    css: source_folder + "/scss/**/*.scss" + "",
     js: source_folder + "/js/**/*.js",
     img: source_folder + "/img/**/*.+(jpg|png|svg|gif|ico|webp)",
     videos: source_folder + "/videos/**/*.mp4",
   },
   clean: "./" + project_folder + "/",
-}
-
+};
 
 function browserSync(params) {
   browsersync.init({
     server: {
-      baseDir: "./" + project_folder + "/"
+      baseDir: "./" + project_folder + "/",
     },
     port: 3000,
-    notify: false
+    notify: false,
   });
 }
 
@@ -80,20 +78,22 @@ function js() {
           product: "./src/js/product.js",
         },
         output: {
-          filename: "[name].js"
+          filename: "[name].js",
         },
         optimization: {
-          runtimeChunk: 'single',
+          runtimeChunk: "single",
           splitChunks: {
-            chunks: 'all',
+            chunks: "all",
             maxInitialRequests: Infinity,
             minSize: 0,
             cacheGroups: {
               vendor: {
                 test: /[\\/]node_modules[\\/]/,
                 name(module) {
-                  const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-                  return `npm.${packageName.replace('@', '')}`;
+                  const packageName = module.context.match(
+                    /[\\/]node_modules[\\/](.*?)([\\/]|$)/
+                  )[1];
+                  return `npm.${packageName.replace("@", "")}`;
                 },
               },
             },
@@ -106,11 +106,11 @@ function js() {
               exclude: /(node_modules)/,
               loader: "babel-loader",
               query: {
-                presets: ["@babel/preset-env"]
-              }
-            }
-          ]
-        }
+                presets: ["@babel/preset-env"],
+              },
+            },
+          ],
+        },
       })
     )
     .pipe(fileinclude())
@@ -123,26 +123,27 @@ function css() {
   return src(path.src.css)
     .pipe(
       scss({
-        outputStyle: "expanded"
-      }))
+        outputStyle: "expanded",
+      })
+    )
     .pipe(group_media())
     .pipe(
       autoprefixer({
         overrideBrowserslist: ["last 5 versions"],
-        cascade: true
+        cascade: true,
       })
     )
     .pipe(
       webpcss({
         webpClass: ".webp",
-        noWebpClass: ".no-webp"
+        noWebpClass: ".no-webp",
       })
     )
     .pipe(dest(path.build.css))
     .pipe(clean_css())
     .pipe(
       rename({
-        extname: ".min.css"
+        extname: ".min.css",
       })
     )
     .pipe(dest(path.build.css))
@@ -153,7 +154,7 @@ function images() {
   return src(path.src.img)
     .pipe(
       webp({
-        quality: 75
+        quality: 75,
       })
     )
     .pipe(dest(path.build.img))
@@ -161,10 +162,11 @@ function images() {
     .pipe(
       imagemin({
         progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
+        svgoPlugins: [{ removeViewBox: false }],
         interlaced: true,
-        optimizationLevel: 3 //0 to 7
-      }))
+        optimizationLevel: 3, //0 to 7
+      })
+    )
     .pipe(dest(path.build.img))
     .pipe(browsersync.stream());
 }
@@ -177,42 +179,37 @@ function videos() {
 }
 
 function fonts() {
-  src(path.src.fonts)
-    .pipe(ttf2woff())
-    .pipe(dest(path.build.fonts));
-  return src(path.src.fonts)
-    .pipe(ttf2woff2())
-    .pipe(dest(path.build.fonts));
+  src(path.src.fonts).pipe(ttf2woff()).pipe(dest(path.build.fonts));
+  return src(path.src.fonts).pipe(ttf2woff2()).pipe(dest(path.build.fonts));
 }
 
 gulp.task("svgSprite", function () {
-  return gulp.src([source_folder + "/iconsprite/*.svg"])
+  return gulp
+    .src([source_folder + "/iconsprite/*.svg"])
     .pipe(
       svgSprite({
         mode: {
           stack: {
             sprite: "../icons/icons.svg",
             // example: true
-          }
-        }
+          },
+        },
       })
     )
-    .pipe(dest(path.build.img))
-})
+    .pipe(dest(path.build.img));
+});
 
 gulp.task("otf2ttf", function () {
   return src([source_folder + "/fonts/*.otf"])
     .pipe(
       fonter({
-        formats: ["ttf"]
+        formats: ["ttf"],
       })
     )
     .pipe(dest(source_folder + "/fonts/"));
-})
+});
 
-function cb() {
-}
-
+function cb() {}
 
 function watchFiles(params) {
   gulp.watch([path.watch.html], html);
@@ -225,7 +222,10 @@ function clean(params) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, videos, fonts));
+let build = gulp.series(
+  clean,
+  gulp.parallel(js, css, html, images, videos, fonts)
+);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.html = html;

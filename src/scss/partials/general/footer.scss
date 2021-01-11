@@ -2,9 +2,14 @@
   background: url("../img/icons/icons.svg#bg2") center no-repeat;
   background-size: cover;
   @include adaptive-value(padding-top, 70, 20);
+  transition: 0.3s;
 
   @media (max-width: 860px) {
     background: #1f1f1f;
+  }
+
+  &.active {
+    transform: translateX(280px);
   }
 
   &__nav {

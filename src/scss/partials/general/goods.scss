@@ -29,6 +29,7 @@
     }
 
     &-wrap {
+      width: 100%;
       overflow: hidden;
       position: relative;
 
@@ -185,10 +186,11 @@
   }
 
   &__img {
-    width: 99%;
+    width: calc(100% - 2px);
     //height: 320px;
     @include adaptive-value(height, 320, 270);
     object-fit: cover;
+    margin: 0 1px;
     @include adaptive-value(margin-bottom, 70, 100);
     //margin-bottom: 70px;
   }
@@ -212,6 +214,8 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    right: 0;
+    padding: 0 1px;
     background: #fff;
     transition: 0.3s ease-in-out;
     transform: translateY(40%);
@@ -349,8 +353,10 @@
   text-decoration: line-through;
   font-weight: 400;
   color: lighten(#a0a0a0, 10%);
+  @include adaptive-value(font-size, 16, 14);
 }
 
 .new-price {
   color: $orange;
+  @include adaptive-value(font-size, 16, 14);
 }
