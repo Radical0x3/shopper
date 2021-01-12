@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{110:function(n,c,e){"use strict";e.r(c);var t=e(0),o=e.n(t);e(17).a.initAll({alwaysShowTracks:!1,renderByPixels:!0}),o()("a").on("click",(function(n){n.preventDefault()})),o()(".cart__products-remove").on("click",(function(){o()(this).parents(".cart__products-item").remove()}))}},[[110,1,0,5,2,3,6,7]]]);

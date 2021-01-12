@@ -76,6 +76,8 @@ function js() {
           main: "./src/js/script.js",
           shop: "./src/js/shop.js",
           product: "./src/js/product.js",
+          cart: "./src/js/cart.js",
+          checkout: "./src/js/checkout.js",
         },
         output: {
           filename: "[name].js",
