@@ -18,6 +18,7 @@ const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
 const fonter = require("gulp-fonter");
 const webpackStream = require("webpack-stream");
+const htmlmin = require("gulp-htmlmin");
 
 const project_folder = "dist";
 const source_folder = "src";
@@ -63,6 +64,7 @@ function browserSync(params) {
 function html() {
   return src(path.src.html)
     .pipe(fileinclude())
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
 }
