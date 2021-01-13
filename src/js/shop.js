@@ -81,10 +81,6 @@ $(".aside-reset").on("click", function () {
   }
 });
 
-$(".goods__item-link").on("click", function (e) {
-  e.preventDefault();
-});
-
 $(".quick-action").on("click", function (e) {
   e.preventDefault();
   let elem = document.createElement("p");

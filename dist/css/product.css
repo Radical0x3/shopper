@@ -1502,11 +1502,16 @@ h6 {
   color: #6d6d6d;
 }
 
-.header__title {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 42px;
-  padding: 25px 0;
+.header__logo {
+  width: 300px;
+  height: 70px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.header__logo svg {
+  width: 100%;
+  height: 100%;
 }
 
 .header__actions {
@@ -1801,7 +1806,7 @@ h6 {
 }
 
 .footer {
-  background: url("../img/icons/icons.svg#bg2") center no-repeat;
+  background: url("../img/icons/icons.svg#bg") center no-repeat;
   background-size: cover;
   padding-top: calc( 20px + 50 * ((100vw - 320px) / 1046));
   -webkit-transition: 0.3s;
@@ -1813,6 +1818,19 @@ h6 {
   -webkit-transform: translateX(280px);
       -ms-transform: translateX(280px);
           transform: translateX(280px);
+}
+
+.footer__logo {
+  width: 180px;
+  height: 60px;
+  margin-bottom: 15px;
+  margin-top: -15px;
+}
+
+.footer__logo svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
 }
 
 .footer__nav {
@@ -4230,6 +4248,38 @@ body.lock {
 }
 
 @media (max-width: 1170px) {
+  .header__logo {
+    width: calc( 150px + 150 * ((100vw - 320px) / 850));
+  }
+
+  .header__logo {
+    height: calc( 35px + 35 * ((100vw - 320px) / 850));
+  }
+
+  .header__logo {
+    margin-top: calc( 5px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .header__logo {
+    margin-bottom: calc( 5px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .footer__logo {
+    width: calc( 150px + 30 * ((100vw - 320px) / 850));
+  }
+
+  .footer__logo {
+    height: calc( 40px + 20 * ((100vw - 320px) / 850));
+  }
+
+  .footer__logo {
+    margin-bottom: calc( 5px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .footer__logo {
+    margin-top: calc( 0px + -15 * ((100vw - 320px) / 850));
+  }
+
   .product__preview {
     margin-right: calc( 0px + 80 * ((100vw - 320px) / 850));
   }
@@ -4595,6 +4645,10 @@ body.lock {
 }
 
 @media (max-width: 792px) {
+  .footer__logo {
+    margin: 0 auto 10px;
+  }
+
   .footer__nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4811,10 +4865,6 @@ body.lock {
     border-top: 1px solid #e2e2e2;
   }
 
-  .header__title {
-    padding: 0;
-  }
-
   .header__mobile {
     display: block;
     width: 100%;
@@ -4886,7 +4936,7 @@ body.lock {
     font-size: 18px;
   }
 
-  .header__body .header__title {
+  .header__body .header__logo {
     display: none;
   }
 

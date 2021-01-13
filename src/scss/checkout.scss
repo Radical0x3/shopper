@@ -69,6 +69,14 @@ body {
 }
 
 .checkout {
+  input {
+    transition: 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 5px 1px #cdcdcd;
+    }
+  }
+
   &__title {
     @include adaptive-value(font-size, 32, 24);
     @include adaptive-value(line-height, 44, 32);
@@ -79,15 +87,15 @@ body {
   }
 
   &__subtitle {
-    font-size: 16px;
-    line-height: 24px;
+    @include adaptive-value(font-size, 16, 14);
+    @include adaptive-value(line-height, 24, 18);
     color: $black;
     text-align: center;
     @include adaptive-value(margin-bottom, 45, 15, 1);
 
     &-link {
-      font-size: 16px;
-      line-height: 24px;
+      @include adaptive-value(font-size, 16, 14);
+      @include adaptive-value(line-height, 24, 18);
       color: $black;
       font-weight: 600;
       transition: 0.3s;
@@ -101,6 +109,10 @@ body {
   &__body {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 680px) {
+      display: block;
+    }
 
     &-title {
       @include adaptive-value(font-size, 20, 16, 1);
@@ -124,10 +136,18 @@ body {
     &-wrap {
       display: flex;
       justify-content: space-between;
+
+      @media (max-width: 480px) {
+        display: block;
+      }
     }
 
     &-inner {
       width: 48%;
+
+      @media (max-width: 480px) {
+        width: 100%;
+      }
     }
 
     label {
@@ -181,7 +201,7 @@ body {
     }
 
     td {
-      @include adaptive-value(font-size, 15, 14, 1);
+      @include adaptive-value(font-size, 15, 13, 1);
       @include adaptive-value(line-height, 22, 16, 1);
       @include adaptive-value(padding-top, 19, 10, 1);
       @include adaptive-value(padding-bottom, 19, 10, 1);
@@ -204,6 +224,7 @@ body {
 
     @media (max-width: 680px) {
       width: 100%;
+      margin-bottom: 30px;
     }
   }
 
@@ -266,4 +287,416 @@ body {
     align-items: center;
     @include adaptive-value(margin-bottom, 50, 15, 1);
   }
+
+  &__payment {
+    &-wrap {
+      @include adaptive-value(margin-bottom, 110, 20, 1);
+
+      @media (max-width: 680px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-list {
+      @include adaptive-value(margin-bottom, 40, 20, 1);
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      @include adaptive-value(padding-top, 19, 10, 1);
+      @include adaptive-value(padding-bottom, 19, 10, 1);
+      @include adaptive-value(padding-left, 20, 10, 1);
+      @include adaptive-value(padding-right, 20, 10, 1);
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      @include adaptive-value(padding-left, 20, 10, 1);
+      @include adaptive-value(padding-right, 20, 10, 1);
+      height: 100%;
+      max-height: 0;
+      overflow: hidden;
+      border-top: 0 solid #cdcdcd;
+      transition: 0.3s;
+
+      input {
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 14px 20px;
+        border: 1px solid #dddddd;
+        margin: 8px 0;
+      }
+
+      #card-label {
+        position: relative;
+
+        input {
+          padding-right: 35px;
+        }
+
+        svg {
+          width: 14px;
+          height: 14px;
+          object-fit: cover;
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          fill: #767676;
+        }
+      }
+
+      #cvv-label {
+        position: relative;
+        width: 32%;
+        min-width: 120px;
+
+        @media (max-width: 430px) {
+          width: 100%;
+        }
+
+        svg {
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            fill: darken(#767676, 20%);
+          }
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &-multiple {
+      display: flex;
+      margin: 8px 0;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .select {
+        width: 32%;
+        min-width: 120px;
+        margin: 0 5px 0 0;
+
+        @media (max-width: 430px) {
+          width: 47%;
+          margin: 0 0 16px 0;
+        }
+
+        &__header {
+          font-size: 14px;
+          color: #767676;
+          text-align: left;
+          padding: 14px 20px 14px 10px;
+          border-color: #dddddd;
+
+          &.active {
+            color: $black;
+          }
+        }
+
+        &__current {
+          &::after {
+            right: 20px;
+          }
+        }
+
+        &__item {
+          font-size: 14px;
+          text-align: left;
+          padding: 14px 20px 14px 10px;
+        }
+      }
+
+      input {
+        margin: 0 !important;
+        font-size: 14px;
+      }
+    }
+
+    &-item {
+      font-size: 15px;
+      line-height: 22px;
+      background: #fff;
+      border: 1px solid #cdcdcd;
+      border-bottom-width: 0;
+      transition: 0.3s;
+      margin: 0 -1px;
+
+      &.active {
+        .checkout__payment-header {
+          background: #f5f5f5;
+        }
+
+        .checkout__payment-body {
+          @include adaptive-value(padding-top, 17, 10, 1);
+          @include adaptive-value(padding-bottom, 17, 10, 1);
+          @include adaptive-value(padding-left, 20, 10, 1);
+          @include adaptive-value(padding-right, 20, 10, 1);
+          max-height: 999px;
+          overflow: visible;
+          border-top-width: 1px;
+        }
+
+        .checkmark__container {
+          color: $black;
+        }
+      }
+
+      &:nth-child(2) {
+        .checkout__payment-header {
+          @include adaptive-value(padding, 20, 12, 1);
+        }
+
+        svg {
+          width: 70px;
+        }
+      }
+
+      &:last-child {
+        border-bottom-width: 1px;
+      }
+
+      .checkmark__container {
+        margin-right: 12px;
+        color: #767676;
+        transition: 0.3s;
+      }
+    }
+
+    &-sublist {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 32px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-subitem {
+      height: 18px;
+      margin: 0 3px;
+
+      &_bg {
+        border: 1px solid #f5f5f5;
+        height: 20px;
+      }
+    }
+
+    &-notes {
+      width: 100%;
+      height: 140px;
+      padding: 13px 20px;
+      border: 1px solid #cdcdcd;
+      resize: none;
+      overflow-x: hidden;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+  }
+
+  &__wrap {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 12;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      fill: #767676;
+    }
+  }
+
+  &__note {
+    width: 250px;
+    padding: 11px 15px;
+    background: #f5f5f5;
+    font-size: 11px;
+    line-height: 16px;
+    position: absolute;
+    top: -80px;
+    right: -118px;
+    z-index: 11;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+    @media (max-width: 680px) {
+      right: -20px;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: #f5f5f5 transparent transparent transparent;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media (max-width: 680px) {
+        left: auto;
+        right: 22px;
+        transform: translateX(0);
+      }
+    }
+
+    p {
+      color: #525252;
+      user-select: none;
+    }
+  }
+
+  &__products {
+    width: 100%;
+
+    &-item {
+      display: flex;
+      @include adaptive-value(padding-top, 30, 15, 1);
+      @include adaptive-value(padding-bottom, 30, 15, 1);
+      border-top: 1px solid #e2e2e2;
+    }
+
+    &-img {
+      width: 100px;
+      min-width: 100px;
+      height: 100px;
+      min-height: 100px;
+      @include adaptive-value(margin-right, 30, 15, 1);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-main {
+      max-width: 100%;
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-inner {
+      height: 100%;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-top {
+      color: $black;
+      @include adaptive-value(font-size, 15, 13, 1);
+      @include adaptive-value(line-height, 24, 16, 1);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    &-title {
+      margin-bottom: 5px;
+    }
+
+    &-price {
+      color: #767676;
+    }
+  }
+
+  &__info {
+    color: #767676;
+
+    &-item {
+      @include adaptive-value(font-size, 15, 13, 1);
+      @include adaptive-value(line-height, 22, 16, 1);
+    }
+  }
+
+  &__total {
+    padding: 7px 0;
+    @include adaptive-value(padding-left, 30, 10, 1);
+    @include adaptive-value(padding-right, 30, 10, 1);
+    @include adaptive-value(margin-bottom, 30, 15, 1);
+    background: #f5f5f5;
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      @include adaptive-value(font-size, 16, 14, 1);
+      @include adaptive-value(line-height, 24, 18, 1);
+      color: $black;
+      @include adaptive-value(padding-top, 18, 10, 1);
+      @include adaptive-value(padding-bottom, 18, 10, 1);
+
+      &_total {
+        font-size: 18px;
+        font-weight: 600;
+        @include adaptive-value(font-size, 18, 16, 1);
+        @include adaptive-value(line-height, 27, 22, 1);
+        @include adaptive-value(padding-top, 16, 8, 1);
+      }
+    }
+  }
+
+  &__personal-data {
+    font-size: 14px;
+    line-height: 21px;
+    color: #525252;
+    @include adaptive-value(margin-bottom, 35, 15, 1);
+  }
+
+  &__checkout-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background: #1f1f1f;
+    @include adaptive-value(font-size, 16, 14, 1);
+    @include adaptive-value(line-height, 24, 18, 1);
+    @include adaptive-value(padding-top, 15, 10, 1);
+    @include adaptive-value(padding-bottom, 15, 10, 1);
+    @include adaptive-value(margin-bottom, 20, 10, 1);
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 5px 2px #cdcdcd;
+      background: lighten(#1f1f1f, 5%);
+    }
+  }
+}
+
+.hidden-input {
+  position: absolute;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0;
+  padding: 0 !important;
+  visibility: hidden;
 }
