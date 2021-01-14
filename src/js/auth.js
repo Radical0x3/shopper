@@ -56,7 +56,6 @@ $(document).ready(function () {
   const timeout = 200;
   const body = document.querySelector("body");
   const lockPadding = document.querySelectorAll(".lock-padding");
-  const header = document.querySelector(".header");
 
   function bodyLock() {
     const lockPaddingValue =
@@ -67,7 +66,6 @@ $(document).ready(function () {
         el.style.paddingRight = lockPaddingValue;
       }
     }
-    header.style.paddingRight = lockPaddingValue;
     body.style.paddingRight = lockPaddingValue;
     body.classList.add("lock");
 
@@ -84,7 +82,6 @@ $(document).ready(function () {
         el.style.paddingRight = "0px";
       }
       body.style.paddingRight = "0px";
-      header.style.paddingRight = "0px";
       body.classList.remove("lock");
     }, timeout);
 

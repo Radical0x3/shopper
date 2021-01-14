@@ -176,7 +176,7 @@
       left: 0;
       background: #fff;
       z-index: 2223;
-      transform: translateY(100%);
+      transform: translateY(200%);
       transition: 0.3s;
       overflow-y: auto;
 
@@ -405,8 +405,10 @@
 
   .goods {
     &__list {
-      @include adaptive-value(margin, -8, -5);
-      margin-bottom: 40px;
+      @include adaptive-value(margin-top, -8, -5);
+      @include adaptive-value(margin-left, -8, -5);
+      @include adaptive-value(margin-right, -8, -5);
+      @include adaptive-value(margin-bottom, 40, 20);
     }
 
     &__item {

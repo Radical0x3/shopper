@@ -140,7 +140,6 @@ let unlock = true;
 const timeout = 200;
 const body = document.querySelector("body");
 const lockPadding = document.querySelectorAll(".lock-padding");
-const header = document.querySelector(".header");
 
 function bodyLock() {
   const lockPaddingValue =
@@ -151,7 +150,6 @@ function bodyLock() {
       el.style.paddingRight = lockPaddingValue;
     }
   }
-  header.style.paddingRight = lockPaddingValue;
   body.style.paddingRight = lockPaddingValue;
   body.classList.add("lock");
 
@@ -168,7 +166,6 @@ function bodyUnlock() {
       el.style.paddingRight = "0px";
     }
     body.style.paddingRight = "0px";
-    header.style.paddingRight = "0px";
     body.classList.remove("lock");
   }, timeout);
 

@@ -21,7 +21,6 @@ body {
   &.lock {
     overflow: hidden;
     box-sizing: border-box;
-    //padding-right: 17px;
   }
 
   @media (max-width: 769px) {
@@ -84,8 +83,4 @@ body {
   &.hide {
     display: none;
   }
-}
-
-.goods {
-  
 }

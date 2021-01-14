@@ -2960,9 +2960,9 @@ h6 {
   left: 0;
   background: #fff;
   z-index: 2223;
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(200%);
+      -ms-transform: translateY(200%);
+          transform: translateY(200%);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -3224,7 +3224,9 @@ h6 {
 }
 
 .content .goods__list {
-  margin: -8px;
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
   margin-bottom: 40px;
 }
 
@@ -3797,7 +3799,19 @@ body.lock {
   }
 
   .content .goods__list {
-    margin: calc( -5px + -3 * ((100vw - 320px) / 850));
+    margin-top: calc( -5px + -3 * ((100vw - 320px) / 850));
+  }
+
+  .content .goods__list {
+    margin-left: calc( -5px + -3 * ((100vw - 320px) / 850));
+  }
+
+  .content .goods__list {
+    margin-right: calc( -5px + -3 * ((100vw - 320px) / 850));
+  }
+
+  .content .goods__list {
+    margin-bottom: calc( 20px + 20 * ((100vw - 320px) / 850));
   }
 
   .content .goods__item {
