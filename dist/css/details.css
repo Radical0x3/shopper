@@ -1689,9 +1689,9 @@ h6 {
   left: 0;
   background: #fff;
   z-index: 2223;
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(200%);
+      -ms-transform: translateY(200%);
+          transform: translateY(200%);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
