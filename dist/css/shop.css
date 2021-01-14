@@ -3052,13 +3052,17 @@ h6 {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-transition: z-index 0.1s;
-  -o-transition: z-index 0.1s;
-  transition: z-index 0.1s;
+  -webkit-transition: z-index 0.1s, opacity 0.2s;
+  -o-transition: z-index 0.1s, opacity 0.2s;
+  transition: z-index 0.1s, opacity 0.2s;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .content__mobile-sort.active {
   z-index: 2224;
+  opacity: 1;
+  visibility: visible;
 }
 
 .content__mobile-sort.active .content__mobile-body {

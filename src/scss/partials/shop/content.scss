@@ -255,10 +255,15 @@
       top: 0;
       left: 0;
       z-index: -1;
-      transition: z-index 0.1s;
+      transition: z-index 0.1s, opacity 0.2s;
+      opacity: 0;
+      visibility: hidden;
 
       &.active {
         z-index: 2224;
+        opacity: 1;
+        visibility: visible;
+
         .content__mobile-body {
           transform: translateY(0);
         }
