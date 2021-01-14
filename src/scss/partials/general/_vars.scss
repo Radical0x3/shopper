@@ -5,7 +5,7 @@ $black: #111;
 $maxWidth: 1366;
 $maxWidthContainer: 1170;
 
-@mixin adaptive-value($property, $startSize, $minSize, $type: 0) {
+@mixin adaptive-value($property, $startSize, $minSize, $type: 1) {
   $addSize: $startSize - $minSize;
 
   @if $type == 1 {

@@ -110,7 +110,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 680px) {
+    @media (max-width: 709px) {
       display: block;
     }
 
@@ -125,7 +125,7 @@ body {
   &__details {
     width: 58%;
 
-    @media (max-width: 680px) {
+    @media (max-width: 709px) {
       width: 100%;
     }
   }
@@ -222,7 +222,7 @@ body {
   &__summary {
     width: 34%;
 
-    @media (max-width: 680px) {
+    @media (max-width: 709px) {
       width: 100%;
       margin-bottom: 30px;
     }
@@ -292,7 +292,7 @@ body {
     &-wrap {
       @include adaptive-value(margin-bottom, 110, 20, 1);
 
-      @media (max-width: 680px) {
+      @media (max-width: 709px) {
         margin-bottom: 20px;
       }
     }
@@ -511,7 +511,12 @@ body {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-    z-index: 12;
+    z-index: 3;
+    transition: 0.3s;
+
+    &.active {
+      z-index: 12;
+    }
 
     svg {
       width: 100%;
@@ -536,7 +541,7 @@ body {
     visibility: hidden;
     transition: 0.3s;
 
-    @media (max-width: 680px) {
+    @media (max-width: 709px) {
       right: -20px;
     }
 
@@ -558,7 +563,7 @@ body {
       left: 50%;
       transform: translateX(-50%);
 
-      @media (max-width: 680px) {
+      @media (max-width: 709px) {
         left: auto;
         right: 22px;
         transform: translateX(0);
@@ -572,8 +577,6 @@ body {
   }
 
   &__products {
-    width: 100%;
-
     &-item {
       display: flex;
       @include adaptive-value(padding-top, 30, 15, 1);

@@ -1,0 +1,38 @@
+.signin {
+  width: 48%;
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.02);
+  @include adaptive-value(padding-top, 30, 15, 1);
+  @include adaptive-value(padding-bottom, 40, 15, 1);
+  @include adaptive-value(padding-left, 40, 15, 1);
+  @include adaptive-value(padding-right, 40, 15, 1);
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  form {
+    input {
+      &[type="email"],
+      &[type="password"] {
+        width: 100%;
+        border: 1px solid #cdcdcd;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 12px 20px;
+        @include adaptive-value(margin-top, 10, 5, 1);
+        @include adaptive-value(margin-bottom, 10, 5, 1);
+        transition: 0.3s;
+
+        &::placeholder {
+          color: #767676;
+        }
+
+        &:focus {
+          box-shadow: 0 0 5px 1px #cdcdcd;
+        }
+      }
+    }
+  }
+}

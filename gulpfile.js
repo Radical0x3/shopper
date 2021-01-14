@@ -80,6 +80,9 @@ function js() {
           product: "./src/js/product.js",
           cart: "./src/js/cart.js",
           checkout: "./src/js/checkout.js",
+          auth: "./src/js/auth.js",
+          orders: "./src/js/orders.js",
+          details: "./src/js/details.js",
         },
         output: {
           filename: "[name].js",

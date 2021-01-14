@@ -39,6 +39,8 @@ input,
 button,
 textarea {
   font-family: inherit;
+  appearance: none;
+  border-radius: 0;
 }
 
 input::-ms-clear {

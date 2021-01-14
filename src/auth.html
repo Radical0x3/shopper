@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="preload"
+      href="https://kit.fontawesome.com/4481fae25d.js"
+      as="script"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Jost.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" media="all" href="css/auth.min.css" />
+    <title>Shopper | Authorization Page</title>
+  </head>
+</html>
+<body id="home">
+  @@include("_header.html")
+  <main class="main">
+    <div class="container">
+      <section class="auth">
+        <div class="signin">
+          <h2 class="auth__title">Returning Customer</h2>
+          <form action="#" id="login">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address *"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password *"
+              required
+            />
+            <div class="auth__actions">
+              <input type="checkbox" id="c1" class="auth__input" />
+              <label for="c1" class="auth__label">Remember me</label>
+              <a href="#" class="auth__forgot">Forgot Password?</a>
+            </div>
+            <input type="submit" value="Sign In" class="auth__submit" />
+          </form>
+        </div>
+        <div class="signup">
+          <h2 class="auth__title">New Customer</h2>
+          <form action="#" id="register">
+            <input type="text" placeholder="First Name *" required />
+            <input type="text" placeholder="Last Name *" required />
+            <input type="email" placeholder="Email Address *" required />
+            <div class="signup__multiple">
+              <input
+                type="password"
+                id="pass"
+                placeholder="Password *"
+                required
+              />
+              <input
+                type="password"
+                id="confirm-pass"
+                placeholder="Confirm Password *"
+                required
+              />
+            </div>
+            <p class="signup__agree">
+              By registering your details, you agree with our Terms &
+              Conditions, and Privacy and Cookie Policy.
+            </p>
+            <input type="checkbox" id="c2" class="auth__input" />
+            <label for="c2" class="auth__label"
+              >Sign me up for the Newsletter!</label
+            >
+            <input type="submit" value="Register" class="auth__submit" />
+          </form>
+        </div>
+      </section>
+      <div class="popup js-popup" data-id-popup="0">
+        <div class="popup__opas"></div>
+        <div class="popup__wrap js-popup__wrap" data-scrollbar>
+          <div class="popup__container">
+            <div class="auth-popup">
+              <div class="auth-popup__header">
+                <h3 class="auth-popup__title">Forgot Password?</h3>
+                <span class="popup__close js-popup__close">
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#cancel"></use>
+                  </svg>
+                </span>
+              </div>
+              <div class="auth-popup__body">
+                <p class="auth-popup__text">
+                  Please enter your Email Address. You will receive a link to
+                  create a new password via Email.
+                </p>
+                <form action="#" id="forgot">
+                  <input type="email" placeholder="Your Email *" required />
+                  <input
+                    type="submit"
+                    value="Reset Password"
+                    class="auth__submit"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  @@include("_footer.html")
+  <a href="#home" class="button-up"></a>
+  <script
+    type="module"
+    async
+    src="https://kit.fontawesome.com/4481fae25d.js"
+    crossorigin="anonymous"
+  ></script>
+  <script type="module" async src="js/runtime.js"></script>
+  <script type="module" async src="js/npm.jquery.js"></script>
+  <script type="module" async src="js/npm.slick-carousel.js"></script>
+  <script type="module" async src="js/npm.core-js.js"></script>
+  <script type="module" async src="js/npm.lodash-es.js"></script>
+  <script type="module" async src="js/npm.smooth-scrollbar.js"></script>
+  <script type="module" async src="js/npm.tslib.js"></script>
+  <script type="module" async src="js/npm.webpack-stream.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/auth.js"></script>
+</body>

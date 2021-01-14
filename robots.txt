@@ -1,0 +1,9 @@
+User-agent: * 
+Disallow: /index.html
+Disallow: /shop.html
+Disallow: /product.html
+Disallow: /cart.html
+Disallow: /checkout.html
+Disallow: /auth.html
+Disallow: /orders.html
+Disallow: /details.html

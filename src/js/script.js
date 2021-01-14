@@ -3,20 +3,22 @@ import "./slider";
 
 window.onload = function () {
   // <------ Button scroll-up START ------>
-  $("a").on("click", function () {
+  $("a").on("click", function (e) {
     let href = $(this).attr("href");
 
-    $("html, body").animate(
-      {
-        scrollTop: $(href).offset().top - 55,
-      },
-      {
-        duration: 600,
-        easing: "linear",
-      }
-    );
+    if (href.startsWith("#") && href !== "#" & href !== "##") {
+      $("html, body").animate(
+        {
+          scrollTop: $(href).offset().top - 55,
+        },
+        {
+          duration: 600,
+          easing: "linear",
+        }
+      );
 
-    return false;
+      return false;
+    }
   });
 
   $(window).scroll(function () {

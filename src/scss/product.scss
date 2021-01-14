@@ -532,6 +532,7 @@ body {
     @include adaptive-value(padding-bottom, 22, 15);
     border-bottom: 1px solid #e2e2e2;
     @include adaptive-value(margin-bottom, 25, 10);
+    position: relative;
   }
 
   &__title {
@@ -1094,9 +1095,19 @@ body {
 }
 
 .popup {
+  &[data-id-popup="0"] {
+    .popup__close {
+      top: 45% !important;
+    }
+  }
+
   &[data-id-popup="1"] {
     .popup__wrap {
       max-width: 570px;
+    }
+
+    .popup__close {
+      top: 45% !important;
     }
   }
 

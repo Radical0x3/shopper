@@ -30,8 +30,10 @@ $(".select__item").on("click", function () {
 
 $(".checkout__wrap svg").on("click", function () {
   let elem = $(this).parent().children(".checkout__note");
+  let wrap = $(this).parent();
 
   elem.toggleClass("active");
+  wrap.toggleClass("active");
 });
 
 let container = $(".checkout__wrap");
@@ -40,6 +42,7 @@ $(document).mouseup(function (e) {
 
   if (elem.has(e.target).length === 0 && container.has(e.target).length === 0) {
     elem.removeClass("active");
+    container.removeClass("active");
   }
 });
 
