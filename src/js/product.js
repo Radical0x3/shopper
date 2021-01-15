@@ -430,6 +430,7 @@ ratingItemsArray.forEach((item) => {
   });
 });
 
-$(".reviews__actions-btn").on("click", function () {
+$(".reviews__actions-btn").on("click", function (e) {
+  e.preventDefault();
   $(".reviews__write-review").fadeToggle(200);
 });

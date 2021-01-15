@@ -361,7 +361,7 @@ h6 {
 .goods__tag {
   position: absolute;
   top: 20px;
-  left: 0;
+  left: 1px;
   font-size: 11px;
   font-weight: 600;
   line-height: 16px;
@@ -518,7 +518,7 @@ h6 {
 }
 
 .goods__colors-item.brown-color::after {
-  background-color: #D5B38A;
+  background-color: #d5b38a;
 }
 
 .goods__colors-item.black-color::after {
@@ -583,6 +583,39 @@ h6 {
   margin-right: 0;
 }
 
+.goods__remove {
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.goods__remove:hover svg {
+  fill: #1f1f1f;
+}
+
+.goods__remove svg {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  fill: #919191;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .old-price {
   text-decoration: line-through;
   font-weight: 400;
@@ -640,6 +673,7 @@ h6 {
   padding-right: 36px;
   background: #1f1f1f;
   color: #fff;
+  border: 1px solid transparent;
   font-size: 16px;
   line-height: 23px;
   position: absolute;
@@ -654,7 +688,9 @@ h6 {
 }
 
 .shop-btn:hover {
-  background: #393939;
+  background: #fff;
+  color: #111;
+  border-color: #1f1f1f;
 }
 
 .arrow-link {
@@ -3058,6 +3094,30 @@ body.lock {
 
   .goods__sizes a {
     line-height: calc( 14px + 7 * ((100vw - 320px) / 850));
+  }
+
+  .goods__remove {
+    width: calc( 30px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .goods__remove {
+    height: calc( 30px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .goods__remove {
+    top: calc( 10px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .goods__remove {
+    right: calc( 10px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .goods__remove svg {
+    width: calc( 12px + 2 * ((100vw - 320px) / 850));
+  }
+
+  .goods__remove svg {
+    height: calc( 12px + 2 * ((100vw - 320px) / 850));
   }
 
   .old-price {

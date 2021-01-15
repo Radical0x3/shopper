@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="preload"
+      href="https://kit.fontawesome.com/4481fae25d.js"
+      as="script"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Jost.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" media="all" href="css/add-address.min.css" />
+    <title>Shopper | Edit/Add Address Page</title>
+  </head>
+</html>
+<body id="home">
+  @@include("_header.html")
+  <main class="main">
+    <div class="container">
+      <ul class="routes">
+        <li class="routes__item">
+          <a href="#" class="routes__link">Home</a>
+        </li>
+        <li class="routes__item">
+          <a href="#" class="routes__link">My Account</a>
+        </li>
+      </ul>
+      <h2 class="account__title">My Account</h2>
+      <section class="add-address">
+        <aside class="account__aside">
+          <ul class="account__aside-list">
+            <li class="account__aside-item">
+              <a href="http://demo.pplus.net.ua/orders.html">Orders</a>
+            </li>
+            <li class="account__aside-item">
+              <a href="http://demo.pplus.net.ua/wishlist.html">Wishlist</a>
+            </li>
+            <li class="account__aside-item">
+              <a href="http://demo.pplus.net.ua/personal.html">Personal Info</a>
+            </li>
+            <li class="account__aside-item active">
+              <a href="http://demo.pplus.net.ua/address.html">Addresses</a>
+            </li>
+            <li class="account__aside-item">
+              <a href="#">Logout</a>
+            </li>
+          </ul>
+        </aside>
+        <div class="add-address__body">
+          <div class="account__actions">
+            <button class="account__actions-btn nav-btn">Navigation</button>
+          </div>
+          <div class="account__mobile-nav">
+            <div class="account__mobile-header">
+              <h5 class="account__mobile-title">Navigation</h5>
+              <svg class="account__mobile-close">
+                <use xlink:href="img/icons/icons.svg#cancel"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="add-address__wrap">
+            <h3 class="add-address__body-title">Add Address</h3>
+            <form id="order" action="#" class="add-address__form">
+              <div class="add-address__form-wrap">
+                <div class="add-address__form-inner">
+                  <label for="fname">First Name *</label>
+                  <input
+                    type="text"
+                    id="fname"
+                    placeholder="First Name"
+                    required
+                  />
+                </div>
+                <div class="add-address__form-inner">
+                  <label for="lname">Last Name *</label>
+                  <input
+                    type="text"
+                    id="lname"
+                    placeholder="Last Name"
+                    required
+                  />
+                </div>
+              </div>
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required
+              />
+              <label for="cname">Company Name</label>
+              <input
+                type="text"
+                id="cname"
+                placeholder="Company Name (optional)"
+              />
+              <label for="country">Country *</label>
+              <input type="text" id="country" placeholder="Country" required />
+              <label for="address1">Address Line 1 *</label>
+              <input
+                type="text"
+                id="address1"
+                placeholder="Address Line 1"
+                required
+              />
+              <label for="address2">Address Line 2</label>
+              <input
+                type="text"
+                id="address2"
+                placeholder="Address Line 2 (optional)"
+              />
+              <div class="add-address__form-wrap">
+                <div class="add-address__form-inner">
+                  <label for="town">Town / City *</label>
+                  <input
+                    type="text"
+                    id="town"
+                    placeholder="Town / City"
+                    required
+                  />
+                </div>
+                <div class="add-address__form-inner">
+                  <label for="pcode">ZIP / Postcode *</label>
+                  <input
+                    type="text"
+                    id="pcode"
+                    placeholder="ZIP / Postcode"
+                    required
+                  />
+                </div>
+              </div>
+              <label for="tel">Mobile Phone *</label>
+              <input type="tel" id="tel" placeholder="Mobile Phone" required />
+              <input
+                type="checkbox"
+                id="c1"
+                class="add-address__input"
+              />
+              <label for="c1" class="add-address__label"
+                >Default delivery address</label
+              >
+              <input
+                type="checkbox"
+                id="c2"
+                class="add-address__input"
+              />
+              <label for="c2" class="add-address__label"
+                >Default shipping address</label
+              >
+              <input type="submit" value="Add Address">
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  @@include("_footer.html")
+  <a href="#home" class="button-up"></a>
+  <script
+    type="module"
+    async
+    src="https://kit.fontawesome.com/4481fae25d.js"
+    crossorigin="anonymous"
+  ></script>
+  <script type="module" async src="js/runtime.js"></script>
+  <script type="module" async src="js/npm.jquery.js"></script>
+  <script type="module" async src="js/npm.slick-carousel.js"></script>
+  <script type="module" async src="js/npm.core-js.js"></script>
+  <script type="module" async src="js/npm.lodash-es.js"></script>
+  <script type="module" async src="js/npm.smooth-scrollbar.js"></script>
+  <script type="module" async src="js/npm.tslib.js"></script>
+  <script type="module" async src="js/npm.webpack-stream.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/addAddress.js"></script>
+</body>

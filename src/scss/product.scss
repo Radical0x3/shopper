@@ -298,22 +298,29 @@ body {
       font-weight: 600;
       margin: 8px 0;
 
-      &:hover {
-        box-shadow: 0 0 5px 1px #cdcdcd;
-      }
-
       &.cart-btn {
-        @include adaptive-value(padding-top, 15, 10, 1);
-        @include adaptive-value(padding-bottom, 15, 10, 1);
-        @include adaptive-value(padding-left, 40, 10, 1);
-        @include adaptive-value(padding-right, 40, 10, 1);
+        @include adaptive-value(padding-top, 14, 9, 1);
+        @include adaptive-value(padding-bottom, 14, 9, 1);
+        @include adaptive-value(padding-left, 39, 9, 1);
+        @include adaptive-value(padding-right, 39, 9, 1);
         color: #fff;
         background: #1f1f1f;
+        border: 1px solid transparent;
         @include adaptive-value(margin-right, 10, 5, 1);
 
         @media (max-width: 1033px) {
           @include adaptive-value(padding-left, 30, 10, 1);
           @include adaptive-value(padding-right, 30, 10, 1);
+        }
+
+        &:hover {
+          background: #fff;
+          color: $black;
+          border-color: #1f1f1f;
+
+          svg {
+            fill: $black;
+          }
         }
 
         svg {
@@ -335,8 +342,21 @@ body {
         }
 
         &.active {
-          background: $orange;
-          color: #fff;
+          background: #fff;
+          color: $orange;
+
+          &:hover {
+            background: $orange;
+            color: #fff;
+          }
+        }
+
+        &:not(.active) {
+          &:hover {
+            background: #1f1f1f;
+            color: #fff;
+            border-color: #1f1f1f;
+          }
         }
       }
 

@@ -37,6 +37,7 @@
   @include adaptive-value(padding-right, 36, 15);
   background: #1f1f1f;
   color: #fff;
+  border: 1px solid transparent;
   @include adaptive-value(font-size, 16, 13);
   @include adaptive-value(line-height, 23, 13);
   position: absolute;
@@ -46,7 +47,9 @@
   transition: 0.3s;
 
   &:hover {
-    background: lighten(#1f1f1f, 10%);
+    background: #fff;
+    color: $black;
+    border-color: #1f1f1f;
   }
 }
 

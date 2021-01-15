@@ -131,7 +131,7 @@
   &__tag {
     position: absolute;
     top: 20px;
-    left: 0;
+    left: 1px;
     font-size: 11px;
     font-weight: 600;
     line-height: 16px;
@@ -279,7 +279,7 @@
 
       &.brown-color {
         &::after {
-          background-color: #D5B38A;
+          background-color: #d5b38a;
         }
       }
 
@@ -345,6 +345,36 @@
       &:last-child {
         margin-right: 0;
       }
+    }
+  }
+
+  &__remove {
+    display: block;
+    @include adaptive-value(width, 40, 30);
+    @include adaptive-value(height, 40, 30);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.03);
+    border-radius: 50%;
+    background: #fff;
+    z-index: 10;
+    position: absolute;
+    @include adaptive-value(top, 20, 10);
+    @include adaptive-value(right, 20, 10);
+
+    &:hover {
+      svg {
+        fill: #1f1f1f;
+      }
+    }
+
+    svg {
+      @include adaptive-value(width, 14, 12);
+      @include adaptive-value(height, 14, 12);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: #919191;
+      transition: 0.3s;
     }
   }
 }

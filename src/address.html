@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="preload"
+      href="https://kit.fontawesome.com/4481fae25d.js"
+      as="script"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Jost.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" media="all" href="css/address.min.css" />
+    <title>Shopper | Addresses Page</title>
+  </head>
+</html>
+<body id="home">
+  @@include("_header.html")
+  <main class="main">
+    <div class="container">
+      <ul class="routes">
+        <li class="routes__item">
+          <a href="#" class="routes__link">Home</a>
+        </li>
+        <li class="routes__item">
+          <a href="#" class="routes__link">My Account</a>
+        </li>
+      </ul>
+      <h2 class="account__title">My Account</h2>
+      <section class="address">
+        <aside class="account__aside">
+          <ul class="account__aside-list">
+            <li class="account__aside-item">
+              <a href="http://demo.pplus.net.ua/orders.html">Orders</a>
+            </li>
+            <li class="account__aside-item">
+              <a href="http://demo.pplus.net.ua/wishlist.html">Wishlist</a>
+            </li>
+            <li class="account__aside-item">
+              <a href="http://demo.pplus.net.ua/personal.html">Personal Info</a>
+            </li>
+            <li class="account__aside-item active">
+              <a href="http://demo.pplus.net.ua/address.html">Addresses</a>
+            </li>
+            <li class="account__aside-item">
+              <a href="#">Logout</a>
+            </li>
+          </ul>
+        </aside>
+        <div class="address__body">
+          <div class="account__actions">
+            <button class="account__actions-btn nav-btn">Navigation</button>
+          </div>
+          <div class="account__mobile-nav">
+            <div class="account__mobile-header">
+              <h5 class="account__mobile-title">Navigation</h5>
+              <svg class="account__mobile-close">
+                <use xlink:href="img/icons/icons.svg#cancel"></use>
+              </svg>
+            </div>
+          </div>
+          <ul class="address__list">
+            <li class="address__item">
+              <div class="address__item-top">
+                <h3 class="address__title">Billing Address</h3>
+                <div class="address__actions">
+                  <a href="http://demo.pplus.net.ua/add-addresses.html" class="address__actions-link edit-btn">
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#edit"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="address__actions-link remove-btn">
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#cancel"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <ul class="address__sublist">
+                <li class="address__subitem">Daniel Robinson</li>
+                <li class="address__subitem">3997 Raccoon Run</li>
+                <li class="address__subitem">kingston</li>
+                <li class="address__subitem">45644</li>
+                <li class="address__subitem">United States</li>
+                <li class="address__subitem">6146389574</li>
+              </ul>
+            </li>
+            <li class="address__item">
+              <div class="address__item-top">
+                <h3 class="address__title">Shipping Address</h3>
+                <div class="address__actions">
+                  <a href="http://demo.pplus.net.ua/add-addresses.html" class="address__actions-link edit-btn">
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#edit"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="address__actions-link remove-btn">
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#cancel"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <ul class="address__sublist">
+                <li class="address__subitem">Daniel Robinson</li>
+                <li class="address__subitem">3997 Raccoon Run</li>
+                <li class="address__subitem">kingston</li>
+                <li class="address__subitem">45644</li>
+                <li class="address__subitem">United States</li>
+                <li class="address__subitem">6146389574</li>
+              </ul>
+            </li>
+          </ul>
+          <a href="http://demo.pplus.net.ua/add-addresses.html" class="address__btn add-btn">Add Address <span>+</span></a>
+        </div>
+      </section>
+    </div>
+  </main>
+  @@include("_footer.html")
+  <a href="#home" class="button-up"></a>
+  <script
+    type="module"
+    async
+    src="https://kit.fontawesome.com/4481fae25d.js"
+    crossorigin="anonymous"
+  ></script>
+  <script type="module" async src="js/runtime.js"></script>
+  <script type="module" async src="js/npm.jquery.js"></script>
+  <script type="module" async src="js/npm.slick-carousel.js"></script>
+  <script type="module" async src="js/npm.core-js.js"></script>
+  <script type="module" async src="js/npm.lodash-es.js"></script>
+  <script type="module" async src="js/npm.smooth-scrollbar.js"></script>
+  <script type="module" async src="js/npm.tslib.js"></script>
+  <script type="module" async src="js/npm.webpack-stream.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/address.js"></script>
+</body>

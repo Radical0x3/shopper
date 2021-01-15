@@ -7,3 +7,7 @@ Disallow: /checkout.html
 Disallow: /auth.html
 Disallow: /orders.html
 Disallow: /details.html
+Disallow: /wishlist.html
+Disallow: /personal.html
+Disallow: /address.html
+Disallow: /add-address.html

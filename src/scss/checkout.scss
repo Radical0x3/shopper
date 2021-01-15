@@ -269,12 +269,6 @@ body {
         font-weight: 500;
       }
     }
-
-    &:focus + .checkout__label {
-      &::before {
-        outline: rgb(59, 153, 252) auto 5px;
-      }
-    }
   }
 
   &__label {
@@ -682,15 +676,17 @@ body {
     background: #1f1f1f;
     @include adaptive-value(font-size, 16, 14, 1);
     @include adaptive-value(line-height, 24, 18, 1);
-    @include adaptive-value(padding-top, 15, 10, 1);
-    @include adaptive-value(padding-bottom, 15, 10, 1);
+    @include adaptive-value(padding-top, 14, 9, 1);
+    @include adaptive-value(padding-bottom, 14, 9, 1);
     @include adaptive-value(margin-bottom, 20, 10, 1);
+    border: 1px solid transparent;
     transition: 0.3s;
     cursor: pointer;
 
     &:hover {
-      box-shadow: 0 0 5px 2px #cdcdcd;
-      background: lighten(#1f1f1f, 5%);
+      background: #fff;
+      color: $black;
+      border-color: #1f1f1f;
     }
   }
 }

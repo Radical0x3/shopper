@@ -97,17 +97,19 @@ body {
     line-height: 22px;
     color: #fff;
     background: #1f1f1f;
-    @include adaptive-value(padding-top, 12, 8, 1);
-    @include adaptive-value(padding-bottom, 12, 8, 1);
-    @include adaptive-value(padding-left, 56, 22, 1);
-    @include adaptive-value(padding-right, 56, 22, 1);
+    @include adaptive-value(padding-top, 11, 7, 1);
+    @include adaptive-value(padding-bottom, 11, 7, 1);
+    @include adaptive-value(padding-left, 55, 21, 1);
+    @include adaptive-value(padding-right, 55, 21, 1);
+    border: 1px solid transparent;
     cursor: pointer;
     transition: 0.3s;
 
     &:hover,
     &:focus {
-      box-shadow: 0 0 5px 2px #cdcdcd;
-      background: lighten(#1f1f1f, 5%);
+      background: #fff;
+      color: $black;
+      border-color: #1f1f1f;
     }
   }
 
@@ -150,12 +152,6 @@ body {
     &:checked + .auth__label {
       &::after {
         font-weight: 500;
-      }
-    }
-
-    &:focus + .auth__label {
-      &::before {
-        outline: rgb(59, 153, 252) auto 5px;
       }
     }
   }

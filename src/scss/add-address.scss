@@ -1,0 +1,213 @@
+@import "hamburgers/hamburgers";
+@import "partials/general/nullstyle";
+@import "partials/general/_vars";
+@import "partials/general/links";
+@import "partials/general/menu";
+@import "partials/general/routes";
+@import "partials/general/header";
+@import "partials/general/footer";
+@import "partials/account/account";
+@import "fonts";
+
+body {
+  font-family: Jost;
+  border: 0;
+  transition: 0.3s;
+
+  &.lock {
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 769px) {
+    margin-top: 55px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.main {
+  transition: 0.3s;
+
+  &.active {
+    transform: translateX(280px);
+  }
+}
+
+.hamburger {
+  padding-bottom: 10px;
+}
+
+.header {
+  margin-bottom: 20px;
+
+  @media (max-width: 769px) {
+    @include adaptive-value(margin-bottom, 123, 70);
+  }
+}
+
+.circle {
+  &.hide {
+    display: none;
+  }
+}
+
+.routes {
+  @include adaptive-value(margin-bottom, 65, 20, 1);
+}
+
+.add-address {
+  display: flex;
+  justify-content: space-between;
+
+  &__body {
+    width: 74%;
+    @include adaptive-value(margin-bottom, 110, 40);
+
+    @media (max-width: 941px) {
+      width: 100%;
+    }
+
+    &-title {
+      @include adaptive-value(font-size, 20, 16, 1);
+      @include adaptive-value(line-height, 30, 22, 1);
+      font-weight: 600;
+      @include adaptive-value(margin-bottom, 28, 15, 1);
+    }
+  }
+
+  &__form {
+    @include adaptive-value(margin-bottom, 25, 10, 1);
+
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 480px) {
+        display: block;
+      }
+    }
+
+    &-inner {
+      width: 48%;
+
+      @media (max-width: 480px) {
+        width: 100%;
+      }
+    }
+
+    label {
+      display: block;
+      font-size: 15px;
+      line-height: 22px;
+      color: $black;
+      @include adaptive-value(margin-bottom, 20, 10);
+
+      &:last-of-type {
+        @include adaptive-value(margin-bottom, 40, 20);
+      }
+    }
+
+    input {
+      &[type="text"],
+      &[type="email"],
+      &[type="tel"] {
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 14px 20px;
+        border: 1px solid rgba(205, 205, 205, 1);
+        @include adaptive-value(margin-bottom, 25, 10, 1);
+
+        &::placeholder {
+          color: #767676;
+        }
+
+        &:focus {
+          box-shadow: 0 0 5px 1px #cdcdcd;
+        }
+      }
+
+      &[type="submit"] {
+        display: block;
+        font-size: 15px;
+        line-height: 22px;
+        color: #fff;
+        background: #1f1f1f;
+        @include adaptive-value(padding-top, 11, 10, 1);
+        @include adaptive-value(padding-bottom, 11, 10, 1);
+        @include adaptive-value(padding-left, 47, 26, 1);
+        @include adaptive-value(padding-right, 47, 26, 1);
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover,
+        &:focus {
+          background: #fff;
+          color: $black;
+          border-color: #1f1f1f;
+        }
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+
+    & + .add-address__label {
+      &::before {
+        content: "\00a0";
+        display: inline-block;
+        @include adaptive-value(width, 18, 15, 1);
+        @include adaptive-value(height, 18, 15, 1);
+        @include adaptive-value(line-height, 18, 15, 1);
+        font-size: 11px;
+        font-weight: 200;
+        text-align: center;
+        background: #e2e2e2;
+        margin-right: 15px;
+        transition: 0.1s;
+        text-shadow: none !important;
+      }
+
+      @media (max-width: 941px) {
+        &::before {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &:checked + .add-address__label {
+      &::before {
+        background: $black;
+        color: #fff;
+        content: "\f00c";
+        font-family: FontAwesome;
+        text-align: center;
+      }
+    }
+
+    &:checked + .add-address__label {
+      &::after {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 15px;
+    line-height: 22px;
+    color: $black;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+  }
+}

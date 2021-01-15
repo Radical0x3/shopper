@@ -68,7 +68,7 @@ body {
   justify-content: space-between;
 
   &__body {
-    width: 72%;
+    width: 74%;
     @include adaptive-value(margin-bottom, 110, 40);
 
     @media (max-width: 941px) {

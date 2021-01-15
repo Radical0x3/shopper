@@ -532,6 +532,7 @@ h6 {
   padding-right: 36px;
   background: #1f1f1f;
   color: #fff;
+  border: 1px solid transparent;
   font-size: 16px;
   line-height: 23px;
   position: absolute;
@@ -546,7 +547,9 @@ h6 {
 }
 
 .shop-btn:hover {
-  background: #393939;
+  background: #fff;
+  color: #111;
+  border-color: #1f1f1f;
 }
 
 .arrow-link {
@@ -1878,10 +1881,11 @@ body.lock {
   line-height: 22px;
   color: #fff;
   background: #1f1f1f;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 56px;
-  padding-right: 56px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 55px;
+  padding-right: 55px;
+  border: 1px solid transparent;
   cursor: pointer;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -1890,9 +1894,9 @@ body.lock {
 
 .auth__submit:hover,
 .auth__submit:focus {
-  -webkit-box-shadow: 0 0 5px 2px #cdcdcd;
-          box-shadow: 0 0 5px 2px #cdcdcd;
-  background: #2c2c2c;
+  background: #fff;
+  color: #111;
+  border-color: #1f1f1f;
 }
 
 .auth__input {
@@ -1926,10 +1930,6 @@ body.lock {
 
 .auth__input:checked + .auth__label::after {
   font-weight: 500;
-}
-
-.auth__input:focus + .auth__label::before {
-  outline: #3b99fc auto 5px;
 }
 
 .auth__label {
@@ -2362,19 +2362,19 @@ body.lock {
   }
 
   .auth__submit {
-    padding-top: calc( 8px + 4 * ((100vw - 320px) / 850));
+    padding-top: calc( 7px + 4 * ((100vw - 320px) / 850));
   }
 
   .auth__submit {
-    padding-bottom: calc( 8px + 4 * ((100vw - 320px) / 850));
+    padding-bottom: calc( 7px + 4 * ((100vw - 320px) / 850));
   }
 
   .auth__submit {
-    padding-left: calc( 22px + 34 * ((100vw - 320px) / 850));
+    padding-left: calc( 21px + 34 * ((100vw - 320px) / 850));
   }
 
   .auth__submit {
-    padding-right: calc( 22px + 34 * ((100vw - 320px) / 850));
+    padding-right: calc( 21px + 34 * ((100vw - 320px) / 850));
   }
 
   .auth__input + .auth__label::before {

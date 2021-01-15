@@ -532,6 +532,7 @@ h6 {
   padding-right: 36px;
   background: #1f1f1f;
   color: #fff;
+  border: 1px solid transparent;
   font-size: 16px;
   line-height: 23px;
   position: absolute;
@@ -546,7 +547,9 @@ h6 {
 }
 
 .shop-btn:hover {
-  background: #393939;
+  background: #fff;
+  color: #111;
+  border-color: #1f1f1f;
 }
 
 .arrow-link {
@@ -1913,10 +1916,6 @@ body.lock {
   font-weight: 500;
 }
 
-.checkout__input:focus + .checkout__label::before {
-  outline: #3b99fc auto 5px;
-}
-
 .checkout__label {
   font-size: 15px;
   line-height: 22px;
@@ -2364,9 +2363,10 @@ body.lock {
   background: #1f1f1f;
   font-size: 16px;
   line-height: 24px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   margin-bottom: 20px;
+  border: 1px solid transparent;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -2374,9 +2374,9 @@ body.lock {
 }
 
 .checkout__checkout-btn:hover {
-  -webkit-box-shadow: 0 0 5px 2px #cdcdcd;
-          box-shadow: 0 0 5px 2px #cdcdcd;
-  background: #2c2c2c;
+  background: #fff;
+  color: #111;
+  border-color: #1f1f1f;
 }
 
 .hidden-input {
@@ -2876,11 +2876,11 @@ body.lock {
   }
 
   .checkout__checkout-btn {
-    padding-top: calc( 10px + 5 * ((100vw - 320px) / 850));
+    padding-top: calc( 9px + 5 * ((100vw - 320px) / 850));
   }
 
   .checkout__checkout-btn {
-    padding-bottom: calc( 10px + 5 * ((100vw - 320px) / 850));
+    padding-bottom: calc( 9px + 5 * ((100vw - 320px) / 850));
   }
 
   .checkout__checkout-btn {

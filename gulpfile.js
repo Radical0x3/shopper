@@ -83,6 +83,10 @@ function js() {
           auth: "./src/js/auth.js",
           orders: "./src/js/orders.js",
           details: "./src/js/details.js",
+          personal: "./src/js/personal.js",
+          address: "./src/js/address.js",
+          addAddress: "./src/js/add-address.js",
+          wishlist: "./src/js/wishlist.js",
         },
         output: {
           filename: "[name].js",

@@ -1,0 +1,876 @@
+@import "hamburgers/hamburgers";
+@import "partials/general/nullstyle";
+@import "partials/general/_vars";
+@import "partials/general/links";
+@import "partials/general/menu";
+@import "partials/general/routes";
+@import "partials/general/header";
+@import "partials/general/footer";
+@import "partials/general/select";
+@import "partials/general/goods";
+@import "partials/general/popup";
+@import "partials/account/account";
+@import "fonts";
+
+body {
+  font-family: Jost;
+  border: 0;
+
+  &.lock {
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 769px) {
+    margin-top: 55px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.main {
+  transition: 0.3s;
+
+  &.active {
+    transform: translateX(280px);
+  }
+}
+
+.hamburger {
+  padding-bottom: 10px;
+}
+
+.header {
+  margin-bottom: 20px;
+
+  @media (max-width: 769px) {
+    @include adaptive-value(margin-bottom, 123, 70);
+  }
+}
+
+.circle {
+  &.hide {
+    display: none;
+  }
+}
+
+.routes {
+  @include adaptive-value(margin-bottom, 65, 20, 1);
+}
+
+.goods__item-wrap {
+  &:hover {
+    .goods__panel {
+      opacity: 1;
+      visibility: visible;
+      z-index: 5;
+    }
+  }
+}
+
+.wishlist {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &__body {
+    width: 74%;
+
+    @media (max-width: 941px) {
+      width: 100%;
+    }
+  }
+}
+
+.goods {
+  &__info {
+    display: block;
+    margin-bottom: 10px;
+    transform: translateY(35%);
+
+    @media (max-width: 899px) {
+      transform: translateY(12%);
+    }
+  }
+
+  &__description {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  &__prices {
+    text-align: center;
+
+    .old-price {
+      margin-right: 10px;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    justify-content: flex-start;
+
+    @media (max-width: 577px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    width: 31%;
+    margin: 0;
+    @include adaptive-value(margin-right, 30, 10);
+    @include adaptive-value(margin-bottom, 30, 10);
+
+    @media (max-width: 1190px) {
+      @include adaptive-value(margin-right, 20, 10);
+      @include adaptive-value(margin-bottom, 20, 10);
+    }
+
+    @media (max-width: 1170px) {
+      width: 32%;
+      margin: 0 10px 20px 0;
+    }
+
+    @media (max-width: 940px) {
+      width: 23%;
+      @include adaptive-value(margin-right, 20, 10);
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 769px) {
+      width: 32%;
+      margin: 0 10px 20px 0;
+    }
+
+    @media (max-width: 577px) {
+      width: 48%;
+    }
+
+    &:nth-child(even) {
+      @media (max-width: 577px) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      margin-right: 0;
+
+      @media (max-width: 940px) {
+        @include adaptive-value(margin-right, 20, 10);
+      }
+
+      @media (max-width: 769px) {
+        margin: 0 0 20px 0;
+      }
+
+      @media (max-width: 577px) {
+        margin: 0 10px 20px 0;
+      }
+    }
+
+    &:nth-child(4) {
+      @media (max-width: 940px) {
+        margin-right: 0;
+      }
+
+      @media (max-width: 769px) {
+        margin: 0 10px 20px 0;
+      }
+    }
+  }
+
+  &__colors {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  &__sizes {
+    justify-content: center;
+
+    &-item {
+      @include adaptive-value(margin-right, 15, 10);
+    }
+  }
+
+  &__panel {
+    padding: 0 1px;
+    top: -40px;
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100% !important;
+      height: 40px !important;
+      border-radius: 0;
+      margin: 0;
+      box-shadow: none;
+      background: #1f1f1f;
+      color: #fff;
+      font-size: 15px;
+
+      svg {
+        fill: #fff;
+        position: static;
+        transform: none;
+        margin-right: 13px;
+      }
+    }
+  }
+
+  &__price {
+    font-size: 15px;
+  }
+}
+
+.aside {
+  &__input {
+    display: none;
+
+    & + .aside__label {
+      &::before {
+        content: "\00a0";
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        font-size: 11px;
+        line-height: 18px;
+        font-weight: 200;
+        text-align: center;
+        background: #e2e2e2;
+        margin-right: 15px;
+        transition: 0.1s;
+        text-shadow: none !important;
+      }
+
+      @media (max-width: 941px) {
+        &::before {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &:checked + .aside__label {
+      &::before {
+        background: $black;
+        color: #fff;
+        content: "\f00c";
+        font-family: FontAwesome;
+        text-align: center;
+      }
+    }
+
+    &:checked + .aside__label {
+      color: $black;
+      text-shadow: 0 0 1px $black;
+    }
+
+    &:checked + .aside__label {
+      &::after {
+        font-weight: 500;
+      }
+    }
+
+    &:focus + .aside__label {
+      &::before {
+        outline: rgb(59, 153, 252) auto 5px;
+      }
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+  }
+}
+
+.aside-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+  width: 100%;
+  margin: 0;
+
+  &.active {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 4px;
+
+    &.unavailable {
+      cursor: not-allowed;
+
+      .aside__label {
+        background: #f5f5f5;
+        text-decoration: line-through;
+        pointer-events: none;
+      }
+    }
+
+    .aside__label {
+      display: block;
+      width: 42px;
+      height: 42px;
+      line-height: 42px;
+      text-align: center;
+      user-select: none;
+      background: #fff;
+      color: #525252;
+      border: 1px solid #cdcdcd;
+      transition: 0.3s;
+
+      &:hover {
+        background: darken(#fff, 2%);
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .aside__input:checked + .aside__label {
+      border-color: #1f1f1f;
+    }
+  }
+}
+
+.popup {
+  &[data-id-popup="0"] {
+    .popup__wrap {
+      max-width: 1110px;
+    }
+  }
+}
+
+.product {
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__prices {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 5px;
+
+    &-stock {
+      font-size: 15px;
+      color: $black;
+    }
+
+    .old-price {
+      @include adaptive-value(font-size, 18, 14, 1);
+      @include adaptive-value(line-height, 26, 18, 1);
+      margin-right: 10px;
+    }
+
+    .new-price {
+      @include adaptive-value(font-size, 22, 16, 1);
+      @include adaptive-value(line-height, 32, 22, 1);
+      margin-right: 15px;
+    }
+  }
+
+  &__colors {
+    @include adaptive-value(margin-bottom, 45, 15, 1);
+
+    &-title {
+      font-size: 16px;
+      line-height: 24px;
+      color: $black;
+      margin-bottom: 5px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    &-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -6px;
+    }
+
+    &-item {
+      margin: 12px 6px;
+      cursor: pointer;
+      width: 70px;
+      height: 70px;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #1f1f1f;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: 0.3s;
+      }
+
+      &.active {
+        &::after {
+          width: 100%;
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__sizes {
+    @include adaptive-value(margin-bottom, 37, 10, 1);
+
+    &-wrap {
+      @include adaptive-value(margin-bottom, 20, 10, 1);
+    }
+
+    &-title {
+      @include adaptive-value(margin-bottom, 20, 10, 1);
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    &-chart {
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 22px;
+        height: 16px;
+        object-fit: cover;
+        margin-right: 12px;
+      }
+
+      a {
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+        text-decoration: underline;
+        transition: 0.3s;
+
+        &:hover {
+          color: lighten($black, 20%);
+        }
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -8px 0 27px;
+
+    @media (max-width: 577px) {
+      justify-content: flex-start;
+    }
+
+    &-item {
+      @include adaptive-value(font-size, 16, 12, 1);
+      @include adaptive-value(line-height, 24, 16, 1);
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      margin: 8px 0;
+
+      &.cart-btn {
+        @include adaptive-value(padding-top, 14, 9, 1);
+        @include adaptive-value(padding-bottom, 14, 9, 1);
+        @include adaptive-value(padding-left, 39, 9, 1);
+        @include adaptive-value(padding-right, 39, 9, 1);
+        color: #fff;
+        background: #1f1f1f;
+        border: 1px solid transparent;
+        @include adaptive-value(margin-right, 10, 5, 1);
+
+        @media (max-width: 1033px) {
+          @include adaptive-value(padding-left, 30, 10, 1);
+          @include adaptive-value(padding-right, 30, 10, 1);
+        }
+
+        &:hover {
+          background: #fff;
+          color: $black;
+          border-color: #1f1f1f;
+
+          svg {
+            fill: $black;
+          }
+        }
+
+        svg {
+          fill: #fff;
+        }
+      }
+
+      &.wish-btn {
+        @include adaptive-value(padding-top, 15, 10, 1);
+        @include adaptive-value(padding-bottom, 15, 10, 1);
+        @include adaptive-value(padding-left, 30, 5, 1);
+        @include adaptive-value(padding-right, 30, 5, 1);
+        color: $black;
+        border: 1px solid #1f1f1f;
+
+        @media (max-width: 1033px) {
+          @include adaptive-value(padding-left, 20, 5, 1);
+          @include adaptive-value(padding-right, 20, 5, 1);
+        }
+
+        &.active {
+          background: #fff;
+          color: $orange;
+
+          &:hover {
+            background: $orange;
+            color: #fff;
+          }
+        }
+
+        &:not(.active) {
+          &:hover {
+            background: #1f1f1f;
+            color: #fff;
+            border-color: #1f1f1f;
+          }
+        }
+      }
+
+      span {
+        @include adaptive-value(margin-right, 20, 5, 1);
+      }
+
+      svg {
+        @include adaptive-value(width, 17, 13, 1);
+        @include adaptive-value(height, 17, 13, 1);
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.product-popup {
+  &__header {
+    font-size: 18px;
+    line-height: 26px;
+    color: $black;
+    text-align: center;
+    @include adaptive-value(padding-top, 22, 15);
+    @include adaptive-value(padding-bottom, 22, 15);
+    border-bottom: 1px solid #e2e2e2;
+    @include adaptive-value(margin-bottom, 25, 10);
+    position: relative;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptive-value(margin-bottom, 25, 10);
+  }
+
+  &__preview {
+    display: flex;
+
+    @media (max-width: 798px) {
+      flex-direction: column;
+    }
+
+    &-slider {
+      max-width: 470px;
+      width: 43%;
+      max-height: 550px;
+      @include adaptive-value(margin-right, 70, 30, 1);
+
+      @media (max-width: 798px) {
+        max-width: 100%;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 426px) {
+        width: 100%;
+      }
+    }
+
+    &-item {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        max-height: 550px;
+        object-fit: cover;
+
+        @media (max-width: 798px) {
+          max-height: 350px;
+        }
+      }
+    }
+
+    .product {
+      &__header {
+        @include adaptive-value(margin-bottom, 25, 15, 1);
+      }
+
+      &__title {
+        @include adaptive-value(font-size, 32, 24, 1);
+        @include adaptive-value(line-height, 44, 28, 1);
+      }
+
+      &__info {
+        @include adaptive-value(padding-top, 45, 20, 1);
+
+        @media (max-width: 798px) {
+          width: 100%;
+          text-align: center;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+      &__description {
+        @media (max-width: 798px) {
+          width: 100%;
+        }
+      }
+
+      &__prices {
+        @media (max-width: 798px) {
+          justify-content: center;
+        }
+      }
+
+      &__colors {
+        @include adaptive-value(margin-bottom, 25, 15);
+
+        &-wrap {
+          @media (max-width: 798px) {
+            justify-content: center;
+          }
+        }
+      }
+
+      &__sizes {
+        @include adaptive-value(margin-bottom, 30, 15);
+
+        .aside-sizes {
+          @media (max-width: 798px) {
+            max-width: 100%;
+            justify-content: center;
+          }
+        }
+      }
+
+      &__actions {
+        margin: -8px 0;
+
+        @media (max-width: 950px) {
+          justify-content: flex-start;
+        }
+
+        @media (max-width: 798px) {
+          justify-content: center;
+          margin-bottom: 10px;
+        }
+
+        &-item {
+          span {
+            margin-right: 10px;
+          }
+
+          @media (max-width: 950px) {
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+
+    .slick {
+      &-slider {
+        position: relative;
+      }
+
+      &-list {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
+
+      &-slide {
+        div {
+          height: 100%;
+        }
+      }
+
+      &-track {
+        display: flex;
+        height: 100%;
+      }
+
+      &-arrow {
+        @include adaptive-value(width, 42, 30);
+        @include adaptive-value(height, 42, 30);
+        background: #fff !important;
+        position: absolute !important;
+        z-index: 1111;
+      }
+
+      &-prev,
+      &-next {
+        font-size: 0 !important;
+        background: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &::after {
+          display: block;
+          font-family: FontAwesome;
+          @include adaptive-value(font-size, 22, 18);
+          color: #1f1f1f;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: 0.3s;
+        }
+
+        &:hover::after {
+          color: darken(#cdcdcd, 25%);
+        }
+      }
+
+      &-prev {
+        left: -1px !important;
+
+        &::after {
+          content: "\f053";
+        }
+      }
+
+      &-next {
+        right: -1px !important;
+
+        &::after {
+          content: "\f054";
+        }
+      }
+    }
+
+    .select {
+      margin-right: 10px;
+
+      &__current {
+        &::after {
+          content: "\f077";
+        }
+      }
+
+      &__body {
+        top: initial;
+        bottom: 150%;
+        border-top-width: 1px;
+        border-bottom-width: 0;
+
+        &.active {
+          top: initial;
+          bottom: 100%;
+        }
+      }
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    max-width: 470px;
+    width: 43%;
+    color: #fff;
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 600;
+    padding: 15px 0;
+    background: $orange;
+    transition: 0.3s;
+
+    @media (max-width: 798px) {
+      margin: 0 auto;
+    }
+
+    @media (max-width: 577px) {
+      width: 60%;
+    }
+
+    i {
+      font-size: 20px;
+      margin-left: 16px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 5px 2px $orange;
+    }
+  }
+}
+
+.select {
+  width: 83px;
+  margin: 8px 0;
+  @include adaptive-value(margin-right, 15, 5, 1);
+
+  @media (max-width: 665px) {
+    width: 70px;
+  }
+
+  &__header {
+    text-align: left;
+    padding: 0 10px;
+    @include adaptive-value(padding-top, 17, 10);
+    @include adaptive-value(padding-bottom, 17, 10);
+  }
+
+  &__item {
+    text-align: left;
+  }
+
+  &__body {
+    max-height: 160px;
+  }
+
+  &__current {
+    padding-right: 10px;
+
+    &::after {
+      right: 20px;
+    }
+  }
+}
+
+.scrollbar-thumb {
+  background: #1f1f1f !important;
+  width: 4px !important;
+}
+
+.scrollbar-track-y {
+  width: 4px !important;
+  background: #e2e2e2 !important;
+}
