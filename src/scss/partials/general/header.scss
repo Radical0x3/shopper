@@ -165,9 +165,9 @@
         color: $orange;
       }
 
-      &:hover::before {
-        color: $orange;
-      }
+      // &:hover::before {
+      //   color: $orange;
+      // }
 
       &::before {
         content: "\f078";

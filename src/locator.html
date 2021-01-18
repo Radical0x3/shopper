@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="preload"
+      href="https://kit.fontawesome.com/4481fae25d.js"
+      as="script"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Jost.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" media="all" href="css/locator.min.css" />
+    <title>Shopper | Store Locator Page</title>
+  </head>
+</html>
+<body id="home">
+  @@include("_header.html")
+  <main class="main">
+    <div class="container">
+      <ul class="routes">
+        <li class="routes__item">
+          <a href="#" class="routes__link">Home</a>
+        </li>
+        <li class="routes__item">
+          <a href="#" class="routes__link">Contact Us</a>
+        </li>
+        <li class="routes__item">
+          <a href="#" class="routes__link">Store Locator</a>
+        </li>
+      </ul>
+      <h2 class="account__title">Store Locator</h2>
+      <form action="#" id="search-stores" class="locator__search">
+        <input name="search" type="text" placeholder="Enter Counry or City" />
+        <a href="#" class="locator__btn">
+          <i class="fas fa-search"></i>
+        </a>
+      </form>
+    </div>
+    <section class="locator">
+      <div class="locator__body">
+        <div class="container">
+          <ul class="locator__list" data-scrollbar>
+            <li id="address-1" class="locator__item">
+              <h3 class="locator__item-title">Baldwin Hills Crenshaw Plaza</h3>
+              <p>24/26 Strait Bargate, Boston, PE21, United Kingdom</p>
+              <div class="locator__item-block">
+                <span>Phone: &nbsp;</span>
+                <a href="tel:6-146-389-574">6-146-389-574</a>
+              </div>
+              <div class="locator__item-block">
+                <span>Store Hours: &nbsp;</span>
+                <p>10 am - 10 pm EST, 7 days a week</p>
+              </div>
+            </li>
+            <li id="address-2" class="locator__item">
+              <h3 class="locator__item-title">Stonewood Center</h3>
+              <p>3250 W. MLK Jr. Blvd, Ste 120 Los Angeles</p>
+              <div class="locator__item-block">
+                <span>Phone: &nbsp;</span>
+                <a href="tel:6-146-389-575">6-146-389-575</a>
+              </div>
+              <div class="locator__item-block">
+                <span>Store Hours: &nbsp;</span>
+                <p>12 am - 8 pm EST, 7 days a week</p>
+              </div>
+            </li>
+            <li id="address-3" class="locator__item">
+              <h3 class="locator__item-title">Azalea Shopping Center</h3>
+              <p>6000 Sepulveda Blvd., Space 1351 Culver City</p>
+              <div class="locator__item-block">
+                <span>Phone: &nbsp;</span>
+                <a href="tel:6-146-389-573">6-146-389-573</a>
+              </div>
+              <div class="locator__item-block">
+                <span>Store Hours: &nbsp;</span>
+                <p>9 am - 6 pm EST, 7 days a week</p>
+              </div>
+            </li>
+          </ul>
+          <div id="map" class="locator__map"></div>
+        </div>
+      </div>
+    </section>
+    <div class="map__popup">
+      <a href="#" class="map__popup-close">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#cancel"></use>
+        </svg>
+      </a>
+      <h3 class="locator__item-title">Baldwin Hills Crenshaw Plaza</h3>
+      <p>24/26 Strait Bargate, Boston, PE21, United Kingdom</p>
+      <div class="locator__item-block">
+        <span>Phone: &nbsp;</span>
+        <a href="tel:6-146-389-574">6-146-389-574</a>
+      </div>
+      <div class="locator__item-block">
+        <span>Store Hours: &nbsp;</span>
+        <p>10 am - 10 pm EST, 7 days a week</p>
+      </div>
+    </div>
+    <div class="map__popup">
+      <a href="#" class="map__popup-close">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#cancel"></use>
+        </svg>
+      </a>
+      <h3 class="locator__item-title">Stonewood Center</h3>
+      <p>3250 W. MLK Jr. Blvd, Ste 120 Los Angeles</p>
+      <div class="locator__item-block">
+        <span>Phone: &nbsp;</span>
+        <a href="tel:6-146-389-575">6-146-389-575</a>
+      </div>
+      <div class="locator__item-block">
+        <span>Store Hours: &nbsp;</span>
+        <p>12 am - 8 pm EST, 7 days a week</p>
+      </div>
+    </div>
+    <div class="map__popup">
+      <a href="#" class="map__popup-close">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#cancel"></use>
+        </svg>
+      </a>
+      <h3 class="locator__item-title">Azalea Shopping Center</h3>
+      <p>6000 Sepulveda Blvd., Space 1351 Culver City</p>
+      <div class="locator__item-block">
+        <span>Phone: &nbsp;</span>
+        <a href="tel:6-146-389-573">6-146-389-573</a>
+      </div>
+      <div class="locator__item-block">
+        <span>Store Hours: &nbsp;</span>
+        <p>9 am - 6 pm EST, 7 days a week</p>
+      </div>
+    </div>
+  </main>
+  @@include("_footer.html")
+  <a href="#home" class="button-up"></a>
+  <script
+    type="module"
+    async
+    src="https://kit.fontawesome.com/4481fae25d.js"
+    crossorigin="anonymous"
+  ></script>
+  <script type="module" async src="js/runtime.js"></script>
+  <script type="module" async src="js/npm.jquery.js"></script>
+  <script type="module" async src="js/npm.slick-carousel.js"></script>
+  <script type="module" async src="js/npm.core-js.js"></script>
+  <script type="module" async src="js/npm.lodash-es.js"></script>
+  <script type="module" async src="js/npm.smooth-scrollbar.js"></script>
+  <script type="module" async src="js/npm.tslib.js"></script>
+  <script type="module" async src="js/npm.webpack-stream.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/locator.js"></script>
+  <script>
+    function initMap() {
+      const locations = [
+        ["Poltava", 49.587097079095884, 34.55298540355666, 1],
+        ["Kremenchug", 49.134079747501055, 33.44182106914818, 2],
+        ["Sumy", 50.91363402968596, 34.79773247850303, 3],
+      ];
+
+      const array = document.querySelectorAll(".map__popup");
+
+      const icon = {
+        url: "img/icons/icons.svg#marker",
+        scaledSize: new google.maps.Size(28, 40),
+      };
+
+      const markers = [];
+      const active_popups = [];
+
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 6,
+        center: new google.maps.LatLng(49.58, 34.55),
+      });
+
+      for (let i = 0; i < locations.length; i++) {
+        let marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map,
+          icon: icon,
+        });
+        markers.push(marker);
+
+        google.maps.event.addListener(
+          marker,
+          "click",
+          (function (marker, i) {
+            return function () {
+              array[i].classList.add("active");
+
+              for (let pop of active_popups) {
+                if (pop === undefined) {
+                  continue;
+                }
+
+                pop.setMap(null);
+              }
+
+              let popup = new Popup(
+                new google.maps.LatLng(locations[i][1], locations[i][2]),
+                array[i]
+              );
+
+              active_popups[i] = popup;
+              popup.setMap(map);
+
+              array[i].children[0].addEventListener("click", function (e) {
+                e.preventDefault();
+                popup.setMap(null);
+              });
+            };
+          })(marker, i)
+        );
+      }
+
+      class Popup extends google.maps.OverlayView {
+        constructor(position, content) {
+          super();
+          this.position = position;
+          content.classList.add("popup-bubble");
+
+          const bubbleAnchor = document.createElement("div");
+          bubbleAnchor.classList.add("popup-bubble-anchor");
+          bubbleAnchor.appendChild(content);
+
+          this.containerDiv = document.createElement("div");
+          this.containerDiv.classList.add("popup-container");
+          this.containerDiv.appendChild(bubbleAnchor);
+
+          Popup.preventMapHitsAndGesturesFrom(this.containerDiv);
+        }
+
+        onAdd() {
+          this.getPanes().floatPane.appendChild(this.containerDiv);
+        }
+
+        onRemove() {
+          if (this.containerDiv.parentElement) {
+            this.containerDiv.parentElement.removeChild(this.containerDiv);
+          }
+        }
+
+        draw() {
+          const divPosition = this.getProjection().fromLatLngToDivPixel(
+            this.position
+          );
+
+          const display =
+            Math.abs(divPosition.x) < 4000 && Math.abs(divPosition.y) < 4000
+              ? "block"
+              : "none";
+
+          if (display === "block") {
+            this.containerDiv.style.left = divPosition.x + "px";
+            this.containerDiv.style.top = divPosition.y + "px";
+          }
+
+          if (this.containerDiv.style.display !== display) {
+            this.containerDiv.style.display = display;
+          }
+        }
+      }
+    }
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3fUgaU04CzMbd3XN13FBPrQD_BZCta-Q&callback=initMap"
+    defer
+  ></script>
+</body>

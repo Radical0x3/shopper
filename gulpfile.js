@@ -87,6 +87,9 @@ function js() {
           address: "./src/js/address.js",
           addAddress: "./src/js/add-address.js",
           wishlist: "./src/js/wishlist.js",
+          shipping: "./src/js/shipping.js",
+          contact: "./src/js/contact.js",
+          locator: "./src/js/locator.js",
         },
         output: {
           filename: "[name].js",

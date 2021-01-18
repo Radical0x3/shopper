@@ -1,0 +1,260 @@
+@import "hamburgers/hamburgers";
+@import "partials/general/nullstyle";
+@import "partials/general/_vars";
+@import "partials/general/links";
+@import "partials/general/menu";
+@import "partials/general/routes";
+@import "partials/general/header";
+@import "partials/general/footer";
+@import "partials/account/account";
+@import "fonts";
+
+body {
+  font-family: Jost;
+  border: 0;
+
+  &.lock {
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 769px) {
+    margin-top: 55px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.main {
+  transition: 0.3s;
+
+  &.active {
+    transform: translateX(280px);
+  }
+}
+
+.hamburger {
+  padding-bottom: 10px;
+}
+
+.header {
+  margin-bottom: 20px;
+
+  @media (max-width: 769px) {
+    @include adaptive-value(margin-bottom, 123, 70);
+  }
+}
+
+.circle {
+  &.hide {
+    display: none;
+  }
+}
+
+.routes {
+  @include adaptive-value(margin-bottom, 65, 20, 1);
+}
+
+.shipping {
+  max-width: 970px;
+  margin: 0 auto;
+  @include adaptive-value(margin-bottom, 110, 40);
+
+  &__top {
+    @include adaptive-value(margin-bottom, 60, 25);
+  }
+
+  &__text {
+    @include adaptive-value(font-size, 18, 15);
+    @include adaptive-value(line-height, 26, 22);
+    color: #525252;
+
+    &_bold {
+      color: $black;
+      font-weight: 600;
+    }
+
+    &_notice {
+      @include adaptive-value(margin-bottom, 16, 10);
+    }
+
+    &_black {
+      color: $black;
+      @include adaptive-value(margin-bottom, 20, 10);
+    }
+  }
+
+  &__title {
+    @include adaptive-value(font-size, 24, 18);
+    @include adaptive-value(line-height, 36, 28);
+    font-weight: 600;
+    color: $black;
+    @include adaptive-value(margin-bottom, 30, 15);
+  }
+
+  &__box {
+    @include adaptive-value(margin-bottom, 55, 25);
+  }
+
+  table,
+  tr,
+  th,
+  td {
+    border: 1px solid #cdcdcd;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    color: $black;
+    text-align: left;
+    color: $black;
+    @include adaptive-value(margin-top, 45, 20, 1);
+    @include adaptive-value(margin-bottom, 45, 20, 1);
+
+    td,
+    th {
+      @include adaptive-value(font-size, 16, 14, 1);
+      @include adaptive-value(line-height, 24, 20, 1);
+      @include adaptive-value(padding-top, 14, 10, 1);
+      @include adaptive-value(padding-bottom, 14, 10, 1);
+      @include adaptive-value(padding-left, 30, 10, 1);
+      @include adaptive-value(padding-right, 30, 10, 1);
+      vertical-align: top;
+
+      &:first-child {
+        width: 28%;
+      }
+
+      &:nth-child(3) {
+        width: 20%;
+      }
+    }
+
+    th {
+      font-weight: 600;
+    }
+  }
+
+  .international-shipping {
+    max-width: 940px;
+    @include adaptive-value(margin-bottom, 38, 15);
+
+    &:last-of-type {
+      @include adaptive-value(margin-bottom, 20, 10);
+    }
+  }
+
+  &__subtitle {
+    @include adaptive-value(font-size, 20, 16);
+    @include adaptive-value(line-height, 30, 24);
+    font-weight: 600;
+    color: $black;
+    @include adaptive-value(margin-bottom, 20, 10);
+  }
+
+  &__link {
+    display: inline-block;
+    @include adaptive-value(font-size, 18, 15);
+    @include adaptive-value(line-height, 26, 22);
+    color: $black;
+    text-decoration: underline;
+    @include adaptive-value(margin-bottom, 50, 25);
+    transition: 0.3s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__order {
+    &-list {
+      @include adaptive-value(font-size, 18, 15);
+      @include adaptive-value(line-height, 26, 22);
+      color: #525252;
+      @include adaptive-value(padding-left, 40, 20);
+      @include adaptive-value(margin-bottom, 57, 25);
+    }
+
+    &-item {
+      padding-left: 15px;
+      margin-bottom: 10px;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 5px;
+        min-width: 5px;
+        height: 5px;
+        min-height: 5px;
+        border-radius: 50%;
+        background: #525252;
+        position: absolute;
+        top: 10px;
+        left: 0;
+      }
+    }
+  }
+
+  .shipping-returns {
+    @include adaptive-value(margin-bottom, 38, 15);
+  }
+
+  &__return,
+  &__exchange {
+    &-list {
+      @include adaptive-value(font-size, 18, 15);
+      @include adaptive-value(line-height, 26, 22);
+      color: #525252;
+    }
+
+    &-item {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__return {
+    &-list {
+      max-width: 950px;
+      @include adaptive-value(margin-bottom, 36, 20);
+    }
+  }
+
+  &__exchange {
+    &-list {
+      @include adaptive-value(margin-bottom, 73, 30);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    display: block;
+    width: 48%;
+    @include adaptive-value(font-size, 16, 13);
+    @include adaptive-value(line-height, 24, 20);
+    @include adaptive-value(padding-top, 22, 11);
+    @include adaptive-value(padding-bottom, 22, 11);
+    text-align: center;
+    color: $black;
+    font-weight: 600;
+    background: #fff;
+    border: 1px solid #1f1f1f;
+    transition: 0.3s;
+
+    &:hover {
+      color: #fff;
+      background: #1f1f1f;
+    }
+  }
+}

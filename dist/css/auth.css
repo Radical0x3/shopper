@@ -812,10 +812,6 @@ h6 {
   color: #FF6F61;
 }
 
-.header__menu .drop-menu:hover::before {
-  color: #FF6F61;
-}
-
 .header__menu .drop-menu::before {
   content: "\f078";
   display: block;

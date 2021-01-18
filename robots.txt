@@ -11,3 +11,6 @@ Disallow: /wishlist.html
 Disallow: /personal.html
 Disallow: /address.html
 Disallow: /add-address.html
+Disallow: /shipping_returns.html
+Disallow: /contact.html
+Disallow: /locator.html

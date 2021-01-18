@@ -76,7 +76,7 @@ window.onload = function () {
         let elem = $(this).next("ul");
 
         if (!elem.hasClass("active")) {
-          $(".drop-menu ul").removeClass("active");
+          $(".drop-menu ul.active").removeClass("active");
           elem.addClass("active");
         } else {
           elem.removeClass("active");

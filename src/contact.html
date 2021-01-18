@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="preload"
+      href="https://kit.fontawesome.com/4481fae25d.js"
+      as="script"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Jost.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" media="all" href="css/contact.min.css" />
+    <title>Shopper | Contact Us Page</title>
+  </head>
+</html>
+<body id="home">
+  @@include("_header.html")
+  <main class="main">
+    <div class="container">
+      <ul class="routes">
+        <li class="routes__item">
+          <a href="#" class="routes__link">Home</a>
+        </li>
+        <li class="routes__item">
+          <a href="#" class="routes__link">Contact Us</a>
+        </li>
+      </ul>
+      <section class="contact">
+        <h2 class="account__title">Contact Us</h2>
+        <div class="contact__wrap">
+          <aside class="contact__aside">
+            <ul class="contact__list">
+              <li class="contact__item">
+                <header class="contact__item-header">
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#phone"></use>
+                  </svg>
+                  <h3 class="contact__item-title">Call to Us:</h3>
+                </header>
+                <p>We're available from 10 am - 10 pm EST, 7 days a week.</p>
+                <div class="contact__item-block">
+                  <span>Customer Service: &nbsp;</span>
+                  <a href="tel:6-146-389-574">6-146-389-574</a>
+                </div>
+                <div class="contact__item-block">
+                  <span>Careers: &nbsp;</span>
+                  <a href="tel:6-146-389-575">6-146-389-575</a>
+                </div>
+              </li>
+              <li class="contact__item">
+                <header class="contact__item-header">
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#mail"></use>
+                  </svg>
+                  <h3 class="contact__item-title">Write to Us:</h3>
+                </header>
+                <p>
+                  Fill out our form and we will contact you within 24 hours.
+                </p>
+                <div class="contact__item-block">
+                  <span>Customer Service: &nbsp;</span>
+                  <a href="mailto:customer@example.com">customer@example.com</a>
+                </div>
+                <div class="contact__item-block">
+                  <span>Careers: &nbsp;</span>
+                  <a href="mailto:careers@example.com">careers@example.com</a>
+                </div>
+              </li>
+              <li class="contact__item">
+                <header class="contact__item-header">
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#marker-regular"></use>
+                  </svg>
+                  <h3 class="contact__item-title">Find Us:</h3>
+                </header>
+                <p class="contact__find-text">
+                  Want to visit our Offline Stores? &nbsp;
+                </p>
+                <a
+                  class="contact__find-link"
+                  href="http://demo.pplus.net.ua/locator.html"
+                  >Go to Store Locator
+                  <span class="arrow-link">→</span>
+                </a>
+              </li>
+            </ul>
+          </aside>
+          <div class="contact__body">
+            <form action="#" class="contact__form">
+              <input type="text" placeholder="Your Name *" required />
+              <input type="email" placeholder="Your Email *" required />
+              <input type="tel" placeholder="Your Phone" />
+              <input type="text" placeholder="Your Title *" required />
+              <textarea
+                class="contact__message"
+                name="message"
+                placeholder="Message *"
+                required
+              ></textarea>
+              <input type="submit" value="Send Message" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  @@include("_footer.html")
+  <a href="#home" class="button-up"></a>
+  <script
+    type="module"
+    async
+    src="https://kit.fontawesome.com/4481fae25d.js"
+    crossorigin="anonymous"
+  ></script>
+  <script type="module" async src="js/runtime.js"></script>
+  <script type="module" async src="js/npm.jquery.js"></script>
+  <script type="module" async src="js/npm.slick-carousel.js"></script>
+  <script type="module" async src="js/npm.core-js.js"></script>
+  <script type="module" async src="js/npm.lodash-es.js"></script>
+  <script type="module" async src="js/npm.smooth-scrollbar.js"></script>
+  <script type="module" async src="js/npm.tslib.js"></script>
+  <script type="module" async src="js/npm.webpack-stream.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/contact.js"></script>
+</body>

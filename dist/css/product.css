@@ -1238,10 +1238,6 @@ h6 {
   color: #FF6F61;
 }
 
-.header__menu .drop-menu:hover::before {
-  color: #FF6F61;
-}
-
 .header__menu .drop-menu::before {
   content: "\f078";
   display: block;
@@ -6103,7 +6099,7 @@ body.lock {
 
 @media (max-width: 431px) {
   .routes {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   .routes {
