@@ -14,3 +14,7 @@ Disallow: /add-address.html
 Disallow: /shipping_returns.html
 Disallow: /contact.html
 Disallow: /locator.html
+Disallow: /about.html
+Disallow: /err404.html
+Disallow: /order-completed.html
+Disallow: /coming-soon.html

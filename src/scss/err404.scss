@@ -1,0 +1,100 @@
+@import "hamburgers/hamburgers";
+@import "partials/general/nullstyle";
+@import "partials/general/_vars";
+@import "partials/general/links";
+@import "partials/general/menu";
+@import "partials/general/header";
+@import "partials/general/footer";
+@import "fonts";
+
+body {
+  font-family: Jost;
+  border: 0;
+
+  &.lock {
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 769px) {
+    margin-top: 55px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.main {
+  transition: 0.3s;
+
+  &.active {
+    transform: translateX(280px);
+  }
+}
+
+.hamburger {
+  padding-bottom: 10px;
+}
+
+.header {
+  @include adaptive-value(margin-bottom, 110, 30);
+
+  @media (max-width: 769px) {
+    @include adaptive-value(margin-bottom, 123, 80);
+  }
+}
+
+.circle {
+  &.hide {
+    display: none;
+  }
+}
+
+.error {
+  &__logo {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    @include adaptive-value(margin-bottom, 35, 20);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    @include adaptive-value(font-size, 36, 24);
+    @include adaptive-value(line-height, 48, 36);
+    font-weight: 600;
+    color: $black;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__message {
+    max-width: 430px;
+    margin: 0 auto;
+    @include adaptive-value(font-size, 18, 16);
+    @include adaptive-value(line-height, 27, 20);
+    color: #525252;
+    text-align: center;
+    @include adaptive-value(margin-bottom, 52, 35);
+  }
+
+  &__action {
+    text-align: center;
+    @include adaptive-value(margin-bottom, 125, 35);
+  }
+}
+
+.shop-btn {
+  position: static;
+  font-size: 16px !important;
+}

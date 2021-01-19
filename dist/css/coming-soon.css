@@ -1,0 +1,389 @@
+@charset "UTF-8";
+
+/*Обнуление*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost.woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(17, 17, 17, 0.25)), to(rgba(17, 17, 17, 0.25))), #cdcdcd;
+  background: -o-linear-gradient(bottom, rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25)), #cdcdcd;
+  background: linear-gradient(0deg, rgba(17, 17, 17, 0.25), rgba(17, 17, 17, 0.25)), #cdcdcd;
+  font-family: Jost;
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  padding-top: 25px;
+  margin-bottom: 110px;
+}
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo svg {
+  width: 300px;
+  height: 75px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  fill: #fff;
+}
+
+.header__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__social-item {
+  margin: 0 8px;
+}
+
+.header__social-item:hover a {
+  color: #cccccc;
+}
+
+.header__social-item a {
+  color: #fff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.main {
+  margin-bottom: 20px;
+}
+
+.soon {
+  padding: 0 10px;
+}
+
+.soon__title {
+  font-size: 44px;
+  line-height: 65px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.soon__subtitle {
+  font-size: 18px;
+  line-height: 27px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.soon__timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 65px;
+}
+
+.soon__timer .soon__title {
+  margin-bottom: 0;
+  font-size: 44px;
+  line-height: 65px;
+}
+
+.soon__item {
+  text-align: center;
+  position: relative;
+}
+
+.soon__item:not(:last-child) {
+  padding-right: 30px;
+  margin-right: 20px;
+}
+
+.soon__item:not(:last-child)::after {
+  content: ":";
+  display: inline-block;
+  font-size: 44px;
+  line-height: 65px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.soon__item p {
+  font-size: 13px;
+  line-height: 19px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 570px;
+  width: 100%;
+  margin: 0 auto 20px;
+  padding-bottom: 150px;
+}
+
+.form input[type="email"] {
+  font-size: 15px;
+  line-height: 22px;
+  padding: 16px 30px;
+  margin-right: 10px;
+  width: 100%;
+  max-width: 425px;
+  background: rgba(31, 31, 31, 0.4);
+  color: #fff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.form input[type="email"]::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.form input[type="email"]::-moz-placeholder {
+  color: #fff;
+}
+
+.form input[type="email"]:-ms-input-placeholder {
+  color: #fff;
+}
+
+.form input[type="email"]::-ms-input-placeholder {
+  color: #fff;
+}
+
+.form input[type="email"]::placeholder {
+  color: #fff;
+}
+
+.form input[type="email"]:focus {
+  -webkit-box-shadow: 0 0 5px 1px #cdcdcd;
+          box-shadow: 0 0 5px 1px #cdcdcd;
+}
+
+.form input[type="submit"] {
+  display: block;
+  padding: 14px 33px;
+  font-size: 16px;
+  line-height: 24px;
+  background: #1f1f1f;
+  border: 1px solid #1f1f1f;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+  background: #fff;
+  color: #111;
+}
+
+@media (max-width: 1170px) {
+  .header {
+    padding-top: calc( 15px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .header {
+    margin-bottom: calc( 50px + 60 * ((100vw - 320px) / 850));
+  }
+
+  .header__logo svg {
+    width: calc( 150px + 150 * ((100vw - 320px) / 850));
+  }
+
+  .header__logo svg {
+    height: calc( 35px + 40 * ((100vw - 320px) / 850));
+  }
+
+  .soon__title {
+    font-size: calc( 28px + 16 * ((100vw - 320px) / 850));
+  }
+
+  .soon__title {
+    line-height: calc( 44px + 21 * ((100vw - 320px) / 850));
+  }
+
+  .soon__subtitle {
+    font-size: calc( 16px + 2 * ((100vw - 320px) / 850));
+  }
+
+  .soon__subtitle {
+    line-height: calc( 22px + 5 * ((100vw - 320px) / 850));
+  }
+
+  .soon__subtitle {
+    margin-bottom: calc( 25px + 23 * ((100vw - 320px) / 850));
+  }
+
+  .soon__timer {
+    margin-bottom: calc( 35px + 30 * ((100vw - 320px) / 850));
+  }
+
+  .soon__timer .soon__title {
+    font-size: calc( 26px + 18 * ((100vw - 320px) / 850));
+  }
+
+  .soon__timer .soon__title {
+    line-height: calc( 36px + 29 * ((100vw - 320px) / 850));
+  }
+
+  .soon__item:not(:last-child) {
+    padding-right: calc( 20px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .soon__item:not(:last-child) {
+    margin-right: calc( 10px + 10 * ((100vw - 320px) / 850));
+  }
+
+  .soon__item:not(:last-child)::after {
+    font-size: calc( 26px + 18 * ((100vw - 320px) / 850));
+  }
+
+  .soon__item:not(:last-child)::after {
+    line-height: calc( 36px + 29 * ((100vw - 320px) / 850));
+  }
+
+  .form {
+    padding-bottom: calc( 50px + 100 * ((100vw - 320px) / 850));
+  }
+}
+
+@media (max-width: 426px) {
+  .form {
+    display: block;
+  }
+
+  .form input[type="email"] {
+    margin-bottom: 10px;
+  }
+
+  .form input[type="submit"] {
+    width: 70%;
+    margin: 0 auto;
+  }
+}

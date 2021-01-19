@@ -1748,6 +1748,9 @@ body.lock {
   padding-bottom: 16px;
   padding-right: 40px;
   border: 1px solid #cdcdcd;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .locator__search input::-webkit-input-placeholder {
@@ -1912,6 +1915,7 @@ body.lock {
       -ms-transform: translate(-50%, -100%);
           transform: translate(-50%, -100%);
   left: 0;
+  z-index: 1111;
 }
 
 .popup-bubble-anchor::after {

@@ -5299,12 +5299,6 @@ body.lock {
 }
 
 @media (max-width: 906px) {
-  .features {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
   .features__item {
     margin-right: 10px;
     margin-left: 10px;
@@ -6244,5 +6238,13 @@ body.lock {
 @media (max-width: 358px) {
   .reviews__bottom a {
     margin: 5px 0;
+  }
+}
+
+@media (max-width: 906px) and (min-width: 598px) {
+  .features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }

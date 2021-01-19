@@ -5,7 +5,7 @@
   @include adaptive-value(padding-right, 130, 0);
   @include adaptive-value(margin-bottom, 105, 40);
   text-align: center;
-  background: url("../img/sale.png") center no-repeat, $orange;
+  background: url("../img/sale.png") no-repeat, $orange;
   background-size: contain;
 
   &__title {

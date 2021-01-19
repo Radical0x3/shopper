@@ -2606,12 +2606,6 @@ body.lock {
 }
 
 @media (max-width: 906px) {
-  .features {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
   .features__item {
     margin-right: 10px;
     margin-left: 10px;
@@ -3324,5 +3318,13 @@ body.lock {
 
   .header__body .header__menu-item:first-child ul {
     width: 135px;
+  }
+}
+
+@media (max-width: 906px) and (min-width: 598px) {
+  .features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }

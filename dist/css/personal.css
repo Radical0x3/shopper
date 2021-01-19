@@ -1983,6 +1983,9 @@ body.lock {
   padding: 14px 20px;
   border: 1px solid #cdcdcd;
   margin-bottom: 25px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .personal__form input[type="text"]::-webkit-input-placeholder, .personal__form input[type="email"]::-webkit-input-placeholder, .personal__form input[type="password"]::-webkit-input-placeholder {

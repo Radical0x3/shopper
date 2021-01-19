@@ -2157,6 +2157,14 @@ body.lock {
   overflow-x: hidden;
   overflow-y: auto;
   font-size: 14px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkout__payment-notes:focus {
+  -webkit-box-shadow: 0 0 5px 1px #cdcdcd;
+          box-shadow: 0 0 5px 1px #cdcdcd;
 }
 
 .checkout__wrap {
@@ -2909,12 +2917,6 @@ body.lock {
 }
 
 @media (max-width: 906px) {
-  .features {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
   .features__item {
     margin-right: 10px;
     margin-left: 10px;
@@ -3661,5 +3663,13 @@ body.lock {
 
   .header__body .header__menu-item:first-child ul {
     width: 135px;
+  }
+}
+
+@media (max-width: 906px) and (min-width: 598px) {
+  .features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }

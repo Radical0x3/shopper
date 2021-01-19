@@ -2329,7 +2329,7 @@ h6 {
 }
 
 .no-webp .sale-banner{
-  background: url("../img/sale.png") center no-repeat, #FF6F61; }
+  background: url("../img/sale.png") no-repeat, #FF6F61; }
 
 .sale-banner {
   padding-top: 85px;
@@ -3736,12 +3736,6 @@ body.lock {
 }
 
 @media (max-width: 906px) {
-  .features {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
   .features__item {
     margin-right: 10px;
     margin-left: 10px;
@@ -4490,6 +4484,12 @@ body.lock {
   }
 }
 
+@media (max-width: 598px) {
+  .features {
+    margin: 0 10px;
+  }
+}
+
 @media (max-width: 584px) {
   .footer__nav-right {
     -webkit-box-pack: center;
@@ -4547,6 +4547,12 @@ body.lock {
   }
 }
 
+@media (max-width: 375px) {
+  .features__item {
+    margin: 10px 0;
+  }
+}
+
 @media (max-width: 359px) {
   .header__countries.active {
     left: 5px;
@@ -4557,4 +4563,12 @@ body.lock {
   }
 }
 
-.webp .sale-banner{ background: url(../img/sale.webp) center no-repeat, #FF6F61; }
+@media (max-width: 906px) and (min-width: 598px) {
+  .features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.webp .sale-banner{ background: url(../img/sale.webp) no-repeat, #FF6F61; }

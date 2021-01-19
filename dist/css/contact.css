@@ -1825,6 +1825,14 @@ body.lock {
   overflow-y: auto;
   font-size: 14px;
   margin-bottom: 80px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.contact__message:focus {
+  -webkit-box-shadow: 0 0 5px 1px #cdcdcd;
+          box-shadow: 0 0 5px 1px #cdcdcd;
 }
 
 .contact__item {

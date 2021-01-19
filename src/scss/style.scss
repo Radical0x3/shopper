@@ -69,3 +69,15 @@ body {
     display: none;
   }
 }
+
+.features {
+  @media (max-width: 598px) {
+    margin: 0 10px;
+  }
+
+  &__item {
+    @media (max-width: 375px) {
+      margin: 10px 0;
+    }
+  }
+}

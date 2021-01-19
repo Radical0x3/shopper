@@ -5,7 +5,7 @@
   @include adaptive-value(padding-top, 45, 10, 1);
   @include adaptive-value(padding-bottom, 45, 10, 1);
 
-  @media (max-width: 906px) {
+  @media (max-width: 906px) and (min-width: 598px) {
     justify-content: center;
   }
 

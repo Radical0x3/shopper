@@ -204,6 +204,7 @@ body {
         padding: 14px 20px;
         border: 1px solid rgba(205, 205, 205, 1);
         @include adaptive-value(margin-bottom, 25, 10, 1);
+        transition: 0.3s;
 
         &::placeholder {
           color: #767676;

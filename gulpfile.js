@@ -90,6 +90,8 @@ function js() {
           shipping: "./src/js/shipping.js",
           contact: "./src/js/contact.js",
           locator: "./src/js/locator.js",
+          about: "./src/js/about.js",
+          comingSoon: "./src/js/comingSoon.js",
         },
         output: {
           filename: "[name].js",
