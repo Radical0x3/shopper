@@ -1,10 +1,4 @@
 import $ from "jquery";
-import Scrollbar from "smooth-scrollbar";
-
-Scrollbar.initAll({
-  alwaysShowTracks: false,
-  renderByPixels: true,
-});
 
 $(".checkout__shipping .checkmark__container").on("click", function () {
   let elem = $(this).parents("tr");

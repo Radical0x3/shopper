@@ -76,6 +76,7 @@ function js() {
         mode: "production",
         entry: {
           main: "./src/js/script.js",
+          general: "./src/js/general.js",
           shop: "./src/js/shop.js",
           product: "./src/js/product.js",
           cart: "./src/js/cart.js",
@@ -92,6 +93,9 @@ function js() {
           locator: "./src/js/locator.js",
           about: "./src/js/about.js",
           comingSoon: "./src/js/comingSoon.js",
+          blog: "./src/js/blog.js",
+          post: "./src/js/post.js",
+          search: "./src/js/search.js",
         },
         output: {
           filename: "[name].js",

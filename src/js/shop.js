@@ -1,11 +1,5 @@
 import $ from "jquery";
-import Scrollbar from "smooth-scrollbar";
 import "slick-carousel";
-
-Scrollbar.initAll({
-  alwaysShowTracks: false,
-  renderByPixels: true,
-});
 
 $(".slider").slick({
   arrows: true,
@@ -200,6 +194,13 @@ $(".next-arrow").on("click", function () {
 
 $(".content__bottom").on("click", ".content__tag", function (e) {
   e.preventDefault();
+  let label = $(".aside__list").find(
+    `.aside__label.active:contains("${$(this).text()}")`
+  );
+  
+  label.removeClass("active");
+  label.parent().removeClass("active");
+  label.prev().prop("checked", false);
   $(this).remove();
 
   let col = $(".content__tag").length;

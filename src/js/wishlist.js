@@ -1,11 +1,5 @@
 import $ from "jquery";
 import "slick-carousel";
-import Scrollbar from "smooth-scrollbar";
-
-Scrollbar.initAll({
-  alwaysShowTracks: false,
-  renderByPixels: true,
-});
 
 $(".nav-btn").on("click", function () {
   $(".account__mobile-nav").addClass("active");

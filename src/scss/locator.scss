@@ -201,7 +201,7 @@ body {
 
   &__map {
     width: 66%;
-    @include adaptive-value(height, 620, 240);
+    @include adaptive-value(height, 620, 350);
 
     @media (max-width: 768px) {
       width: 100%;

@@ -202,8 +202,6 @@
           <!-- /.menu-item -->
         </ul>
         <!-- /.menu -->
-        <!-- <h1 class="header__title">Shopper.</h1> -->
-        <!-- /.header__title -->
         <div class="header__logo">
           <a href="http://demo.pplus.net.ua/">
             <svg>
@@ -236,7 +234,7 @@
             <!-- /.header__actions-link -->
           </li>
           <!-- /.header__actions-item -->
-          <li class="header__actions-item">
+          <li class="header__actions-item cart-icon">
             <a
               href="http://demo.pplus.net.ua/cart.html"
               class="header__actions-link"
@@ -248,6 +246,109 @@
               <!-- /.circle -->
             </a>
             <!-- /.header__actions-link -->
+            <div class="header__actions-cart">
+              <div class="user__cart">
+                <header class="user__cart-header">
+                  <h3 class="user__cart-title">Your Cart (<span>2</span>)</h3>
+                </header>
+                <div class="user__cart-body">
+                  <div class="user__cart-products">
+                    <ul class="user__cart-list">
+                      <li class="user__cart-item">
+                        <div class="user__cart-img">
+                          <picture>
+                            <source
+                              srcset="https://dummyimage.com/340"
+                              type="image/webp"
+                            />
+                            <img src="https://dummyimage.com/340" alt="" />
+                          </picture>
+                        </div>
+                        <div class="user__cart-main">
+                          <div class="user__cart-inner">
+                            <div class="user__cart-top">
+                              <p class="user__cart-subtitle">
+                                Cotton floral print Dress
+                              </p>
+                              <p class="user__cart-price">$40.00</p>
+                            </div>
+                          </div>
+                          <div class="user__cart-bottom">
+                            <div class="cart__quantity">
+                              <span class="cart__quantity-minus"></span>
+                              <span class="cart__quantity-current">1</span>
+                              <span class="cart__quantity-plus"></span>
+                            </div>
+                            <a href="#" class="user__cart-remove">
+                              <span class="user__cart-icon">&#10006;</span>
+                              <span>Remove</span>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="user__cart-item">
+                        <div class="user__cart-img">
+                          <picture>
+                            <source
+                              srcset="https://dummyimage.com/340"
+                              type="image/webp"
+                            />
+                            <img src="https://dummyimage.com/340" alt="" />
+                          </picture>
+                        </div>
+                        <div class="user__cart-main">
+                          <div class="user__cart-inner">
+                            <div class="user__cart-top">
+                              <p class="user__cart-subtitle">
+                                Suede cross body Bag
+                              </p>
+                              <p class="user__cart-price">$49.00</p>
+                            </div>
+                          </div>
+                          <div class="user__cart-bottom">
+                            <div class="cart__quantity">
+                              <span class="cart__quantity-minus"></span>
+                              <span class="cart__quantity-current">1</span>
+                              <span class="cart__quantity-plus"></span>
+                            </div>
+                            <a href="#" class="user__cart-remove">
+                              <span class="user__cart-icon">&#10006;</span>
+                              <span>Remove</span>
+                            </a>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="user__cart-total">
+                    <span class="user__cart-subtotal">Subtotal:</span>
+                    <span class="user__cart-cost">$89.00</span>
+                  </div>
+                  <div class="user__cart-actions">
+                    <a
+                      href="http://demo.pplus.net.ua/checkout.html"
+                      class="user__cart-checkout"
+                      >Continue to Checkout</a
+                    >
+                    <a href="#" class="user__cart-shopping"
+                      >Continue Shopping</a
+                    >
+                  </div>
+                </div>
+                <div class="user__cart-empty">
+                  <div class="user__cart-message">
+                    <span>Your cart is empty</span>
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#404"></use>
+                    </svg>
+                  </div>
+                  <div class="user__cart-actions">
+                    <a href="#" class="user__cart-shopping"
+                      >Continue Shopping</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <!-- /.header__actions-item -->
         </ul>
@@ -458,7 +559,10 @@
                       <div class="categories__details-right">
                         <div class="categories__details-box">
                           <picture>
-                            <source srcset="" type="image/webp" />
+                            <source
+                              srcset="https://dummyimage.com/240x184"
+                              type="image/webp"
+                            />
                             <img src="https://dummyimage.com/240x184" alt="" />
                           </picture>
                           <a href="##">Bags Collection</a>
@@ -1752,7 +1856,11 @@
           </li>
           <!-- /.header__list-item -->
           <li class="header__list-item">
-            <a href="#" class="header__list-link">Blog</a>
+            <a
+              href="http://demo.pplus.net.ua/blog.html"
+              class="header__list-link"
+              >Blog</a
+            >
             <!-- /.header__list-link -->
           </li>
           <!-- /.header__list-item -->
@@ -1778,10 +1886,118 @@
             type="text"
             id="header__search"
             placeholder="Search for items and brands"
+            autocomplete="off"
           />
           <a href="#" class="header__label">
-            <i class="fas fa-search" aria-hidden="true"></i>
+            <i class="fas fa-search"></i>
           </a>
+          <div class="form__result">
+            <div class="form__result-success">
+              <p>Search Results:</p>
+              <ul class="form__result-list" data-scrollbar>
+                <li class="form__result-item">
+                  <div class="form__result-img">
+                    <a href="http://demo.pplus.net.ua/product.html">
+                      <picture>
+                        <source
+                          srcset="https://dummyimage.com/100"
+                          type="image/webp" />
+                        <img src="https://dummyimage.com/100" alt=""
+                      /></picture>
+                    </a>
+                  </div>
+                  <div class="form__result-text">
+                    <h4 class="form__result-title">
+                      Cotton floral print Dress
+                    </h4>
+                    <p class="form__result-price">$40.00</p>
+                  </div>
+                </li>
+                <li class="form__result-item">
+                  <div class="form__result-img">
+                    <a href="http://demo.pplus.net.ua/product.html">
+                      <picture>
+                        <source
+                          srcset="https://dummyimage.com/100"
+                          type="image/webp" />
+                        <img src="https://dummyimage.com/100" alt=""
+                      /></picture>
+                    </a>
+                  </div>
+                  <div class="form__result-text">
+                    <h4 class="form__result-title">Suede cross body Bag</h4>
+                    <p class="form__result-price">$49.00</p>
+                  </div>
+                </li>
+                <li class="form__result-item">
+                  <div class="form__result-img">
+                    <a href="http://demo.pplus.net.ua/product.html">
+                      <picture>
+                        <source
+                          srcset="https://dummyimage.com/100"
+                          type="image/webp" />
+                        <img src="https://dummyimage.com/100" alt=""
+                      /></picture>
+                    </a>
+                  </div>
+                  <div class="form__result-text">
+                    <h4 class="form__result-title">
+                      Straight Trousers with Belt
+                    </h4>
+                    <p class="form__result-price">$79.00</p>
+                  </div>
+                </li>
+                <li class="form__result-item">
+                  <div class="form__result-img">
+                    <a href="http://demo.pplus.net.ua/product.html">
+                      <picture>
+                        <source
+                          srcset="https://dummyimage.com/100"
+                          type="image/webp" />
+                        <img src="https://dummyimage.com/100" alt=""
+                      /></picture>
+                    </a>
+                  </div>
+                  <div class="form__result-text">
+                    <h4 class="form__result-title">Men’s leather Sneakers</h4>
+                    <p class="form__result-price sale">$99.00</p>
+                  </div>
+                </li>
+                <li class="form__result-item">
+                  <div class="form__result-img">
+                    <a href="http://demo.pplus.net.ua/product.html">
+                      <picture>
+                        <source
+                          srcset="https://dummyimage.com/100"
+                          type="image/webp" />
+                        <img src="https://dummyimage.com/100" alt=""
+                      /></picture>
+                    </a>
+                  </div>
+                  <div class="form__result-text">
+                    <h4 class="form__result-title">Sweatshirt with Pocket</h4>
+                    <p class="form__result-price">$39.00</p>
+                  </div>
+                </li>
+                <li class="form__result-item">
+                  <a
+                    href="http://demo.pplus.net.ua/search.html"
+                    class="form__link"
+                  >
+                    View All <span>→</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="form__result-fail">
+              <p>Nothing matches your search</p>
+              <div class="form__result-icon">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#404"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
       <!-- /.container -->

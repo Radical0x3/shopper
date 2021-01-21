@@ -704,3 +704,13 @@ body {
   padding: 0 !important;
   visibility: hidden;
 }
+
+.scrollbar-thumb {
+  background: #1f1f1f !important;
+  width: 4px !important;
+}
+
+.scrollbar-track-y {
+  width: 4px !important;
+  background: #e2e2e2 !important;
+}

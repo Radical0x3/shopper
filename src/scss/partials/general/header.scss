@@ -206,6 +206,10 @@
   }
 
   &__middle {
+    .container {
+      position: relative;
+    }
+
     .menu-link {
       text-transform: uppercase;
     }
@@ -267,6 +271,10 @@
     max-width: 370px;
     width: 100%;
     position: relative;
+
+    @media (max-width: 769px) {
+      display: block;
+    }
   }
 
   &__search {
@@ -277,6 +285,8 @@
     border: none;
     background: #303030;
     position: relative;
+    font-size: 15px;
+    line-height: 22px;
     color: #fff;
     transition: 0.3s;
 
@@ -303,6 +313,134 @@
 
     &:hover {
       color: $orange;
+    }
+  }
+
+  .form {
+    &__result {
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      @include adaptive-value(padding-left, 22, 10);
+      @include adaptive-value(padding-right, 22, 10);
+      height: auto;
+      background: #fff;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 10;
+      transition: 0.3s;
+
+      &.active {
+        box-shadow: 0 0 1px 1px #e2e2e2;
+        max-height: 500px;
+        @include adaptive-value(padding-top, 18, 10);
+        @include adaptive-value(padding-bottom, 18, 10);
+        @include adaptive-value(padding-left, 22, 10);
+        @include adaptive-value(padding-right, 22, 10);
+
+        @media (max-width: 769px) {
+          position: static;
+          box-shadow: none;
+        }
+
+        .form__result-list {
+          overflow-y: auto;
+        }
+      }
+
+      &-success {
+        display: none;
+
+        > p {
+          font-size: 15px;
+          line-height: 22px;
+          color: $black;
+          @include adaptive-value(margin-bottom, 24, 15);
+        }
+
+        &.active {
+          display: block;
+        }
+      }
+
+      &-fail {
+        display: none;
+        padding: 15px 0;
+
+        > p {
+          font-size: 15px;
+          line-height: 22px;
+          color: $black;
+          margin-bottom: 13px;
+          text-align: center;
+        }
+
+        &.active {
+          display: block;
+        }
+      }
+
+      &-icon {
+        width: 22px;
+        height: 22px;
+        margin: 0 auto;
+
+        svg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-list {
+        max-height: 290px;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        @include adaptive-value(font-size, 15, 13);
+        @include adaptive-value(line-height, 22, 18);
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      &-img {
+        @include adaptive-value(width, 80, 60);
+        @include adaptive-value(height, 80, 60);
+        @include adaptive-value(margin-right, 30, 15);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-price {
+        color: #767676;
+
+        &.sale {
+          color: $orange;
+        }
+      }
+    }
+
+    &__link {
+      @include adaptive-value(font-size, 16, 14);
+      @include adaptive-value(line-height, 24, 20);
+      font-weight: 600;
+      color: $black;
+      transition: 0.3s;
+
+      &:hover {
+        color: $orange;
+      }
+
+      > span {
+        margin-left: 24px;
+      }
     }
   }
 
@@ -526,12 +664,17 @@
     &-item {
       position: relative;
       margin: 0 10px;
+      padding: 3px 0;
     }
 
     img {
       width: 20px;
       height: 20px;
       object-fit: cover;
+    }
+
+    &-cart {
+      position: relative;
     }
   }
 
@@ -573,7 +716,7 @@
       visibility: hidden;
       position: fixed;
       width: 280px;
-      background: #f5f5f5;
+      background: #fff;
       top: 0;
       left: 0;
       transform: translateX(-100%);
@@ -582,6 +725,18 @@
       overflow-y: scroll;
       transition: 0.3s;
       z-index: 9999;
+
+      .header__top {
+        background: #fff;
+      }
+
+      .categories__titles-item {
+        background: #fff;
+
+        &:hover {
+          background: #fff;
+        }
+      }
     }
 
     &.active {
@@ -1124,4 +1279,289 @@
       }
     }
   }
+
+  .cart-icon {
+    @media (min-width: 769px) {
+      &:hover {
+        .user__cart {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  .user {
+    &__cart {
+      @include adaptive-value(width, 470, 300);
+      // height: 100vh;
+      max-height: 670px;
+      background: #fff;
+      position: absolute;
+      right: -10px;
+      top: 5px;
+      z-index: 11;
+      box-shadow: 0 0 1px 1px #e2e2e2;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+      overflow-y: auto;
+
+      &-header {
+        @include adaptive-value(padding-top, 21, 10);
+        @include adaptive-value(padding-bottom, 21, 10);
+        border-bottom: 1px solid #e2e2e2;
+      }
+
+      &-title {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 600;
+        color: $black;
+        text-align: center;
+      }
+
+      &-body {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+
+      &-item {
+        display: flex;
+        @include adaptive-value(padding-top, 30, 15, 1);
+        @include adaptive-value(padding-bottom, 30, 15, 1);
+        @include adaptive-value(padding-right, 30, 15, 1);
+        @include adaptive-value(padding-left, 30, 15, 1);
+        border-bottom: 1px solid #e2e2e2;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      &-img {
+        @include adaptive-value(width, 100, 80, 1);
+        @include adaptive-value(min-width, 100, 80, 1);
+        @include adaptive-value(height, 100, 80, 1);
+        @include adaptive-value(min-height, 100, 80, 1);
+        @include adaptive-value(margin-right, 30, 15, 1);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-main {
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      &-inner {
+        margin-bottom: 5px;
+      }
+
+      &-top {
+        color: $black;
+        @include adaptive-value(font-size, 15, 13);
+        @include adaptive-value(line-height, 22, 16);
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      &-subtitle {
+        @include adaptive-value(font-size, 15, 13);
+        @include adaptive-value(line-height, 22, 16);
+        display: inline-block;
+        margin-right: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &-bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-remove {
+        font-size: 14px;
+        color: #909090;
+        transition: 0.3s;
+
+        &:hover {
+          color: darken(#909090, 30%);
+        }
+      }
+
+      &-icon {
+        font-size: 10px;
+      }
+
+      &-total {
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 600;
+        color: $black;
+        @include adaptive-value(padding-top, 24, 12, 1);
+        @include adaptive-value(padding-bottom, 24, 12, 1);
+        @include adaptive-value(padding-right, 30, 15, 1);
+        @include adaptive-value(padding-left, 30, 15, 1);
+        background: #f5f5f5;
+        @include adaptive-value(margin-bottom, 30, 15);
+      }
+
+      &-actions {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        @include adaptive-value(margin-bottom, 55, 25);
+      }
+
+      &-checkout,
+      &-shopping {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        padding: 15px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      &-checkout {
+        border: 1px solid #1f1f1f;
+        background: #1f1f1f;
+        color: #fff;
+        margin-bottom: 10px;
+
+        &:hover {
+          background: #fff;
+          color: $black;
+        }
+      }
+
+      &-shopping {
+        border: 1px solid #1f1f1f;
+        background: #fff;
+        color: $black;
+
+        &:hover {
+          border-color: #1f1f1f;
+          background: #1f1f1f;
+          color: #fff;
+        }
+      }
+
+      &-empty {
+        display: none;
+        padding: 60px 0;
+
+        &.active {
+          display: block;
+        }
+
+        .user__cart-actions {
+          margin-bottom: 0;
+        }
+      }
+
+      &-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        line-height: 36px;
+        color: $black;
+        font-weight: 600;
+        margin-bottom: 30px;
+
+        span {
+          margin-right: 17px;
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .cart {
+    &__quantity {
+      display: flex;
+      text-align: center;
+
+      &-current,
+      &-plus,
+      &-minus {
+        display: inline-block;
+        @include adaptive-value(min-width, 30, 25, 1);
+        padding: 2px 10px;
+        font-size: 14px;
+        @include adaptive-value(font-size, 14, 12, 1);
+        background: #fff;
+        border: 1px solid #cdcdcd;
+      }
+
+      &-plus,
+      &-minus {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &::after {
+          display: block;
+          font-family: FontAwesome;
+          font-size: 12px;
+          color: #767676;
+        }
+
+        &:hover {
+          background: #f5f5f5;
+        }
+      }
+
+      &-plus {
+        border-left: 0;
+
+        &::after {
+          content: "\f067";
+        }
+      }
+
+      &-minus {
+        border-right: 0;
+
+        &::after {
+          content: "\f068";
+        }
+      }
+    }
+  }
+}
+
+.scrollbar-thumb {
+  background: #1f1f1f !important;
+  width: 4px !important;
+}
+
+.scrollbar-track-y {
+  width: 4px !important;
+  background: #e2e2e2 !important;
 }

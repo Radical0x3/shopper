@@ -18,3 +18,6 @@ Disallow: /about.html
 Disallow: /err404.html
 Disallow: /order-completed.html
 Disallow: /coming-soon.html
+Disallow: /blog.html
+Disallow: /post.html
+Disallow: /search.html

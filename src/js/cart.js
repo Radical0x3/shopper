@@ -12,8 +12,8 @@ $(".cart__quantity-minus").on("click", function () {
   let elem = $(this).next(".cart__quantity-current");
   let val = parseInt(elem.text());
 
-  if (val <= 0) {
-    elem.text(0);
+  if (val <= 1) {
+    elem.text(1);
   } else {
     elem.text(val - 1);
   }

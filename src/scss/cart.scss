@@ -273,11 +273,11 @@ body {
     }
 
     &:hover {
-      color: lighten($black, 20%);
+      color: $orange;
     }
 
     &:hover::before {
-      color: lighten(#1f1f1f, 20%);
+      color: $orange;
     }
   }
 

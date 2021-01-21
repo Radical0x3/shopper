@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include adaptive-value(margin-bottom, 45, 20);
+    @include adaptive-value(margin-bottom, 25, 5);
 
     @media (max-width: 431px) {
       display: block;
@@ -197,6 +197,9 @@
         }
 
         &__title {
+          padding-bottom: 12px;
+          @include adaptive-value(margin-bottom, 27, 20);
+
           &::before,
           &::after {
             display: block;
@@ -334,7 +337,8 @@
   &__bottom {
     display: flex;
     flex-wrap: wrap;
-    margin: -7px -7px 33px;
+    margin: -7px -7px 0;
+    @include adaptive-value(margin-bottom, 33, 15);
   }
 
   &__tag {

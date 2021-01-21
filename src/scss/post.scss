@@ -1,0 +1,394 @@
+@import "hamburgers/hamburgers";
+@import "partials/general/nullstyle";
+@import "partials/general/_vars";
+@import "partials/general/links";
+@import "partials/general/menu";
+@import "partials/general/routes";
+@import "partials/general/header";
+@import "partials/general/footer";
+@import "partials/account/account";
+@import "fonts";
+
+body {
+  font-family: Jost;
+  border: 0;
+  transition: 0.3s;
+
+  &.lock {
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 769px) {
+    margin-top: 55px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.main {
+  transition: 0.3s;
+
+  &.active {
+    transform: translateX(280px);
+  }
+}
+
+.hamburger {
+  padding-bottom: 10px;
+}
+
+.header {
+  margin-bottom: 20px;
+
+  @media (max-width: 769px) {
+    @include adaptive-value(margin-bottom, 123, 70);
+  }
+}
+
+.circle {
+  &.hide {
+    display: none;
+  }
+}
+
+.routes {
+  @include adaptive-value(margin-bottom, 65, 20, 1);
+}
+
+.account__subtitle {
+  @include adaptive-value(margin-bottom, 73, 25);
+}
+
+.post {
+  &__banner {
+    width: 100%;
+    @include adaptive-value(height, 450, 200);
+    @include adaptive-value(margin-bottom, 72, 25);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    max-width: 985px;
+    margin: 0 auto;
+
+    &-title {
+      @include adaptive-value(font-size, 24, 20);
+      @include adaptive-value(line-height, 36, 30);
+      font-weight: 600;
+      color: $black;
+      @include adaptive-value(margin-bottom, 33, 15);
+    }
+  }
+
+  &__text {
+    @include adaptive-value(font-size, 18, 16);
+    @include adaptive-value(line-height, 27, 22);
+    color: #525252;
+
+    &_bold {
+      font-weight: 600;
+      color: $black;
+    }
+
+    &_indent {
+      @include adaptive-value(margin-bottom, 43, 25);
+    }
+
+    &_end {
+      @include adaptive-value(margin-bottom, 66, 30);
+    }
+  }
+
+  &__link {
+    color: $black;
+    text-decoration: underline;
+    transition: 0.3s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__list {
+    @include adaptive-value(font-size, 18, 16);
+    @include adaptive-value(line-height, 27, 22);
+    color: #525252;
+    @include adaptive-value(padding-left, 40, 20);
+    @include adaptive-value(margin-bottom, 57, 25);
+  }
+
+  &__item {
+    padding-left: 15px;
+    margin-bottom: 10px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 5px;
+      min-width: 5px;
+      height: 5px;
+      min-height: 5px;
+      border-radius: 50%;
+      background: #525252;
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+  }
+
+  &__images {
+    display: flex;
+    justify-content: space-between;
+    @include adaptive-value(margin-top, 68, 25);
+    @include adaptive-value(margin-bottom, 61, 20);
+
+    @media (max-width: 426px) {
+      display: block;
+    }
+
+    &-item {
+      width: 48%;
+      @include adaptive-value(height, 450, 200);
+
+      @media (max-width: 426px) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__quote {
+    max-width: 850px;
+    @include adaptive-value(margin-top, 51, 25);
+    @include adaptive-value(margin-bottom, 43, 25);
+    @include adaptive-value(margin-left, 40, 10);
+    @include adaptive-value(padding-top, 19, 15);
+    @include adaptive-value(padding-bottom, 19, 15);
+    @include adaptive-value(padding-left, 32, 20);
+    border-left: 3px solid $orange;
+    @include adaptive-value(font-size, 20, 16);
+    @include adaptive-value(line-height, 30, 24);
+    color: $black;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include adaptive-value(margin-bottom, 30, 15);
+
+    &-item {
+      margin: 0 4px 8px;
+      border: 1px solid #cdcdcd;
+      background: #fff;
+      transition: 0.3s;
+
+      &:hover {
+        background: #525252;
+
+        a {
+          color: #fff;
+        }
+      }
+
+      a {
+        display: block;
+        @include adaptive-value(font-size, 14, 12);
+        @include adaptive-value(line-height, 22, 16);
+        color: #525252;
+        padding: 9px 0;
+        @include adaptive-value(padding-left, 21, 11);
+        @include adaptive-value(padding-right, 21, 11);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &__share {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include adaptive-value(margin-bottom, 90, 35);
+
+    &-item {
+      @include adaptive-value(margin-right, 8, 5);
+      @include adaptive-value(margin-left, 8, 5);
+      @include adaptive-value(margin-bottom, 16, 10);
+      transition: 0.3s;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 220px;
+        @include adaptive-value(width, 220, 140);
+        @include adaptive-value(font-size, 16, 13);
+        @include adaptive-value(line-height, 24, 20);
+        font-weight: 600;
+        color: #fff;
+        border: 1px solid transparent;
+        @include adaptive-value(padding-top, 14, 9);
+        @include adaptive-value(padding-bottom, 14, 9);
+        transition: 0.3s;
+      }
+
+      i {
+        @include adaptive-value(margin-right, 15, 10);
+      }
+    }
+
+    .share-on-fb {
+      background: #475a96;
+
+      &:hover {
+        background: #fff;
+
+        a {
+          color: #475a96;
+          border-color: #475a96;
+        }
+      }
+    }
+
+    .share-on-tw {
+      background: #49b2e8;
+
+      &:hover {
+        background: #fff;
+
+        a {
+          color: #49b2e8;
+          border-color: #49b2e8;
+        }
+      }
+    }
+
+    .share-on-p {
+      background: #d74047;
+
+      &:hover {
+        background: #fff;
+
+        a {
+          color: #d74047;
+          border-color: #d74047;
+        }
+      }
+    }
+
+    .share-on-in {
+      background: #0d76b4;
+
+      &:hover {
+        background: #fff;
+
+        a {
+          color: #0d76b4;
+          border-color: #0d76b4;
+        }
+      }
+    }
+  }
+
+  .account__title {
+    margin-bottom: 13px;
+  }
+}
+
+.related {
+  .account__title {
+    @include adaptive-value(margin-bottom, 60, 25);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include adaptive-value(margin-bottom, 103, 40);
+
+    @media (max-width: 520px) {
+      // display: block;
+    }
+  }
+
+  &__item {
+    width: 32%;
+    position: relative;
+    @include adaptive-value(margin-bottom, 20, 10);
+
+    @media (max-width: 576px) {
+      width: 48%;
+    }
+
+    &-title {
+      @include adaptive-value(font-size, 20, 13);
+      @include adaptive-value(line-height, 30, 20);
+      color: $black;
+      font-weight: 600;
+      @include adaptive-value(margin-bottom, 17, 10);
+    }
+
+    &-link {
+      @include adaptive-value(font-size, 16, 12);
+      @include adaptive-value(line-height, 24, 18);
+      color: $black;
+      font-weight: 600;
+      transition: 0.3s;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    @include adaptive-value(height, 250, 150);
+    @include adaptive-value(margin-bottom, 20, 10);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__tag {
+    @include adaptive-value(width, 60, 50);
+    width: 60px;
+    background: #fff;
+    text-align: center;
+    position: absolute;
+    @include adaptive-value(top, 20, 10);
+    left: 0;
+
+    p {
+      @include adaptive-value(font-size, 11, 10);
+      line-height: 16px;
+      color: $black;
+      font-weight: 600;
+      padding: 3px 0;
+      text-transform: uppercase;
+    }
+  }
+}

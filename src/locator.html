@@ -154,15 +154,14 @@
   ></script>
   <script type="module" async src="js/runtime.js"></script>
   <script type="module" async src="js/npm.jquery.js"></script>
-  <script type="module" async src="js/npm.slick-carousel.js"></script>
   <script type="module" async src="js/npm.core-js.js"></script>
   <script type="module" async src="js/npm.lodash-es.js"></script>
   <script type="module" async src="js/npm.smooth-scrollbar.js"></script>
   <script type="module" async src="js/npm.tslib.js"></script>
   <script type="module" async src="js/npm.webpack-stream.js"></script>
-  <script type="module" src="js/main.js"></script>
-  <script type="module" src="js/locator.js"></script>
-  <script>
+  <script type="module" async defer src="js/general.js"></script>
+  <script type="module" async defer src="js/locator.js"></script>
+  <script defer>
     function initMap() {
       const locations = [
         ["Poltava", 49.587097079095884, 34.55298540355666, 1],
@@ -275,7 +274,7 @@
     }
   </script>
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=aaa&callback=initMap"
+    src="https://maps.googleapis.com/maps/api/js?key=KEY&callback=initMap"
     defer
   ></script>
 </body>

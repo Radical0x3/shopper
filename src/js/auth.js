@@ -1,10 +1,4 @@
 import $ from "jquery";
-import Scrollbar from "smooth-scrollbar";
-
-Scrollbar.initAll({
-  alwaysShowTracks: false,
-  renderByPixels: true,
-});
 
 $(document).ready(function () {
   let pass = document.getElementById("pass");

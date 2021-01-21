@@ -1,0 +1,255 @@
+@import "hamburgers/hamburgers";
+@import "partials/general/nullstyle";
+@import "partials/general/_vars";
+@import "partials/general/links";
+@import "partials/general/menu";
+@import "partials/general/routes";
+@import "partials/general/header";
+@import "partials/general/footer";
+@import "partials/account/account";
+@import "fonts";
+
+body {
+  font-family: Jost;
+  border: 0;
+  transition: 0.3s;
+
+  &.lock {
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 769px) {
+    margin-top: 55px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.main {
+  transition: 0.3s;
+
+  &.active {
+    transform: translateX(280px);
+  }
+}
+
+.hamburger {
+  padding-bottom: 10px;
+}
+
+.header {
+  margin-bottom: 20px;
+
+  @media (max-width: 769px) {
+    @include adaptive-value(margin-bottom, 123, 70);
+  }
+}
+
+.circle {
+  &.hide {
+    display: none;
+  }
+}
+
+.routes {
+  @include adaptive-value(margin-bottom, 65, 20, 1);
+}
+
+.account__title {
+  @include adaptive-value(margin-bottom, 35, 20);
+}
+
+.account__actions {
+  @media (max-width: 941px) {
+    display: none;
+  }
+
+  @media (max-width: 400px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.account__mobile-nav {
+  .menu {
+    display: block;
+
+    &-item {
+      margin: 15px 0;
+      padding: 0 0 4px;
+      border-bottom: 1px solid #e2e2e2;
+
+      a {
+        padding: 0 5px 0 0;
+        font-size: 18px;
+        position: relative;
+
+        &::after {
+          bottom: -5px;
+        }
+      }
+    }
+  }
+}
+
+.blog {
+  @include adaptive-value(margin-bottom, 110, 40);
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include adaptive-value(margin-bottom, 73, 35);
+
+    @media (max-width: 520px) {
+      display: block;
+    }
+  }
+
+  &__item {
+    width: 48%;
+    position: relative;
+    @include adaptive-value(margin-bottom, 50, 25);
+
+    @media (max-width: 520px) {
+      width: 100%;
+    }
+
+    &-title {
+      @include adaptive-value(font-size, 24, 20);
+      @include adaptive-value(line-height, 36, 28);
+      color: $black;
+      font-weight: 600;
+      @include adaptive-value(margin-bottom, 14, 10);
+    }
+
+    &-text {
+      @include adaptive-value(font-size, 16, 14);
+      @include adaptive-value(line-height, 24, 20);
+      color: #525252;
+      @include adaptive-value(margin-bottom, 17, 10);
+    }
+
+    &-link {
+      @include adaptive-value(font-size, 16, 14);
+      @include adaptive-value(line-height, 24, 20);
+      color: $black;
+      font-weight: 600;
+      transition: 0.3s;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    @include adaptive-value(height, 385, 200);
+    @include adaptive-value(margin-bottom, 25, 15);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__tag {
+    width: 60px;
+    background: #fff;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    p {
+      font-size: 11px;
+      line-height: 16px;
+      color: $black;
+      font-weight: 600;
+      padding: 3px 0;
+      text-transform: uppercase;
+    }
+  }
+
+  &__actions {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__progress {
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    line-height: 22px;
+    color: #767676;
+    padding-bottom: 13px;
+    position: relative;
+    margin-bottom: 40px;
+    --elem-width: 55%;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    &::after {
+      width: 100%;
+      background: #e2e2e2;
+    }
+
+    &::before {
+      width: var(--elem-width);
+      background: #1f1f1f;
+      z-index: 1;
+    }
+  }
+
+  &__load-more {
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+    font-weight: 600;
+    padding: 12px 46px;
+    border: 1px solid #1f1f1f;
+    background: #fff;
+    transition: 0.3s;
+
+    &:hover {
+      background: #1f1f1f;
+      color: #fff;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .menu {
+    justify-content: center;
+    @include adaptive-value(margin-bottom, 65, 30);
+
+    &-item {
+      font-weight: 600;
+    }
+  }
+}
